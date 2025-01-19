@@ -9,7 +9,7 @@ body {
 
 header {
     background: #000000; /* Sfondo nero per l'intestazione */
-    padding: 40px 20px 20px; /* Spazio sopra e sotto l'intestazione */
+    padding: 300px 200px 100px; /* Spazio sopra e sotto l'intestazione */
 }
 
 .header-content {
@@ -29,13 +29,13 @@ header {
 .portfolio-image {
     width: 100px; /* Larghezza delle immagini */
     height: auto; /* Mantiene le proporzioni */
-    margin-left: 10px; /* Spazio tra le immagini */
+    margin-left: 50px; /* Spazio tra le immagini */
     transition: transform 0.3s, filter 0.3s; /* Transizione dolce per il cambiamento di dimensione */
 }
 
     .portfolio-image:hover {
-        transform: scale( 1.1 ); /* Ingrandimento dell'immagine al passaggio del mouse */
-        animation: vibrate 0.2s linear infinite; /* Inizio dell'animazione di vibrazione */
+        transform: scale(3); /* Ingrandimento dell'immagine al passaggio del mouse */
+        animation: vibrate 1s linear infinite; /* Inizio dell'animazione di vibrazione */
     }
 
 @keyframes vibrate {
