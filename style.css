@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0px;
+    margin: 0;
     padding: 0;
     background-color: #000000; /* Sfondo nero */
     color: #ffffff; /* Testo bianco per contrasto */
@@ -9,7 +9,7 @@ body {
 
 header {
     background: #000000; /* Sfondo nero per l'intestazione */
-    padding: 300px 100px 200px; /* Spazio sopra e sotto l'intestazione */
+    padding: 40px 20px 20px; /* Spazio sopra e sotto l'intestazione */
 }
 
 .header-content {
@@ -27,9 +27,37 @@ header {
 }
 
 .portfolio-image {
-    width: 0px; /* Larghezza delle immagini */
+    width: 100px; /* Larghezza delle immagini */
     height: auto; /* Mantiene le proporzioni */
-    margin-left: 50px; /* Spazio tra le immagini */
+    margin-left: 10px; /* Spazio tra le immagini */
+    transition: transform 0.3s, filter 0.3s; /* Transizione dolce per il cambiamento di dimensione */
+}
+
+    .portfolio-image:hover {
+        transform: scale( 1.1 ); /* Ingrandimento dell'immagine al passaggio del mouse */
+        animation: vibrate 0.2s linear infinite; /* Inizio dell'animazione di vibrazione */
+    }
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-1px, -1px);
+    }
+
+    50% {
+        transform: translate(1px, 1px);
+    }
+
+    75% {
+        transform: translate(-1px, 1px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
 }
 
 h1,
@@ -39,10 +67,9 @@ h3 {
 }
 
 section {
-    padding: 0px;
-    margin: 0px;
-    background: #000000; /* Sfondo nero per il footer */
-    color: #ffffff; /* Colore grigio scuro per le sezioni */
+    padding: 20px;
+    margin: 10px;
+    background: #1a1a1a; /* Colore grigio scuro per le sezioni */
     border-radius: 5px;
 }
 
