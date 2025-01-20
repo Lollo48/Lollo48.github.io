@@ -9,13 +9,16 @@ body {
 
 header {
     background: #000000; /* Sfondo nero per l'intestazione */
-    padding: 300px 200px 100px; /* Spazio sopra e sotto l'intestazione */
+    padding: 40px 20px 0px; /* Spazio sopra e sotto l'intestazione */
 }
 
 .header-content {
-    display: flex; /* Disposizione flessibile per il contenuto dell'intestazione */
-    justify-content: space-between; /* Spaziatura tra i contenuti */
+    display: flex; /* Disposizione flessibile */
+    justify-content: space-between; /* Nome a sinistra, icone a destra */
     align-items: center; /* Allinea verticalmente al centro */
+    padding: 0px 30px; /* Spaziatura interna (configurabile) */
+    background-color: #000000; /* Sfondo del header (modificabile) */
+    border-bottom: 2px solid #000000; /* Bordo inferiore per separare dal resto della pagina */ /* Allinea verticalmente al centro */
 }
 
 .left {
@@ -25,39 +28,60 @@ header {
 .right {
     text-align: right; /* Allinea il testo a destra */
 }
+/* Contenuto di sinistra (nome e descrizione) */
+.header-content h1 {
+    margin: 0;
+    font-size: 50px; /* Dimensione del titolo (configurabile) */
+    color: #ff0000; /* Colore del testo */
+}
 
+.header-content h2 {
+    margin: 5px 0 0;
+    font-size: 20px; /* Dimensione sottotitolo */
+    color: #ff0000; /* Colore del sottotitolo */
+}
+
+/* Contenuto di destra (icone) */
+.right {
+    display: flex; /* Disposizione flessibile per le icone */
+    gap: 20px; /* Spazio tra le icone */
+}
+
+/* Icone */
 .portfolio-image {
-    width: 100px; /* Larghezza delle immagini */
-    height: auto; /* Mantiene le proporzioni */
-    margin-left: 50px; /* Spazio tra le immagini */
-    transition: transform 0.3s, filter 0.3s; /* Transizione dolce per il cambiamento di dimensione */
+    width: 100px; /* Larghezza delle icone (configurabile) */
+    height: 100px; /* Altezza delle icone (configurabile) */
+    object-fit: cover; /* Assicura che l'immagine riempia il contenitore */
+    transition: transform 0.3s, opacity 0.3s; /* Transizione smooth per hover */
 }
 
     .portfolio-image:hover {
-        transform: scale(3); /* Ingrandimento dell'immagine al passaggio del mouse */
-        animation: vibrate 1s linear infinite; /* Inizio dell'animazione di vibrazione */
+        transform: scale(1.1); /* Effetto di ingrandimento */
+        opacity: 0.8; /* Riduce l'opacità al passaggio del mouse */
     }
 
-@keyframes vibrate {
-    0% {
-        transform: translate(0);
+.portfolio-image {
+    width: 150px; /* Increased width of images */
+    height: auto; /* Maintains aspect ratio */
+    margin-left: 10px; /* Space between images */
+    transition: transform 0.3s, filter 0.3s, filter 0.3s; /* Smooth transition for size change and color */
+}
+
+    .portfolio-image:hover {
+        transform: scale(1.1); /* Slightly enlarge the image on hover */
+        filter: brightness(0.7); /* Dims the image on hover */
     }
 
-    25% {
-        transform: translate(-1px, -1px);
+    /* Add this if you want the images to change color to blue on hover */
+    .portfolio-image:hover {
+        filter: hue-rotate(180deg); /* Change color effect */
     }
 
-    50% {
-        transform: translate(1px, 1px);
-    }
-
-    75% {
-        transform: translate(-1px, 1px);
-    }
-
-    100% {
-        transform: translate(0);
-    }
+.portfolio-image {
+    width: auto; /* Larghezza delle immagini */
+    height: auto; /* Mantiene le proporzioni */
+    margin-left: 50px; /* Spazio tra le immagini */
+    transition: transform 0.3s, filter 0.3s; /* Transizione dolce per il cambiamento di dimensione */
 }
 
 h1,
@@ -67,15 +91,133 @@ h3 {
 }
 
 section {
-    padding: 20px;
-    margin: 10px;
-    background: #1a1a1a; /* Colore grigio scuro per le sezioni */
-    border-radius: 5px;
+    padding: 10px;
+    margin: 100px 0; /* Margine verticale per le sezioni */
+    text-align: center; /* Centra il testo */
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #000000; /* Sfondo nero per il footer */
-    color: #ffffff; /* Testo bianco per il footer */
+.description {
+    margin-top: 30px; /* Spazio sopra la descrizione */
+    font-size: 20px; /* Dimensione del testo della descrizione */
+}
+
+.project-container {
+    background: linear-gradient( to bottom, #e70000, #0206dd ); /* Sfumatura grigia */
+    padding: 20px; /* Maggiore padding per il contenitore */
+    border-radius: 50px; /* Angoli arrotondati */
+    display: flex; /* Disposizione flessibile */
+    align-items: center; /* Allinea verticalmente al centro */
+}
+
+.project-slides {
+    display: flex; /* Disposizione flessibile per le slide */
+    overflow: hidden; /* Nasconde le slide non visibili */
+    width: 100%; /* Larghezza piena */
+}
+
+.project-slide {
+    min-width: 100%; /* Ogni slide occupa il 100% della larghezza */
+    transition: transform 0.5s ease; /* Transizione per il movimento delle slide */
+    text-align: center; /* Centra il testo nella slide */
+    padding: 0px; /* Padding attorno alla slide */
+}
+
+.project-video {
+    width: 100%; /* Width of the video */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 400px; /* Maximum height for the video */
+    border-radius: 30px; /* Rounded corners for the video */
+    overflow: hidden; /* Ensures that the rounded corners work correctly */
+}
+
+.project-slide p {
+    margin-top: 0px; /* Spazio sopra la descrizione */
+    font-size: 20px; /* Dimensione del testo della descrizione */
+    line-height: 1.5; /* Altezza della linea per una migliore leggibilità */
+}
+
+button {
+    background-color: transparent; /* Sfondo trasparente per i bottoni */
+    color: #0000ff; /* Colore blu per le frecce */
+    border: none; /* Nessun bordo */
+    font-size: 80px; /* Dimensione del font aumentata per le frecce */
+    cursor: pointer; /* Cambia il cursore */
+    padding: 30px; /* Aggiungi padding per rendere più facile il clic */
+    transition: color 0.3s; /* Effetto di transizione per il colore */
+}
+
+    button:hover {
+        color: #ffcc00; /* Colore al passaggio del mouse */
+    }
+
+copy css #esperienza {
+    padding: 20px; /* Padding attorno alla sezione */
+}
+
+#esperienza {
+    padding: 20px; /* Padding around the section */
+}
+
+.skills-container {
+    display: flex; /* Flexible layout for skill boxes */
+    flex-wrap: wrap; /* Allows wrapping to the next line if needed */
+    justify-content: space-between; /* Space between boxes */
+    margin: 20px 0; /* Margin above and below the section */
+    background-color: #000000; /* Light gray background for the section */
+    padding: 20px; /* Padding around the container */
+    border: 2px solid #000000; /* Blue border around the container */
+    border-radius: 10px; /* Rounded corners for the container */
+}
+
+.skill-box {
+    width: 80px; /* Width of the skill boxes */
+    height: 80px; /* Height of the skill boxes */
+    display: flex; /* Flexbox layout to center the text */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: rgb(0, 0, 0); /* White background for the boxes */
+    border: 3px solid #007bff; /* Blue border for the boxes */
+    border-radius: 25px; /* Rounded corners */
+    margin: 10px; /* Space around the boxes */
+    font-size: 50px; /* Font size for the letters */
+    font-weight: bold; /* Bold letters */
+    color: #007bff; /* Blue color for the letters */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+    .skill-box:hover {
+        transform: scale(1.1); /* Enlarge the box on hover */
+    }
+
+#contatti {
+    padding: 20px; /* Padding attorno alla sezione */
+    background-color: #000000; /* Sfondo scuro per la sezione contatti */
+    color: #ffffff; /* Testo bianco per contrasto */
+}
+
+.contact-info {
+    display: flex; /* Disposizione flessibile per email e telefono */
+    justify-content: space-between; /* Spazio tra email e telefono */
+    align-items: center; /* Allinea verticalmente al centro */
+    margin: 20px 0; /* Margine sopra e sotto */
+}
+
+.email,
+.phone {
+    flex: 1; /* Ogni div occupa una porzione uguale di spazio */
+}
+
+.email-text {
+    font-size: 24px; /* Dimensione grande per l'email */
+    color: #007bff; /* Colore blu per l'email */
+}
+
+.phone-text {
+    font-size: 20px; /* Dimensione per il numero di telefono */
+    color: #ffcc00; /* Colore giallo per il numero di telefono */
+}
+
+/* Aggiungi questo per un effetto hover sulla email */
+.email-text:hover {
+    text-decoration: underline; /* Sottolinea l'email al passaggio del mouse */
 }
