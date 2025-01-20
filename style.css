@@ -34,6 +34,22 @@ body {
     padding: 0 var(--video-margin); /* Padding orizzontale definito da una variabile */
 }
 
+/* Header - rendilo fisso */
+header {
+    position: fixed; /* Fissa l'intestazione in cima alla pagina */
+    top: 0; /* Posiziona l'intestazione in alto */
+    left: 0; /* Allinea a sinistra */
+    right: 0; /* Allinea a destra */
+    z-index: 1000; /* Assicura che l'intestazione sia sopra altri contenuti */
+    padding: 40px var(--video-margin) 20px; /* Padding attorno all'header */
+    background-color: #000000; /* Colore di sfondo dell'intestazione */
+}
+
+/* Aggiungi un margine superiore al contenuto principale */
+body {
+    padding-top: 400px; /* Aggiungi un margine superiore per evitare che il contenuto venga coperto dall'header */
+}
+
 /*sezione introduttiva */
 
 header {
