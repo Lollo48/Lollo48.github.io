@@ -235,9 +235,10 @@ video {
 
 /* Contatti */
 #contatti {
-    padding: var(--container-padding);
-    background-color: var(--bg-color);
-    color: #fd8700; /* Colore del testo */
+  padding-top: 200px;
+  padding: var(--container-padding);
+  background-color:  #000000;
+  color: #fd8700; /* Colore del testo */
 }
 
 #contatti h2 {
