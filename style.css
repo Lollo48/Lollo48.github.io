@@ -49,7 +49,7 @@ header {
 
 /* Aggiungi un margine superiore al contenuto principale */
 body {
-    padding-top: 400px; /* Aggiungi un margine superiore per evitare che il contenuto venga coperto dall'header */
+    padding-top: 500px; /* Aggiungi un margine superiore per evitare che il contenuto venga coperto dall'header */
 }
 
 /*sezione introduttiva */
@@ -70,13 +70,13 @@ header {
 
 .header-content h1 {
     margin: 0;
-    font-size: 5vw; /* Dimensione del font scalabile */
+    font-size: 3vw; /* Dimensione del font scalabile */
     color: var(--highlight-color);
 }
 
 .header-content h2 {
     margin: 5px 0 0;
-    font-size: 3vw; /* Dimensione del font scalabile */
+    font-size: 2vw; /* Dimensione del font scalabile */
     color: var(--highlight-color);
 }
 
@@ -90,17 +90,17 @@ header {
 }
 
 .portfolio-image {
-    width: 60px; /* Larghezza dell'immagine */
-    height: 60px; /* Altezza dell'immagine */
+    width: 100px; /* Larghezza dell'immagine */
+    height: 100px; /* Altezza dell'immagine */
     object-fit: cover; /* Adatta l'immagine al contenitore */
     border-radius: 50%; /* Arrotonda gli angoli dell'immagine */
     transition: transform 0.3s, opacity 0.3s, filter 0.3s; /* Transizione per l'effetto hover */
 }
 
 .portfolio-image:hover {
-    transform: scale(1.2); /* Effetto zoom al passaggio del mouse */
+    transform: scale(1.3); /* Effetto zoom al passaggio del mouse */
     filter: brightness(
-            0.8
+            1
     ); /* Cambia colore dell'immagine al passaggio del mouse */
     opacity: 1; /* Assicura che l'opacità sia al massimo durante l'hover */
 }
@@ -111,7 +111,7 @@ header {
     flex-direction: column; /* Dispone gli elementi in colonna */
     align-items: center; /* Centra gli elementi orizzontalmente */
     padding: 20px var(--video-margin); /* Padding su tutti i lati */
-    margin: 0 20px; /* Margine a sinistra e a destra, puoi modificare il valore */
+    margin: 0 10px; /* Margine a sinistra e a destra, puoi modificare il valore */
 }
 
 #biografia h2 {
@@ -149,7 +149,7 @@ header {
     background-color: var(--description-bg-color);
     padding: 10px; /* Padding intorno alla descrizione */
     border-radius: 10px; /* Arrotonda gli angoli del contenitore */
-    text-align: center; /* Centra il testo */ /* Bordo attorno alla descrizione */
+    text-align: center; /* Centra il testo */
     margin-top: 10px; /* Margine sopra il contenitore */
     margin-bottom: 60px; /* Margine sotto il contenitore per separare dalla fine */
     overflow-wrap: break-word; /* Permette di spezzare le parole lunghe */
