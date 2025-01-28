@@ -6,7 +6,6 @@
     --text-color: #ffffff; /* Colore del testo */
     --highlight-color: #007bff; /* Colore evidenziato */
     --video-card-width: calc(50% - var(--video-margin));
-    --description-border: 20px solid #ffffff; /* Bordo della descrizione */
     /* Larghezza del contenitore del video */
     --video-container-height: 800px; /* Altezza del contenitore del video */
     --video-height: 500px; /* Altezza del video (modificabile) */
@@ -150,8 +149,7 @@ header {
     background-color: var(--description-bg-color);
     padding: 10px; /* Padding intorno alla descrizione */
     border-radius: 10px; /* Arrotonda gli angoli del contenitore */
-    text-align: center; /* Centra il testo */
-    border: var(--description-border); /* Bordo attorno alla descrizione */
+    text-align: center; /* Centra il testo */ /* Bordo attorno alla descrizione */
     margin-top: 10px; /* Margine sopra il contenitore */
     margin-bottom: 60px; /* Margine sotto il contenitore per separare dalla fine */
     overflow-wrap: break-word; /* Permette di spezzare le parole lunghe */
