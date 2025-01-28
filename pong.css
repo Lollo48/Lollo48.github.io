@@ -6,18 +6,14 @@
 
     --box-width: 45%; /* Larghezza di ciascun box */
     --box-gap: 40px; /* Spazio tra i due box */
-    --box-padding: 20px; /* Padding interno dei box */
+    --box-padding: 10px; /* Padding interno dei box */
     --box-border-radius: 30px; /* Raggio del bordo dei box */
     --box-shadow-color: rgba(0, 255, 76, 0.3); /* Colore dell'ombra */
-    --box-background-color: #ff0000; /* Colore di sfondo dei box */
-    --description-box-border: 2px solid #fff; /* Bordo della descrizione */
+    --box-background-color: #332f2f; /* Colore di sfondo dei box */
+    --description-box-border: 2px solid #000000; /* Bordo della descrizione */
     --description-box-padding: 10px; /* Padding della descrizione */
-    --description-box-bg: rgba(
-            250,
-            0,
-            0,
-            0.1
-    ); /* Sfondo semi-trasparente della descrizione */
+    --description-box-bg: #332f2f;
+); /* Sfondo semi-trasparente della descrizione */
     --description-title-font-size: 2vw; /* Dimensione del titolo scalabile */
     --margin-left: 10%; /* Margine sinistro personalizzabile */
     --margin-right: 10%; /* Margine destro personalizzabile */
@@ -30,7 +26,7 @@
     --button-font-size: 16px; /* Dimensione del font */
     --button-border-width: 2px; /* Spessore del bordo */
 
-    --container-padding: 40px; /* Padding ai lati del contenitore */
+    --container-padding: 60px; /* Padding ai lati del contenitore */
     --border-radius: 30px;
 
     --button-background-color: #000000;
@@ -40,7 +36,6 @@
     --button-font-size: 20px;
     --button-hover-background-color: #9dff00; /* Raggio di rotondità per le skill */
 }
-
 /* styles.css */
 
 body {
@@ -48,7 +43,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #000000; /* Colore di sfondo */
-    color: #fff; /* Colore del testo */
+    color: #ffa600; /* Colore del testo */
+    overflow-x: hidden; /* Nasconde lo scroll orizzontale */
 }
 
 /* Header - rendilo fisso */
@@ -83,12 +79,12 @@ body {
 
 .header-content h1 {
     margin: 0;
-    font-size: 5vw; /* Dimensione del font scalabile */
+    font-size: 3vw; /* Dimensione del font scalabile */
 }
 
 .header-content h2 {
     margin: 5px 0 0;
-    font-size: 3vw; /* Dimensione del font scalabile */
+    font-size: 2vw; /* Dimensione del font scalabile */
 }
 
 .right {
@@ -138,7 +134,8 @@ video {
 
 .video-title {
     font-size: 2vw; /* Dimensione del titolo scalabile */
-    margin-bottom: 10px; /* Margine inferiore per separare il titolo dal video */
+    margin-bottom: 10px;
+    color: #ffffff; /* Margine inferiore per separare il titolo dal video */
 }
 
 .navigation {
@@ -161,23 +158,24 @@ video {
 }
 
 .container {
-    width: var(--container-width); /* Larghezza del contenitore */
-    max-width: var(--container-max-width); /* Larghezza massima */
     margin-left: var(--margin-left); /* Margine sinistro */
     margin-right: var(--margin-right); /* Margine destro */
-    margin-top: 20px; /* Margine superiore */
-    margin-bottom: 20px; /* Margine inferiore */
+    margin-top: 0px; /* Margine superiore */
+    margin-bottom: 0px; /* Margine inferiore */
     display: flex;
+    height: auto;
     justify-content: space-between; /* Spaziatura tra i box */
     gap: var(--box-gap); /* Spazio tra i due box */
+    overflow: hidden; /* Nasconde qualsiasi overflow */
 }
 
 .box {
     background-color: var(--box-background-color); /* Colore di sfondo */
     border-radius: var(--box-border-radius); /* Raggio del bordo */
+    height: auto;
     padding: var(--box-padding); /* Padding interno */
     width: var(--box-width); /* Larghezza del box */
-    box-shadow: 0 2px 10px var(--box-shadow-color); /* Ombra */
+    box-shadow: 0px 0px 40px var(--box-shadow-color); /* Ombra */
 }
 
 .description-title {
@@ -185,32 +183,34 @@ video {
             --description-title-font-size
     ); /* Dimensione del titolo scalabile */
     margin-bottom: 10px; /* Margine inferiore */
+    color: #ffffff;
 }
 
 .description-box {
     border: var(--description-box-border); /* Bordo della descrizione */
     padding: var(--description-box-padding); /* Padding interno */
-    border-radius: 5px; /* Angoli arrotondati */
+    border-radius: 20px; /* Angoli arrotondati */
     background-color: var(--description-box-bg); /* Sfondo semi-trasparente */
-    margin-top: 10px; /* Margine superiore */
+    margin-top: 0px; /* Margine superiore */
 }
+
 /* Stile per i pulsanti */
 .button-container {
     display: flex; /* Abilita Flexbox per i pulsanti */
     justify-content: center; /* Centra i pulsanti */
-    margin: 20px 0; /* Margini superiori e inferiori */
+    margin: 50px 0; /* Margini superiori e inferiori */
 }
 
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Spazio uniforme tra i pulsanti */
-    margin: 20px 0;
+    gap: 30px; /* Spazio uniforme tra i pulsanti */
+    margin: 50px 0;
 }
 
 .button {
     background-color: var(--button-background-color);
-    color: var(--button-text-color); /* Colore del testo dinamico */
+    color: #fd8700;
     border: var(--button-border-width) solid var(--button-border-color);
     border-radius: var(--button-border-radius);
     padding: 12px 25px;
