@@ -1,8 +1,27 @@
 :root {
-    --video-margin-top: 50px; /* Variabile per determinare lo spazio sopra il video */
+    --video-margin-top: 80px; /* Variabile per determinare lo spazio sopra il video */
     --header-padding: 40px; /* Padding per l'header */
     --header-background-color: #000; /* Colore di sfondo dell'intestazione */
     --border-thickness: 2px; /* Spessore del bordo per la descrizione */
+
+    --box-width: 45%; /* Larghezza di ciascun box */
+    --box-gap: 40px; /* Spazio tra i due box */
+    --box-padding: 20px; /* Padding interno dei box */
+    --box-border-radius: 30px; /* Raggio del bordo dei box */
+    --box-shadow-color: rgba(0, 255, 76, 0.3); /* Colore dell'ombra */
+    --box-background-color: #ff0000; /* Colore di sfondo dei box */
+    --description-box-border: 2px solid #fff; /* Bordo della descrizione */
+    --description-box-padding: 10px; /* Padding della descrizione */
+    --description-box-bg: rgba(
+            250,
+            0,
+            0,
+            0.1
+    ); /* Sfondo semi-trasparente della descrizione */
+    --description-title-font-size: 2vw; /* Dimensione del titolo scalabile */
+    --margin-left: 10%; /* Margine sinistro personalizzabile */
+    --margin-right: 10%; /* Margine destro personalizzabile */
+
     /* Variabili per i pulsanti */
     --button-border-radius: 5px; /* Raggio del bordo */
     --button-border-color: #007bff; /* Colore del bordo */
@@ -13,12 +32,13 @@
 
     --container-padding: 40px; /* Padding ai lati del contenitore */
     --border-radius: 30px;
+
     --button-background-color: #000000;
     --button-border-color: #ff01ea;
     --button-border-width: 3px;
     --button-border-radius: 8px;
     --button-font-size: 20px;
-    --button-hover-background-color: #9dff00; /* Raggio di rotondit‡ per le skill */
+    --button-hover-background-color: #9dff00; /* Raggio di rotondit√† per le skill */
 }
 
 /* styles.css */
@@ -39,7 +59,9 @@ header {
     right: 0; /* Allinea a destra */
     z-index: 1000; /* Assicura che l'intestazione sia sopra altri contenuti */
     padding: var(--header-padding) 20px; /* Padding attorno all'header */
-    background-color: var( --header-background-color ); /* Colore di sfondo dell'intestazione */
+    background-color: var(
+            --header-background-color
+    ); /* Colore di sfondo dell'intestazione */
 }
 
 /* Aggiungi un margine superiore al contenuto principale */
@@ -74,9 +96,9 @@ body {
     align-items: center; /* Allinea le icone verticalmente */
 }
 
-    .right a {
-        margin: 0 10px; /* Margine tra le icone */
-    }
+.right a {
+    margin: 0 10px; /* Margine tra le icone */
+}
 
 .portfolio-image {
     width: 60px; /* Larghezza dell'immagine */
@@ -86,29 +108,37 @@ body {
     transition: transform 0.3s, opacity 0.3s, filter 0.3s; /* Transizione per l'effetto hover */
 }
 
-    .portfolio-image:hover {
-        transform: scale(1.2); /* Effetto zoom al passaggio del mouse */
-        filter: brightness( 0.8 ); /* Cambia colore dell'immagine al passaggio del mouse */
-        opacity: 1; /* Assicura che l'opacit‡ sia al massimo durante l'hover */
-    }
+.portfolio-image:hover {
+    transform: scale(1.2); /* Effetto zoom al passaggio del mouse */
+    filter: brightness(
+            0.8
+    ); /* Cambia colore dell'immagine al passaggio del mouse */
+    opacity: 1; /* Assicura che l'opacit√† sia al massimo durante l'hover */
+}
 
 .video-container {
-    margin-top: var( --video-margin-top ); /* Utilizza la variabile per il margine superiore */
+    margin-top: var(
+            --video-margin-top
+    ); /* Utilizza la variabile per il margine superiore */
     padding: 20px; /* Spaziatura attorno al video */
     border-radius: 10px; /* Angoli arrotondati */
     text-align: center; /* Allinea il video al centro */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    max-width: 1200px; /* Imposta una larghezza massima per il contenitore del video */
+    margin-left: auto; /* Centra il contenitore orizzontalmente */
+    margin-right: auto; /* Centra il contenitore orizzontalmente */
+}
+
+video {
+    width: 80%; /* Larghezza del video */
+    height: auto; /* Altezza automatica */
+    border-radius: 10px; /* Angoli arrotondati */
+    background-color: #000000;
 }
 
 .video-title {
     font-size: 2vw; /* Dimensione del titolo scalabile */
     margin-bottom: 10px; /* Margine inferiore per separare il titolo dal video */
-}
-
-video {
-    width: 100%; /* Larghezza del video */
-    height: auto; /* Altezza automatica */
-    border-radius: 10px; /* Angoli arrotondati */
-    background-color: #000000;
 }
 
 .navigation {
@@ -126,37 +156,44 @@ video {
     margin: 20px 0; /* Margini superiori e inferiori */
 }
 
-    .titles h2 {
-        font-size: 24px; /* Dimensione del titolo */
-    }
+.titles h2 {
+    font-size: 24px; /* Dimensione del titolo */
+}
 
 .container {
-    display: flex; /* Abilita Flexbox per i contenitori */
-    justify-content: space-between; /* Spaziatura tra i contenitori */
-    margin: 20px; /* Margini esterni */
+    width: var(--container-width); /* Larghezza del contenitore */
+    max-width: var(--container-max-width); /* Larghezza massima */
+    margin-left: var(--margin-left); /* Margine sinistro */
+    margin-right: var(--margin-right); /* Margine destro */
+    margin-top: 20px; /* Margine superiore */
+    margin-bottom: 20px; /* Margine inferiore */
+    display: flex;
+    justify-content: space-between; /* Spaziatura tra i box */
+    gap: var(--box-gap); /* Spazio tra i due box */
 }
 
 .box {
-    background-color: #444; /* Colore di sfondo del contenitore */
-    border-radius: 10px; /* Angoli arrotondati */
-    padding: 20px; /* Padding interno */
-    width: 45%; /* Larghezza del contenitore */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombra per effetto di profondit‡ */
+    background-color: var(--box-background-color); /* Colore di sfondo */
+    border-radius: var(--box-border-radius); /* Raggio del bordo */
+    padding: var(--box-padding); /* Padding interno */
+    width: var(--box-width); /* Larghezza del box */
+    box-shadow: 0 2px 10px var(--box-shadow-color); /* Ombra */
 }
 
 .description-title {
-    font-size: 2vw; /* Dimensione del titolo scalabile sopra la descrizione */
-    margin-bottom: 10px; /* Margine inferiore per separare il titolo dalla descrizione */
+    font-size: var(
+            --description-title-font-size
+    ); /* Dimensione del titolo scalabile */
+    margin-bottom: 10px; /* Margine inferiore */
 }
 
 .description-box {
-    border: solid var(--border-thickness) #fff; /* Bordo della descrizione */
-    padding: 10px; /* Padding interno */
-    border-radius: 5px; /* Angoli arrotondati del riquadro */
-    background-color: rgba( 255, 255, 255, 0.1 ); /* Colore di sfondo semi-trasparente per il riquadro */
-    margin-top: 10px; /* Margine superiore per distanziare il riquadro dalla descrizione */
+    border: var(--description-box-border); /* Bordo della descrizione */
+    padding: var(--description-box-padding); /* Padding interno */
+    border-radius: 5px; /* Angoli arrotondati */
+    background-color: var(--description-box-bg); /* Sfondo semi-trasparente */
+    margin-top: 10px; /* Margine superiore */
 }
-
 /* Stile per i pulsanti */
 .button-container {
     display: flex; /* Abilita Flexbox per i pulsanti */
@@ -186,15 +223,15 @@ video {
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
-    .button:hover {
-        transform: translateY(-3px); /* Leggera elevazione */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombra accentuata */
-    }
+.button:hover {
+    transform: translateY(-3px); /* Leggera elevazione */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombra accentuata */
+}
 
-    .button:active {
-        transform: translateY(0); /* Rimuove l'elevazione */
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Ombra ridotta */
-    }
+.button:active {
+    transform: translateY(0); /* Rimuove l'elevazione */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Ombra ridotta */
+}
 
 /* Contatti */
 #contatti {
@@ -203,11 +240,11 @@ video {
     color: #fd8700; /* Colore del testo */
 }
 
-    #contatti h2 {
-        text-align: center; /* Centra il titolo */
-        font-size: 3vw; /* Dimensione del font scalabile */
-        margin-bottom: 20px; /* Margine sotto il titolo */
-    }
+#contatti h2 {
+    text-align: center; /* Centra il titolo */
+    font-size: 3vw; /* Dimensione del font scalabile */
+    margin-bottom: 20px; /* Margine sotto il titolo */
+}
 
 .contact-info {
     display: flex;

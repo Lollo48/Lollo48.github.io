@@ -14,16 +14,18 @@
 
     --skill-margin: 10px; /* Margine tra le skill */
     --container-padding: 40px; /* Padding ai lati del contenitore */
-    --border-radius: 30px; /* Raggio di rotondit‡ per le skill */
+    --border-radius: 30px; /* Raggio di rotondit√† per le skill */
 }
 
 /* Corpo Generale */
 body {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    line-height: 1.6; /* Altezza della linea per migliorare la leggibilit‡ */
+    line-height: 1.6; /* Altezza della linea per migliorare la leggibilit√† */
     margin: 0; /* Rimuove il margine predefinito del browser */
     padding: 0; /* Rimuove il padding predefinito del browser */
-    background-color: var( --bg-color ); /* Colore di sfondo definito da una variabile */
+    background-color: var(
+            --bg-color
+    ); /* Colore di sfondo definito da una variabile */
     color: var(--text-color); /* Colore del testo definito da una variabile */
     overflow-x: hidden; /* Evita lo scroll orizzontale */
 }
@@ -83,9 +85,9 @@ header {
     align-items: center; /* Allinea le icone verticalmente */
 }
 
-    .right a {
-        margin: 0 10px; /* Margine tra le icone */
-    }
+.right a {
+    margin: 0 10px; /* Margine tra le icone */
+}
 
 .portfolio-image {
     width: 60px; /* Larghezza dell'immagine */
@@ -95,11 +97,13 @@ header {
     transition: transform 0.3s, opacity 0.3s, filter 0.3s; /* Transizione per l'effetto hover */
 }
 
-    .portfolio-image:hover {
-        transform: scale(1.2); /* Effetto zoom al passaggio del mouse */
-        filter: brightness( 0.8 ); /* Cambia colore dell'immagine al passaggio del mouse */
-        opacity: 1; /* Assicura che l'opacit‡ sia al massimo durante l'hover */
-    }
+.portfolio-image:hover {
+    transform: scale(1.2); /* Effetto zoom al passaggio del mouse */
+    filter: brightness(
+            0.8
+    ); /* Cambia colore dell'immagine al passaggio del mouse */
+    opacity: 1; /* Assicura che l'opacit√† sia al massimo durante l'hover */
+}
 
 /*biografia*/
 #biografia {
@@ -110,11 +114,11 @@ header {
     margin: 0 20px; /* Margine a sinistra e a destra, puoi modificare il valore */
 }
 
-    #biografia h2 {
-        font-size: 5vw; /* Dimensione del font scalabile in base alla larghezza dello schermo */
-        color: var(--highlight-color);
-        margin: 0 0 10px; /* Margine sotto il titolo */
-    }
+#biografia h2 {
+    font-size: 5vw; /* Dimensione del font scalabile in base alla larghezza dello schermo */
+    color: var(--highlight-color);
+    margin: 0 0 10px; /* Margine sotto il titolo */
+}
 
 .description {
     font-size: 3vw; /* Dimensione del font scalabile per il testo */
@@ -150,7 +154,7 @@ header {
     margin-top: 10px; /* Margine sopra il contenitore */
     margin-bottom: 60px; /* Margine sotto il contenitore per separare dalla fine */
     overflow-wrap: break-word; /* Permette di spezzare le parole lunghe */
-    word-wrap: break-word; /* Compatibilit‡ con browser pi˘ vecchi */
+    word-wrap: break-word; /* Compatibilit√† con browser pi√π vecchi */
 }
 
 .project-card:hover {
@@ -179,11 +183,11 @@ header {
     width: 100%; /* Occupare tutta la larghezza disponibile */
 }
 
-    #esperienza h2 {
-        font-size: 5vw; /* Dimensione del font scalabile */
-        color: #1adb00;
-        margin: 0 0 20px; /* Margine sotto il titolo */
-    }
+#esperienza h2 {
+    font-size: 5vw; /* Dimensione del font scalabile */
+    color: #1adb00;
+    margin: 0 0 20px; /* Margine sotto il titolo */
+}
 
 .skills-container {
     display: flex;
@@ -233,11 +237,11 @@ header {
     color: #fd8700; /* Colore del testo */
 }
 
-    #contatti h2 {
-        text-align: center; /* Centra il titolo */
-        font-size: 3vw; /* Dimensione del font scalabile */
-        margin-bottom: 20px; /* Margine sotto il titolo */
-    }
+#contatti h2 {
+    text-align: center; /* Centra il titolo */
+    font-size: 3vw; /* Dimensione del font scalabile */
+    margin-bottom: 20px; /* Margine sotto il titolo */
+}
 
 .contact-info {
     display: flex;
