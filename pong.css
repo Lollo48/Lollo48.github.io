@@ -273,6 +273,6 @@ video {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: var(--bg-color); /* Colore di sfondo del footer */
+    background-color:  #000000;/* Colore di sfondo del footer */
     color: #ffffff; /* Colore del testo del footer */
 }
