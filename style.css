@@ -49,7 +49,7 @@ header {
 
 /* Aggiungi un margine superiore al contenuto principale */
 body {
-    padding-top: 500px; /* Aggiungi un margine superiore per evitare che il contenuto venga coperto dall'header */
+    padding-top: 800px; /* Aggiungi un margine superiore per evitare che il contenuto venga coperto dall'header */
 }
 
 /*sezione introduttiva */
