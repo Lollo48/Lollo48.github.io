@@ -6,6 +6,7 @@
     --text-color: #ffffff; /* Colore del testo */
     --highlight-color: #007bff; /* Colore evidenziato */
     --video-card-width: calc(50% - var(--video-margin));
+    --description-border: 20px solid #ffffff; /* Bordo della descrizione */
     /* Larghezza del contenitore del video */
     --video-container-height: 800px; /* Altezza del contenitore del video */
     --video-height: 500px; /* Altezza del video (modificabile) */
