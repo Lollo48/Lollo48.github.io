@@ -745,14 +745,14 @@ footer {
 #contatti {
     margin-top: 500px;
     padding: var(--container-padding);
-    background-color: var(--bg-color);
+    background-color:  rgb(0, 0, 0);
     color: #fd8700; /* Colore del testo */
 }
 
 #regardes {
     margin-top: 30px;
     padding: var(--container-padding);
-    background-color: var(--bg-color);
+    background-color:  rgb(0, 0, 0);
     color: #fd8700; /* Colore del testo */
 }
 
@@ -788,7 +788,7 @@ footer {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: var(--bg-color); /* Colore di sfondo del footer */
+    background-color:  rgb(0, 0, 0); /* Colore di sfondo del footer */
     color: #ffffff; /* Colore del testo del footer */
 }
 
