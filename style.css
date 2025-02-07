@@ -750,7 +750,7 @@ footer {
 }
 
 #regardes {
-    margin-top: 100px;
+    margin-top: 30px;
     padding: var(--container-padding);
     background-color: var(--bg-color);
     color: #fd8700; /* Colore del testo */
