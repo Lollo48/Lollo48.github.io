@@ -461,7 +461,7 @@ nav {
 .nav-image:hover {
     transform: scale(1.3); /* Effetto zoom al passaggio del mouse */
     filter: brightness(
-            1
+            1% /* Cambia luminosità dell'immagine al passaggio del mouse */
     ); /* Cambia colore dell'immagine al passaggio del mouse */
     opacity: 1;
 }
