@@ -1,95 +1,455 @@
-:root {
-    --video-spacing: 5%; /* Spaziatura tra i video */
-    --video-margin: 10%; /* Spaziatura dei video dal bordo */
-    --max-width: 1920px; /* Larghezza massima */
-    --bg-color: #000000; /* Colore di sfondo */
-    --text-color: #ffffff; /* Colore del testo */
-    --highlight-color: #007bff; /* Colore evidenziato */
-    --video-card-width: calc(50% - var(--video-margin));
-    /* Larghezza del contenitore del video */
-    --video-container-height: 800px; /* Altezza del contenitore del video */
-    --video-height: 500px; /* Altezza del video (modificabile) */
-    --description-bg-color: rgba(122, 42, 250, 0.1);
-    /* Colore di sfondo della descrizione (modificabile) */
-
-    --skill-margin: 10px; /* Margine tra le skill */
-    --container-padding: 40px; /* Padding ai lati del contenitore */
-    --border-radius: 30px; /* Raggio di rotondità per le skill */
+general/* BODY */
+html {
+    font-size: 100%;
+    line-height: 1.2rem;
+    /* text-size adjust is to maintain the text-size even when the users rotates their phone to landscape view */
+    -webkit-text-size-adjust: 100%;
+    /* Firefox supports only the android version and safari supports only the ios version at the moment according to MDN (2023)*/
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
-/* Corpo Generale */
 body {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    line-height: 1.6; /* Altezza della linea per migliorare la leggibilità */
-    margin: 0; /* Rimuove il margine predefinito del browser */
-    padding: 0; /* Rimuove il padding predefinito del browser */
-    background-color: var(
-            --bg-color
-    ); /* Colore di sfondo definito da una variabile */
-    color: var(--text-color); /* Colore del testo definito da una variabile */
-    overflow-x: hidden; /* Evita lo scroll orizzontale */
+    background-color: rgb(0, 0, 0); /* COLORE DI SFONDO */
+    font-family: "Montserrat", Arial, sans-serif;
+    margin: 0px;
 }
 
-.container {
-    width: var(--max-width); /* Larghezza massima definita da una variabile */
-    margin: 0 auto; /* Centra il contenitore orizzontalmente */
-    padding: 0 var(--video-margin); /* Padding orizzontale definito da una variabile */
+/*-------------------------------------------*/
+
+/* GENERAL */
+/* Fonts */
+.large {
+    font-weight: normal;
+    line-height: normal;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin: 0px;
+    background-image: linear-gradient(
+            135deg,
+            rgb(251, 255, 0) 0%,
+                /* COLORE TITOLO PRINCIPALE */ rgb(255, 0, 162) 80%
+        /* COLORE TITOLO PRINCIPALE */
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    word-wrap: break-word;
 }
 
-/* Header - rendilo fisso */
-header {
-    position: fixed; /* Fissa l'intestazione in cima alla pagina */
-    top: 0; /* Posiziona l'intestazione in alto */
-    left: 0; /* Allinea a sinistra */
-    right: 0; /* Allinea a destra */
-    z-index: 1000; /* Assicura che l'intestazione sia sopra altri contenuti */
-    padding: 40px var(--video-margin) 20px; /* Padding attorno all'header */
-    background-color: #000000; /* Colore di sfondo dell'intestazione */
+.medium-spacing {
+    color: transparent; /* Imposta il colore del testo su trasparente */
+    font-weight: normal;
+    line-height: normal;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    margin: 0px;
+
+    /* Aggiungi il gradiente al testo */
+    background-image: linear-gradient(
+            to right,
+            rgb(251, 255, 0),
+            rgb(255, 0, 162)
+    ); /* Gradiente da rosso a verde e blu */
+    -webkit-background-clip: text; /* Applica il gradiente solo al testo */
+    background-clip: text; /* Per i browser non-Webkit */
+    display: inline-block;
 }
 
-/* Aggiungi un margine superiore al contenuto principale */
-body {
-    padding-top: 800px; /* Aggiungi un margine superiore per evitare che il contenuto venga coperto dall'header */
+.medium-spacing-halfsize {
+    font-weight: normal;
+    line-height: normal;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    margin: 0px;
 }
 
-/*sezione introduttiva */
-
-header {
-    padding: 40px var(--video-margin) 20px; /* Padding attorno all'header */
+.main-title-large {
+    font-weight: normal;
+    line-height: normal;
+    font-size: 3rem;
 }
 
-.header-content {
-    display: flex; /* Abilita Flexbox */
-    justify-content: space-between; /* Spazia tra gli elementi */
-    align-items: center; /* Allinea gli elementi verticalmente al centro */
+.main-title {
+    font-weight: bold; /* Make the text bold */
+    line-height: 1.5; /* Increase line height for more spacing */
+    font-size: 2rem; /* Increase font size for emphasis */
+    color: rgb(251, 255, 0); /* Keep the red color */
+    text-shadow: 5px 5px 5px rgba(185, 17, 163, 0.555); /* Add a soft shadow for depth */
+    letter-spacing: 1px; /* Add spacing between letters for a more playful look */
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Use a playful font */
 }
 
-.left {
-    flex: 1; /* Permette alla parte sinistra di occupare lo spazio disponibile */
+.small {
+    font-weight: normal;
+    font-size: 0.7rem;
 }
 
-.header-content h1 {
-    margin: 0;
-    font-size: 3vw; /* Dimensione del font scalabile */
-    color: var(--highlight-color);
+.quote {
+    font-family: "Covered By Your Grace", cursive, sans-serif;
+    font-size: 1.5em;
 }
 
-.header-content h2 {
-    margin: 5px 0 0;
-    font-size: 2vw; /* Dimensione del font scalabile */
-    color: var(--highlight-color);
+.uppercase {
+    color: rgb(251, 255, 0);
+    text-transform: uppercase;
 }
 
-.right {
-    display: flex; /* Abilita Flexbox per le icone */
-    align-items: center; /* Allinea le icone verticalmente */
+.italic {
+    font-style: italic;
 }
 
-.right a {
-    margin: 0 10px; /* Margine tra le icone */
+.bold {
+    font-weight: bold;
 }
 
-.portfolio-image {
+.colorful-letter {
+    background-image: linear-gradient(
+            135deg,
+            rgb(250, 113, 283) 0%,
+            rgb(255, 0, 162) 60% /* BACKGROUND IMAGE */
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Background colors */
+.baby-pink {
+    background-color: rgb(0, 0, 0); /* COLORE STRISCIA CENTRALE */
+    margin: 20px auto; /* Top and bottom margin, auto for left/right centering */
+    margin-left: 20%; /* Space on the left */
+    margin-right: 20%; /* Space on the right */
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px; /* Rounded corners */
+    border: 3px solid rgb(255, 0, 162); /* Border width, style, and color */
+}
+
+.baby-pink-light {
+    background-color: rgb(255, 0, 221);
+    margin: 20px auto; /* Top and bottom margin, auto for left/right centering */
+    margin-left: 40px; /* Space on the left */
+    margin-right: 40px; /* Space on the right */
+    padding: 20px;
+    text-align: center;
+    border: 3px solid rgb(255, 0, 221); /* Border width, style, and color */
+}
+
+/* Setting alignments and sizing */
+/* for the flexbox */
+.wrapper {
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    gap: 20px 20px;
+}
+
+.column {
+    flex: 50%;
+}
+
+.w-900 {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* for the grid system */
+.grid-system-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.grid-system-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Contenitore video responsivo */
+.video-wrapper {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Video */
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+}
+
+/* Overlay informazioni */
+.video-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 20px;
+}
+
+/* Effetto hover */
+.video-wrapper:hover .video-info {
+    opacity: 1;
+}
+
+.video-wrapper:hover video {
+    filter: brightness(50%);
+}
+
+/* Testo dentro l'overlay */
+.video-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.video-info p {
+    font-size: 16px;
+    max-width: 80%;
+}
+
+/* Effetto hover: Mostra overlay e scurisce il video */
+.video-wrapper:hover .video-info {
+    opacity: 1;
+}
+
+.video-wrapper:hover video {
+    filter: brightness(50%);
+}
+
+.user-items-list-item video {
+    max-width: 100%; /* Make video responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* other */
+.max-width {
+    max-width: 450px;
+}
+
+.max-height {
+    max-height: 350px;
+}
+
+.align-center {
+    align-self: center;
+}
+
+.justify-content {
+    justify-content: right;
+}
+
+.justify {
+    text-align: justify;
+    color: #ffffff; /* COLORE TUTTE SCRITTE */
+}
+
+.principalText {
+    text-align: justify;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.boldText {
+    font-weight: bold;
+    color: #fbff01; /* Colore desiderato per le parole in grassetto */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.secondboldText {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fbff01; /* Colore desiderato per le parole in grassetto */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.center {
+    text-align: center;
+}
+
+.padding {
+    padding: 20px;
+}
+
+.padding-top {
+    padding-top: 20px;
+}
+
+.padding-right {
+    padding-right: 20px;
+}
+
+.padding-bottom {
+    padding-bottom: 20px;
+    color: #ff0000;
+}
+
+.padding-left {
+    padding-left: 20px;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.margin-trbl10 {
+    margin: 10px;
+}
+
+/* for sticky bottom button */
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Miscellaneous */
+.button {
+    background-color: rgb(158, 253, 129);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5%;
+    color: rgb(255, 0, 170);
+}
+
+/* I only used button-outline on this project, but you may like the other one more */
+.button-outline {
+    border: 3px solid rgb(255, 0, 162); /* COLORE BORDO BOTTONE */
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 15%;
+    color: rgb(255, 255, 255); /* COLORE TESTO BOTTNE */
+}
+
+.link {
+    text-decoration: none;
+}
+
+/* I had to double this code, because of the :hover and :active on link above */
+.link-no-scale {
+    text-decoration: none;
+}
+
+.no-padding-list-item {
+    padding-left: 0;
+}
+
+.padding-list-10 {
+    padding: 10px;
+}
+
+.no-bullet-list {
+    list-style-type: none;
+}
+/* ---------------------------------- */
+
+/* ANIMATIONS AND OTHER BEAUTIES */
+.button-outline:hover,
+.button-outline:active {
+    border: 2px solid rgb(255, 0, 162);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 15%;
+    color: rgb(255, 255, 255);
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.link:hover,
+.link:active {
+    font-size: 1.2rem;
+    transform: scale(1.5);
+    transition: 1s ease-in-out;
+    /* second solution: */
+    /* font-size: 1.2rem; 
+    transition: font-size 2s ease-in-out;  */
+}
+
+.progress-bar:hover,
+.progress-bar:active {
+    box-shadow: 6px 5px 5px rgba(31, 255, 1, 0.788);
+    transition: box-shadow 1s ease;
+}
+
+/* ---------------------------------- */
+
+/* NAV */
+nav {
+    margin-bottom: 30px;
+}
+
+.main-nav {
+    background-color: rgb(17, 17, 17); /* colore bordo superiore */
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 30px;
+    margin: 0px;
+    align-items: center; /* Allinea verticalmente */
+}
+
+/* Stile per gli elementi della navigazione */
+.main-nav li {
+    padding: 5px 15px;
+}
+
+.main-nav li a {
+    color: rgb(255, 0, 162); /* COLORE SCRITTE BORDO SUPERIORE */
+    text-decoration: none;
+    font-size: 150%;
+    padding: auto;
+    transition: all 0.3s ease;
+}
+
+.main-nav li a:hover {
+    color: rgb(
+            251,
+            255,
+            0
+    ); /* COLORE QUANDO PASSO SOPRA IL MOUSE BORDO SUPERIORE */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sticky {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    z-index: 1000; /* Rende il menu sopra gli altri contenuti */
+    top: 0;
+    align-self: flex-start; /* <-- this is the fix */
+}
+
+/* Immagini della navigazione */
+.nav-image {
     width: 100px; /* Larghezza dell'immagine */
     height: 100px; /* Altezza dell'immagine */
     object-fit: cover; /* Adatta l'immagine al contenitore */
@@ -97,140 +457,300 @@ header {
     transition: transform 0.3s, opacity 0.3s, filter 0.3s; /* Transizione per l'effetto hover */
 }
 
-.portfolio-image:hover {
+/* Effetto hover sulle immagini */
+.nav-image:hover {
     transform: scale(1.3); /* Effetto zoom al passaggio del mouse */
     filter: brightness(
             1
     ); /* Cambia colore dell'immagine al passaggio del mouse */
-    opacity: 1; /* Assicura che l'opacità sia al massimo durante l'hover */
+    opacity: 1;
 }
 
-/*biografia*/
-#biografia {
-    display: flex; /* Abilita Flexbox */
-    flex-direction: column; /* Dispone gli elementi in colonna */
-    align-items: center; /* Centra gli elementi orizzontalmente */
-    padding: 20px var(--video-margin); /* Padding su tutti i lati */
-    margin: 0 10px; /* Margine a sinistra e a destra, puoi modificare il valore */
-}
-
-#biografia h2 {
-    font-size: 5vw; /* Dimensione del font scalabile in base alla larghezza dello schermo */
-    color: var(--highlight-color);
-    margin: 0 0 10px; /* Margine sotto il titolo */
-}
-
-.description {
-    font-size: 3vw; /* Dimensione del font scalabile per il testo */
-    text-align: center; /* Centra il testo */
-    max-width: 2000px; /* Larghezza massima per evitare che il testo diventi troppo largo */
-    margin: 0 10px; /* Margine a sinistra e a destra, puoi modificare il valore */
-}
-
-/* Progetti */
-#progetti {
-    padding: var(--video-margin);
-}
-
-.project-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Due colonne per riga */
-    gap: var(--video-spacing); /* Spaziatura tra i video */
-}
-
-.project-card {
-    background-color: var(--bg-color);
-    border-radius: 30px;
-    overflow: hidden; /* Nasconde il contenuto che esce */
-    transition: transform 0.3s ease; /* Transizione per il movimento */
-}
-
-.video-description-container {
-    background-color: var(--description-bg-color);
-    padding: 10px; /* Padding intorno alla descrizione */
-    border-radius: 10px; /* Arrotonda gli angoli del contenitore */
-    text-align: center; /* Centra il testo */
-    margin-top: 10px; /* Margine sopra il contenitore */
-    margin-bottom: 60px; /* Margine sotto il contenitore per separare dalla fine */
-    overflow-wrap: break-word; /* Permette di spezzare le parole lunghe */
-    word-wrap: break-word; /* Compatibilità con browser più vecchi */
-}
-
-.project-card:hover {
-    transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
-}
-
-.project-video {
-    width: 100%; /* Larghezza del video */
-    height: var(--video-height); /* Altezza personalizzata del video */
-    border-radius: 10px; /* Arrotonda gli angoli del video */
-}
-
-.project-description {
-    font-size: 16px;
-    color: var(--text-color);
-    margin-top: 10px; /* Spaziatura sopra la descrizione */
-}
-
-/* Sezione Esperienza */
-#esperienza {
+/* Sposta le immagini a destra con più spazio dal testo */
+.nav-images-container {
     display: flex;
-    flex-direction: column; /* Dispone gli elementi in colonna */
-    align-items: center; /* Centra gli elementi orizzontalmente */
-    padding: var(--container-padding); /* Padding ai lati */
-    margin: 0 auto; /* Centra la sezione */
-    width: 100%; /* Occupare tutta la larghezza disponibile */
+    gap: 10px; /* Spazio tra le immagini */
 }
 
-#esperienza h2 {
-    font-size: 5vw; /* Dimensione del font scalabile */
-    color: #1adb00;
-    margin: 0 0 20px; /* Margine sotto il titolo */
+/* Nav-icon */
+.toggle,
+#drop {
+    display: none;
 }
 
-.skills-container {
-    display: flex;
-    flex-wrap: wrap; /* Permette ai box di andare a capo */
-    justify-content: center; /* Centra i box */
-    padding: var(--container-padding); /* Padding attorno ai box */
-    width: 80%; /* Occupare tutta la larghezza disponibile */
+#main-toggle {
+    border: 1px solid #ffc400;
+    float: right;
+    padding: 20px;
+    /* position: relative; */
+    user-select: none;
 }
 
-.skill-box {
-    display: flex;
-    justify-content: center; /* Centra il contenuto orizzontalmente */
-    align-items: center; /* Centra il contenuto verticalmente */
-    margin: var(--skill-margin); /* Margine tra le skill */
-    border: 2px solid #d0ff00; /* Bordo */
-    padding: 10px; /* Padding interno */
-    border-radius: var(--border-radius); /* Arrotonda gli angoli */
-    width: calc(20% - 40px); /* Larghezza responsiva per i box */
-    height: calc(10vh); /* Altezza responsiva per i box */
-    min-width: 50px; /* Larghezza minima */
-    transition: transform 0.3s; /* Transizione per effetto hover */
+.nav-icon {
+    background-color: #0011ff;
+    display: block;
+    height: 3px;
+    width: 10px;
+    position: relative;
 }
 
-/* Stile per il testo all'interno dei box */
-.skill-text {
-    color: #fd8700; /* Colore del testo */
-    font-size: 2vw; /* Dimensione del testo scalabile */
-    min-font-size: 30px; /* Dimensione minima del font */
-    /* Use a media query to enforce a minimum font size */
+.nav-icon::before,
+.nav-icon::after {
+    background-color: #df36854d;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
-/* Apply a minimum font size using a media query */
-@media (max-width: 600px) {
-    .skill-text {
-        font-size: 20px; /* Set the minimum font size */
+.nav-icon::before {
+    top: 5px;
+}
+
+.nav-icon::after {
+    top: -5px;
+}
+/* ---------------------------------- */
+
+/* FOOTER */
+footer {
+    color: #000000;
+    text-align: center;
+    padding: 20px 0px;
+}
+/* ---------------------------------- */
+
+/* INTRODUCTION */
+.header-img {
+    border-radius: 70%;
+}
+/* ---------------------------------- */
+
+/* ARTICLE */
+/* Everything here is made with general classes. Find them in the GENERAL section */
+/* ---------------------------------- */
+
+/* ABOUT ME */
+/* Everything here is made with general classes. Find them in the GENERAL section */
+/* ---------------------------------- */
+
+/* SKILLS */
+.skills {
+    list-style: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Arial", sans-serif; /* Scegli una font elegante e leggibile */
+    font-weight: bold; /* Rende il testo più marcato */
+    font-size: 1.2rem; /* Aumenta leggermente la dimensione del testo */
+    letter-spacing: 2px; /* Aggiungi spaziatura tra le lettere per un aspetto più elegante */
+    margin: 20px 0; /* Spazio sopra e sotto */
+    padding: 10px 0; /* Distanza tra gli elementi */
+    cursor: pointer;
+    text-shadow: 5px 5px 5px rgb(255, 0, 221); /* Add a soft shadow for depth */
+}
+
+.skills li {
+    margin-bottom: 10px; /* Spazio tra ogni elemento della lista */
+    transition: all 0.3s ease; /* Transizione per un effetto più fluido */
+}
+
+.skills li:hover {
+    transform: translateX(
+            5px
+    ); /* Aggiungi un effetto di spostamento per un tocco dinamico */
+}
+
+.progress-bar {
+    background-color: #ffffff; /* BG BARRA PROGRESSIONE */
+    display: block;
+    height: 10px;
+    border-radius: 20px;
+}
+
+.progress-bar span {
+    height: 10px;
+    float: left;
+    background: linear-gradient(
+            135deg,
+            rgb(251, 255, 0) 0%,
+            rgb(255, 0, 162) 50% /* COLORE BARRA PROGRESSIONE A DESTRA */
+    );
+    border-radius: 20px;
+    -webkit-background: linear-gradient(
+            135deg,
+            rgb(255, 153, 0) 0%,
+            rgb(23, 122, 53) 60%
+    );
+    -webkit-border-radius: 20px;
+}
+
+.html {
+    width: 100%;
+    animation: html 2s;
+}
+
+.css {
+    width: 100%;
+    animation: css 2s;
+}
+
+.javascript {
+    width: 100%;
+    animation: javascript 2s;
+}
+
+.php {
+    width: 100%;
+    animation: php 2s;
+}
+
+.comm-adapt {
+    width: 100%;
+    animation: comm-adapt 2s;
+}
+
+.team-player {
+    width: 100%;
+    animation: team-player 2s;
+}
+
+.problem-solving {
+    width: 100%;
+    animation: problem-solving 2s;
+}
+
+.open-minded {
+    width: 100%;
+    animation: open-minded 2s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
     }
 }
 
-.skill-box:hover {
-    transform: scale(1.1); /* Effetto zoom al passaggio del mouse */
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes javascript {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes php {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes comm-adapt {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes team-player {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes problem-solving {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes open-minded {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+/* ---------------------------------- */
+
+/* PROJECTS */
+/* I also used these card settings on other sub-pages */
+.card {
+    background-color: #292222b6; /* Light background for the card */
+    padding: 30px; /* Increase padding inside the card */
+    box-shadow: 5px 5px 5px rgb(125, 9, 202); /* Slight shadow for depth */
+    width: 100%; /* Set width of the card (adjust as needed) */
+    max-width: auto; /* Set maximum width to prevent it from getting too wide */
+    margin: 20px auto; /* Center the card with automatic margins */
+}
+
+.box {
+    display: block;
+    width: 100px;
+}
+
+.card h4 {
+    font-weight: bold; /* Make the text bold */
+    font-size: 2rem; /* Increase font size for emphasis */
+    color: #ffd000; /* Keep the red color */
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
+    letter-spacing: 1px; /* Add spacing between letters for a more playful look */
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Change the color of the project title to blue */
+}
+
+/* Paragraph styles */
+.card p {
+    color: #333; /* Change the color of the paragraph text to dark gray */
+}
+
+/* ---------------------------------- */
+
+/* CONTACT ME */
+.box-contact {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    width: 50px;
 }
 
 /* Contatti */
 #contatti {
+    margin-top: 500px;
+    padding: var(--container-padding);
+    background-color: var(--bg-color);
+    color: #fd8700; /* Colore del testo */
+}
+
+#regardes {
+    margin-top: 100px;
     padding: var(--container-padding);
     background-color: var(--bg-color);
     color: #fd8700; /* Colore del testo */
@@ -238,8 +758,8 @@ header {
 
 #contatti h2 {
     text-align: center; /* Centra il titolo */
-    font-size: 3vw; /* Dimensione del font scalabile */
-    margin-bottom: 20px; /* Margine sotto il titolo */
+    font-size: 2vw; /* Dimensione del font scalabile */
+    margin-bottom: 30px; /* Margine sotto il titolo */
 }
 
 .contact-info {
@@ -270,4 +790,232 @@ footer {
     padding: 20px 0;
     background-color: var(--bg-color); /* Colore di sfondo del footer */
     color: #ffffff; /* Colore del testo del footer */
+}
+
+/* ---------------------------------- */
+
+/* SPECIAL THANKS */
+/* Everything here is made with general classes. Find them in the GENERAL section */
+/* ---------------------------------- */
+
+/* RESPONSIVENESS */
+/* Had to pay attention for that wondow.innerWidth when calculated max-width */
+@media screen and (max-width: 867px) {
+    body {
+        font-size: 90%;
+    }
+
+    .grid-system-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .large {
+        font-size: 4rem;
+    }
+
+    .medium-spacing {
+        font-size: 2.5rem;
+    }
+
+    .main-title-large {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    .main-title {
+        text-align: center;
+        margin: 0;
+    }
+
+    .small {
+        font-size: 0.6rem;
+    }
+
+    .max-width {
+        max-width: 300px;
+    }
+
+    .max-height {
+        max-height: 250px;
+    }
+
+    .padding-top {
+        padding-top: 10px;
+    }
+
+    .padding-right {
+        padding-right: 10px;
+    }
+
+    .padding-bottom {
+        padding-bottom: 10px;
+    }
+
+    .padding-left {
+        padding-left: 10px;
+    }
+
+    .logo {
+        width: 40px;
+    }
+}
+
+/* wrapper on home page looks better with this @media */
+@media screen and (max-width: 750px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .column {
+        flex: 100%;
+    }
+
+    .box {
+        margin: auto;
+    }
+
+    .thanks {
+        text-align: center;
+    }
+}
+
+/* media query for hamburger menu with dropdown */
+@media screen and (max-width: 510px) {
+    .main-nav {
+        display: none;
+    }
+
+    .toggle {
+        display: block;
+        background-color: #ff0000;
+        border: 1px solid #ff0077;
+    }
+
+    .toggle:hover {
+        background-color: #ff0000;
+    }
+
+    #drop:checked + .main-nav {
+        display: block;
+    }
+
+    nav {
+        padding-bottom: 25px;
+    }
+
+    .max-width {
+        max-width: 100%;
+    }
+}
+
+/* media query for smaller screens */
+/* smaller fonts were my way to go */
+@media screen and (max-width: 377px) {
+    body {
+        line-height: 1.5rem;
+    }
+
+    .large {
+        font-size: 3rem;
+    }
+
+    .medium-spacing {
+        font-size: 1.5rem;
+    }
+
+    .medium-spacing-halfsize {
+        font-size: 1.5rem;
+    }
+
+    .main-title {
+        font-size: 1rem;
+    }
+
+    .main-title-large {
+        font-size: 1.5rem;
+    }
+}
+
+/* DARK THEME */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgba(45, 45, 45, 1);
+        color: white;
+    }
+
+    .baby-pink {
+        background-color: rgb(243, 162, 200);
+    }
+
+    .baby-pink-light {
+        background-color: rgba(45, 45, 45, 1);
+        border: 2px solid rgb(243, 162, 200);
+    }
+
+    .main-nav {
+        background-color: rgba(45, 45, 45, 1);
+    }
+
+    .main-nav li a {
+        color: white;
+    }
+
+    .main-nav li a:hover {
+        color: rgb(254, 175, 210);
+    }
+
+    #main-toggle {
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        background-color: rgba(45, 45, 45, 1);
+    }
+
+    .nav-icon {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .nav-icon::before,
+    .nav-icon::after {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .button-outline {
+        border: 2px solid rgb(254, 175, 210);
+        color: white;
+    }
+
+    .button-outline:hover,
+    .button-outline:active {
+        border: 2px solid rgb(254, 175, 210);
+        background-color: rgb(254, 175, 210);
+    }
+
+    .card {
+        box-shadow: 0 0px 0px;
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    .logo {
+        background-color: white;
+        padding: 2px;
+        border-radius: 4px;
+    }
+
+    .hobbies {
+        background-color: white;
+        border-radius: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        color: white;
+    }
+
+    @media screen and (max-width: 929px) {
+        .baby-pink-light {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
 }

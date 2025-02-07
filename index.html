@@ -1,104 +1,251 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio di Grasso Lorenzo</title>
-    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Review this part and modify it to your liking -->
+    <meta name="description" content="Sample text for portfolio template meta tag">
+    <meta name="keywords" content="Sample text for portfolio template meta tag">
+    <meta name="author" content="Sample text for portfolio template meta tag">
+    <title>My portfolio website</title>
+    <!-- Adding favicon for older and modern browsers,
+        It is best to add favicon to the main folder, 
+        I used an only ico converter for best result,
+        Do not forget to clear you cache to see the changes -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- font for the quote -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- font for the body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header>
-    <div class="header-content">
-        <div class="left">
-            <h1>Grasso Lorenzo</h1>
-            <h2>Game Programming</h2>
-        </div>
-        <div class="right">
-             <div class="right">
-            <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
-                <img src="Logos/Linkedin.png" class="portfolio-image" />
-            </a>
-            <a href="https://www.instagram.com/lorenzo_grasso/#" target="_blank">
-                <img src="Logos/Instagram.png" class="portfolio-image" />
-            </a>
-            <a href="https://github.com/Lollo48" target="_blank">
-                <img src="Logos/Github.png" class="portfolio-image" />
-            </a>
-        </div>
-    </div>
+<!-- navigation bar -->
+<nav class="sticky">
+    <label for="drop" class="toggle" id="main-toggle">
+        <span class="nav-icon"></span>
+    </label>
+    <input type="checkbox" id="drop">
+    <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-me.html">About me</a></li>
+        <li><a href="skill-set.html">Skill-set</a></li>
+        <li><a href="#contact-me">Contact me</a></li>
+
+        <a href="https://www.linkedin.com" target="_blank">
+            <img src="Logos/Linkedin.png" class="nav-image" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="Logos/Instagram.png" class="nav-image" />
+        </a>
+        <a href="https://github.com" target="_blank">
+            <img src="Logos/Github.png" class="nav-image" />
+        </a>
+    </ul>
+</nav>
+
+<!-- introduction -->
+<header class="grid-system-2 w-900 padding">
+    <section class="align-center">
+        <h1 class="medium-spacing">Game programming</h1>
+        <h1 class="large">Grasso Lorenzo</h1>
+        <p class="principalText">
+            <span class="boldText">Hey</span>,I'm<span class="boldText"> Lorenzo</span>, I'm a <span class="boldText">game programming</span> student.
+            I'm trying to specialize in the development of the <span class="boldText">enemies</span> and I'm focused on the <span class="boldText">multiplayer</span> part.
+        </p>
+    </section>
+    <section class="center align-center">
+        <img class="header-img max-width max-height" src="assets/profile-pic.png" alt="profile-picture">
+    </section>
 </header>
-</body>
 
-<section id="biografia">
-    <h2>Chi Sono</h2>
-    <p class="description">
-        Sono un game programmer appassionato di sviluppo di giochi, con
-        esperienza in vari linguaggi e motori di gioco.
-    </p>
+
+<!-- quote -->
+<article class="baby-pink">
+    <p class="quote uppercase">"Welcome to my world, where every line of code tells a story, and every game is an adventure waiting to unfold. Just remember: In my world, the only bug that exists is the one you don’t fix."</p>
+</article>
+
+<!-- about me -->
+<!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+<section class="wrapper">
+    <section class="margin-auto">
+    </section>
+    <section class="justify align-center">
+        <p class="quote uppercase">About me</p>
+        Hi, as mentioned above, I'm Lorenzo, a 27-year-old game developer with a <span class="secondboldText">passion for gaming.</span>
+        I’ve always loved video games, and that’s what inspired me to start programming.
+        I'm a <span class="secondboldText">proactive</span> and <span class="secondboldText">generous</span> person, always eager to collaborate and work in teams to create something <span class="secondboldText">amazing.</span>
+        In addition to game development, I have a love for <span class="secondboldText">travel</span> and <span class="secondboldText">food</span>, which allows me to explore new cultures and experiences that often inspire my work.
+        If you want to learn more about me and my projects, just hit the button below!
+        <p class="padding-top"><a href="about-me.html" class="button-outline">More info</a></p>
+    </section>
 </section>
 
-<section id="progetti">
-    <h2>I Miei Progetti</h2>
-    <div class="project-cards">
-        <div class="project-card">
-            <div class="video-description-container">
-                <a href="pong.html">
-                    <video controls src="video1.mp4" class="project-video"></video>
-                </a>
-                <p class="project-description">
-                    FDFDSFDSFDSFDSFDSFDSFSDFSDFSDFSDFFDSFSDDSFSDFFSD
-                    FDSFDSSDFFSDSDFSDFSFDSDFSFDFSD
-                    FDSDFFSDSDFFDSFSDFSDFSDSDFFDSFSDFSDFSDSDFFSDSDFSDFFSD
-                    DSFFSDSDFFDSDSFSDFFSDFSDSDFFSDFSDFSDFDSFSDFSDFSDSDFSDFDSFSDF
-                    SDFSDFSDFSDFSD
-                    FDSDFFSDSDFFDSFSDFSDFSDSDFFDSFSDFSDFSDSDFFSDSDFSDFFSDDFS
-                    DSFFSDSDFFDSDSFSDFFSDFSDSDFFSDFSDFSDFDSFSDFSDFSDSDFSDFDSFSDF
-                    FDSFDSSDFFSDSDFSDFSFDSDFSFDFSD
-                    FDSFDSSDFFSDSDFSDFSFDSDFSFDFSDFDSFDSFDSFSDF
-                    FDSFDSSDFFSDSDFSDFSFDSDFSFDFSDFDSFDSFDSFSDF DSFSDFSDFEWREWRREW
-                    REWREWREWWQEWQQWEEWQ FDSFDSSDFFSDSDFSDFSFDSDFSFDFSD
-                    FDSFDSSDFFSDSDFSDFSFDSDFSFDFSDFDSFDSFDSFSDF
-                </p>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="video-description-container">
-                <a href="link-progetto2.html">
-                    <video controls src="video2.mp4" class="project-video"></video>
-                </a>
-                <p class="project-description">Descrizione del progetto 2</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="video-description-container">
-                <a href="link-progetto3.html">
-                    <video controls src="video3.mp4" class="project-video"></video>
-                </a>
-                <p class="project-description">Descrizione del progetto 3</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="video-description-container">
-                <a href="link-progetto4.html">
-                    <video controls src="video4.mp4" class="project-video"></video>
-                </a>
-                <p class="project-description">Descrizione del progetto 4</p>
-            </div>
-        </div>
-    </div>
+<!-- skills -->
+<!-- use this to showcase your skills, if you make changes, do not forget to modify the css accordingly -->
+<section>
+    <h3 class="main-title center padding">Skills</h3>
+</section>
+<section class="wrapper">
+    <section class="column">
+        <section class="skills">
+            <ul class="no-bullet-list no-padding-list-item">
+                <li>
+                    <p>C++</p>
+                    <span class="progress-bar"><span class="html"></span></span>
+                </li>
+                <li>
+                    <p>Unreal Engine</p>
+                    <span class="progress-bar"><span class="css"></span></span>
+                </li>
+                <li>
+                    <p>Git Flow</p>
+                    <span class="progress-bar"><span class="javascript"></span></span>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <section class="column">
+        <section class="skills">
+            <ul class="no-bullet-list no-padding-list-item">
+                <li>
+                    <p>C#</p>
+                    <span class="progress-bar"><span class="comm-adapt"></span></span>
+                </li>
+                <li>
+                    <p>Unity</p>
+                    <span class="progress-bar"><span class="team-player"></span></span>
+                </li>
+                <li>
+                    <p>OOP</p>
+                    <span class="progress-bar"><span class="problem-solving"></span></span>
+                </li>
+            </ul>
+        </section>
+    </section>
+</section>
 </section>
 
-<section id="esperienza">
-    <h2>La Mia Esperienza</h2>
-    <div class="skills-container">
-        <div class="skill-box"><span class="skill-text">C++</span></div>
-        <div class="skill-box"><span class="skill-text">Unreal Engine</span></div>
-        <div class="skill-box"><span class="skill-text">C#</span></div>
-        <div class="skill-box"><span class="skill-text">Unity</span></div>
-        <div class="skill-box"><span class="skill-text">OOP</span></div>
-        <div class="skill-box"><span class="skill-text">Git Flow</span></div>
-    </div>
+<!-- Projects -->
+<section>
+    <h3 class="main-title center padding">Projects</h3>
 </section>
+
+<section class="wrapper">
+    <section class="column card justify flex">
+        <h4 class="padding bold center">Project Name 1</h4>
+        <div class="video-wrapper" onclick="window.location.href='pong.html'">
+            <video>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Il tuo browser non supporta il video.
+            </video>
+            <div class="video-info">
+                <h3>Project Name 1</h3>
+                <p>Scopri di più su questo progetto!</p>
+            </div>
+        </div>
+        <p>Project description here.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p class="padding-top bottom"><a href="pong.html" class="button-outline">Portfolio</a></p>
+    </section>
+
+    <section class="column card justify flex">
+        <h4 class="padding bold center">Project Name 2</h4>
+        <div class="video-wrapper" onclick="window.location.href='portfolio.html'">
+            <video>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Il tuo browser non supporta il video.
+            </video>
+            <div class="video-info">
+                <h3>Project Name 2</h3>
+                <p>Scopri di più su questo progetto!</p>
+            </div>
+        </div>
+        <p>Project description here.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
+    </section>
+</section>
+
+<section class="wrapper">
+    <section class="column card justify flex">
+        <h4 class="padding bold center">Project Name 3</h4>
+        <div class="video-wrapper" onclick="window.location.href='portfolio.html'">
+            <video>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Il tuo browser non supporta il video.
+            </video>
+            <div class="video-info">
+                <h3>Project Name 3</h3>
+                <p>Scopri di più su questo progetto!</p>
+            </div>
+        </div>
+        <p>Project description here.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
+    </section>
+
+    <section class="column card justify flex">
+        <h4 class="padding bold center">Project Name 4</h4>
+        <div class="video-wrapper" onclick="window.location.href='portfolio.html'">
+            <video>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Il tuo browser non supporta il video.
+            </video>
+            <div class="video-info">
+                <h3>Project Name 4</h3>
+                <p>Scopri di più su questo progetto!</p>
+            </div>
+        </div>
+        <p>Project description here.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Portfolio</a></p>
+    </section>
+</section>
+
+<!-- contact me -->
+<!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
+<section id="contact-me" class="grid-system-2 w-900 padding">
+    <section class="margin-auto">
+        <img class="max-width max-height" src="assets/Contact-me-img.png" alt="contact-me-illustration">
+    </section>
+    <section class="margin-auto align-center">
+        <h1 class="large">Let's get in touch!</h1>
+        <section class="box-contact margin-auto padding-top">
+                <span>
+                    <a href="https://www.linkedin.com/" target="_blank"><img class="logo" src="assets/linkedin.png"
+                                                                             alt=""></a>
+                </span>
+            <span>
+                    <a href="https://github.com/" target="_blank"><img class="logo" src="assets/github.png" alt=""></a>
+                </span>
+            <span>
+                    <a href="mailto:xy@gmail.com" target="_blank"><img class="logo" src="assets/email.png" alt=""></a>
+                </span>
+        </section>
+    </section>
+</section>
+
+<!-- special thanks -->
+<!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
+
 
 <section id="contatti">
     <h2>Contatti</h2>
@@ -112,8 +259,23 @@
     </div>
 </section>
 
+<section id="regardes">
+    <p class="small thanks justify w-900 padding-left">*Based on :
+
+        <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
+
+    <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
+        <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
+
+    <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
+        <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
+        <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
+        <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
+        <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
+        <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
+</section>
 <footer>
-    <p>&copy; 2023 Grasso Lorenzo. Tutti i diritti riservati.</p>
+    <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
 </footer>
 </body>
 </html>
