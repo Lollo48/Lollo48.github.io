@@ -745,7 +745,6 @@ footer {
 #contatti {
     margin-top: 500px;
     padding: var(--container-padding);
-    background-color:  rgb(0, 0, 0);
     color: #fd8700; /* Colore del testo */
 }
 
