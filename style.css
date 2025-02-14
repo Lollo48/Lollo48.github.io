@@ -206,15 +206,16 @@ body {
     background: rgba(0, 0, 0, 0.7);
     color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Centra tutto */
-    text-align: center;
+    flex-direction: column; /* Disposizione verticale per gli elementi */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra orizzontalmente */
+    text-align: center; /* Allinea il testo al centro */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     padding: 20px;
     gap: 15px;
-    overflow: hidden; /* Evita che il testo esca */
+    overflow: hidden; /* Evita il traboccamento */
+    box-sizing: border-box; /* Assicura che padding non influenzi le dimensioni */
 }
 
 /* Struttura per ogni immagine con testo */
@@ -423,7 +424,7 @@ body {
     transition: 1s ease-in-out;
     /* second solution: */
     /* font-size: 1.2rem; 
-    transition: font-size 2s ease-in-out;  */
+      transition: font-size 2s ease-in-out;  */
 }
 
 .progress-bar:hover,
