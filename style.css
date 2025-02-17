@@ -145,9 +145,9 @@ body {
 .wrapper {
     max-width: 1500px;
     margin: auto;
-    padding: 20px;
+    padding: 80px;
     display: flex;
-    gap: 20px 20px;
+    gap: 25px;
 }
 
 .column {
@@ -177,7 +177,7 @@ body {
     width: 100%;
     max-width: 100%;
     position: relative;
-    aspect-ratio: 16 / 9; /* Mantiene il rapporto larghezza/altezza */
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -203,25 +203,24 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Sfondo scuro */
     color: white;
     display: flex;
-    flex-direction: column; /* Disposizione verticale per gli elementi */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra orizzontalmente */
-    text-align: center; /* Allinea il testo al centro */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    padding: 20px;
-    gap: 15px;
-    overflow: hidden; /* Evita il traboccamento */
-    box-sizing: border-box; /* Assicura che padding non influenzi le dimensioni */
+    padding: 5%;
+    box-sizing: border-box;
 }
 
 /* Struttura per ogni immagine con testo */
 .video-info-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     max-width: 90%; /* Evita che il testo sia troppo largo */
     flex-wrap: wrap; /* Permette al testo di andare a capo */
@@ -229,8 +228,8 @@ body {
 
 /* Immagini */
 .nav-image-video-info {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     border-radius: 50%;
     flex-shrink: 0; /* Mantiene la dimensione dell'immagine */
@@ -251,6 +250,24 @@ body {
 /* Effetto hover */
 .video-wrapper:hover .video-info {
     opacity: 1;
+    transform: scale(1.1); /* Leggero ingrandimento */
+}
+
+/* Responsività su schermi piccoli */
+@media screen and (max-width: 600px) {
+    .video-info-grid {
+        grid-template-columns: 1fr; /* Una sola colonna su mobile */
+        gap: 15px;
+    }
+
+    .nav-image-video-info {
+        width: clamp(40px, 15vw, 80px);
+        height: clamp(40px, 15vw, 80px);
+    }
+
+    .video-info-item p {
+        font-size: clamp(10px, 3vw, 18px);
+    }
 }
 
 .video-wrapper:hover video {
@@ -490,12 +507,8 @@ nav {
 
 /* Effetto hover sulle immagini */
 .nav-image:hover {
-    transform: scale(1.3); /* Effetto zoom al passaggio del mouse */
-    filter: brightness(
-            1%
-    ); /* Cambia colore dell'immagine al passaggio del mouse */
-    opacity: 1;
-    color: #eeff00;
+    transform: scale(1.2); /* Effetto zoom al passaggio del mouse */
+    /* Cambia colore dell'immagine al passaggio del mouse */
 }
 
 /* Sposta le immagini a destra con più spazio dal testo */
@@ -847,6 +860,7 @@ footer {
 /* Testo evidenziato */
 .email-text,
 .phone-text {
+    flex-wrap: wrap;
     font-weight: bold;
     color: #f8e800; /* Colore giallo acceso */
 }
@@ -887,6 +901,7 @@ footer {
 
 .email,
 .phone {
+    flex-wrap: wrap;
     flex: 1; /* Permette di espandere le colonne */
     display: flex; /* Usa flexbox all'interno delle colonne */
     justify-content: center; /* Centra il testo orizzontalmente */
@@ -896,6 +911,7 @@ footer {
 
 .email-text,
 .phone-text {
+    flex-wrap: wrap;
     color: #ff0062;
     font-size: 1.5rem; /* Dimensione del testo */
 }
@@ -979,8 +995,13 @@ footer {
 /* wrapper on home page looks better with this @media */
 @media screen and (max-width: 750px) {
     .wrapper {
-        flex-direction: column;
-        gap: 20px 0px;
+        /*flex-direction: column;*/
+
+        display: flex;
+        flex-wrap: wrap; /* Permette la disposizione verticale su schermi piccoli */
+        justify-content: center; /* Centra gli elementi */
+        gap: 20px 0px; /* Distanza tra le card */
+        padding: 20px;
     }
 
     .column {
