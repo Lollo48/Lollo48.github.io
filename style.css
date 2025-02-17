@@ -1,5 +1,5 @@
-general/* BODY */
-html {
+/* BODY */
+general html {
     font-size: 100%;
     line-height: 1.2rem;
     /* text-size adjust is to maintain the text-size even when the users rotates their phone to landscape view */
@@ -144,14 +144,40 @@ body {
 /* for the flexbox */
 .wrapper {
     max-width: 1500px;
+    padding-left: 10%;
+    padding-right: 10%;
     margin: auto;
-    padding: 80px;
     display: flex;
     gap: 25px;
 }
 
+.discord-container {
+    position: relative;
+    display: inline-block;
+}
+
+.discord-hover-image {
+    display: none;
+    position: absolute;
+    top: 110%; /* Posiziona l'immagine sotto l'icona */
+    left: 50%;
+    transform: translateX(-60%);
+    width: 400px; /* Regola la dimensione dell'immagine */
+    border-radius: 10px;
+}
+
+.discord-container:hover .discord-hover-image {
+    display: block;
+}
+
+/* --- Card --- */
 .column {
-    flex: 50%;
+    flex: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.column:hover {
+    transform: translateY(-50px);
 }
 
 .w-900 {
@@ -177,7 +203,7 @@ body {
     width: 100%;
     max-width: 100%;
     position: relative;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9; /* Mantiene il rapporto larghezza/altezza */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -203,7 +229,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Sfondo scuro */
+    background: rgba(0, 0, 0, 0.7); /* Sfondo scuro con trasparenza */
     color: white;
     display: flex;
     flex-direction: column;
@@ -219,32 +245,28 @@ body {
 /* Struttura per ogni immagine con testo */
 .video-info-item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    max-width: 90%; /* Evita che il testo sia troppo largo */
-    flex-wrap: wrap; /* Permette al testo di andare a capo */
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    align-items: center; /* Centra gli elementi verticalmente */
+    gap: 30px; /* Distanza fissa tra l'immagine e il testo */
+    width: 100%;
 }
 
 /* Immagini */
 .nav-image-video-info {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 50px; /* Larghezza fissa per l'immagine */
+    height: 50px; /* Altezza fissa per l'immagine */
+    object-fit: cover; /* Mantiene il rapporto di aspetto */
+    border-radius: 50%; /* Forma circolare per l'immagine */
     flex-shrink: 0; /* Mantiene la dimensione dell'immagine */
 }
 
 /* Testo */
 .video-info-item p {
-    font-size: clamp(
-            12px,
-            2vw,
-            18px
-    ); /* Il testo si ridimensiona in base allo schermo */
-    margin: 0;
+    font-size: 15px; /* Dimensione del font */
+    margin: 0; /* Rimuove margini */
     word-wrap: break-word; /* Evita che il testo esca */
-    text-align: left; /* Mantiene il testo leggibile accanto all'immagine */
+    text-align: center; /* Allinea il testo al centro */
+    flex: 1; /* Permette al testo di occupare lo spazio rimanente */
 }
 
 /* Effetto hover */
@@ -261,12 +283,12 @@ body {
     }
 
     .nav-image-video-info {
-        width: clamp(40px, 15vw, 80px);
-        height: clamp(40px, 15vw, 80px);
+        width: 10px;
+        height: 10px;
     }
 
     .video-info-item p {
-        font-size: clamp(10px, 3vw, 18px);
+        font-size: 4px;
     }
 }
 
@@ -383,22 +405,62 @@ body {
     margin-top: auto;
 }
 
-/* Miscellaneous */
-.button {
-    background-color: rgb(158, 253, 129);
-    padding: 10px;
+/* Stile generale per i bottoni */
+.button,
+.button-outline {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
     text-decoration: none;
-    border-radius: 5%;
-    color: rgb(255, 0, 170);
+    border-radius: 30px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
-/* I only used button-outline on this project, but you may like the other one more */
+/* Bottone principale */
+.button {
+    background: linear-gradient(135deg, #00ff87, #0084ff);
+    color: white;
+    border: none;
+}
+
+/* Bottone con bordo */
 .button-outline {
-    border: 3px solid rgb(255, 0, 162); /* COLORE BORDO BOTTONE */
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 15%;
-    color: rgb(255, 255, 255); /* COLORE TESTO BOTTNE */
+    border: 3px solid #ff0080;
+    color: #ff0080;
+    background: transparent;
+}
+
+/* Effetti hover */
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 255, 135, 0.5);
+}
+
+.button-outline:hover {
+    background: #ff0080;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 0, 128, 0.5);
+}
+
+.button:hover,
+.button-outline:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Centrare il bottone */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .link {
@@ -422,17 +484,6 @@ body {
     list-style-type: none;
 }
 /* ---------------------------------- */
-
-/* ANIMATIONS AND OTHER BEAUTIES */
-.button-outline:hover,
-.button-outline:active {
-    border: 2px solid rgb(255, 0, 162);
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 15%;
-    color: rgb(255, 255, 255);
-    transition: background-color 1s ease, color 1s ease;
-}
 
 .link:hover,
 .link:active {
@@ -747,7 +798,7 @@ footer {
 /* I also used these card settings on other sub-pages */
 .card {
     background-color: #292222b6; /* Light background for the card */
-    padding: 30px; /* Increase padding inside the card */
+    padding: 10px; /* Increase padding inside the card */
     box-shadow: 5px 5px 5px rgb(125, 9, 202); /* Slight shadow for depth */
     width: 100%; /* Set width of the card (adjust as needed) */
     margin: 20px auto; /* Center the card with automatic margins */
@@ -755,14 +806,14 @@ footer {
 
 .box {
     display: block;
-    width: 100px;
+    width: 60px;
 }
 
 .card h4 {
     font-weight: bold; /* Make the text bold */
     font-size: 2rem; /* Increase font size for emphasis */
-    color: #ffd000; /* Keep the red color */
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
+    color: #fbff00; /* Keep the red color */
+    text-shadow: 5px 5px 5px rgba(167, 10, 206, 0.507); /* Add a soft shadow for depth */
     letter-spacing: 1px; /* Add spacing between letters for a more playful look */
     font-family: "Comic Sans MS", cursive, sans-serif; /* Change the color of the project title to blue */
 }
@@ -770,6 +821,42 @@ footer {
 /* Paragraph styles */
 .card p {
     color: #333; /* Change the color of the paragraph text to dark gray */
+}
+
+/* Contenitore principale */
+.text-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Ogni elemento di testo e immagine */
+.text-image-item {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    font-family: "Roboto", sans-serif; /* Font moderno */
+}
+
+/* Immagini */
+.side-image {
+    width: 60px; /* Aumentata la dimensione dell'immagine */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.781); /* Aggiunta ombra per un effetto figo */
+}
+
+/* Testo */
+.text-image-item p {
+    font-size: 20px; /* Testo grande */
+    margin: 0;
+    color: #f0f0f0; /* Colore chiaro */
+    font-weight: bold; /* Grassetto */
+    text-transform: uppercase; /* Tutto maiuscolo */
+    letter-spacing: 0.5px; /* Distanza letterale più piccola */
+    text-shadow: 2px 2px 6px rgb(195, 0, 255, 0.8); /* Ombra del testo */
 }
 
 /* ---------------------------------- */
@@ -1074,6 +1161,30 @@ footer {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .video-info-item {
+        flex-direction: column; /* Allinea gli elementi verticalmente su schermi piccoli */
+        gap: 10px; /* Riduce il gap tra immagine e testo su schermi piccoli */
+    }
+
+    .nav-image-video-info {
+        width: clamp(
+                30px,
+                20vw,
+                60px
+        ); /* Immagini più piccole su schermi piccoli */
+        height: clamp(30px, 20vw, 60px);
+    }
+
+    .video-info-item p {
+        font-size: clamp(
+                12px,
+                5vw,
+                18px
+        ); /* Testo più piccolo su schermi piccoli */
+    }
+}
+
 /* DARK THEME */
 @media (prefers-color-scheme: dark) {
     body {
@@ -1114,17 +1225,6 @@ footer {
     .nav-icon::before,
     .nav-icon::after {
         background-color: rgba(255, 255, 255, 0.6);
-    }
-
-    .button-outline {
-        border: 2px solid rgb(254, 175, 210);
-        color: white;
-    }
-
-    .button-outline:hover,
-    .button-outline:active {
-        border: 2px solid rgb(254, 175, 210);
-        background-color: rgb(254, 175, 210);
     }
 
     .card {
