@@ -154,6 +154,7 @@ body {
 .discord-container {
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 .discord-hover-image {
