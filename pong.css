@@ -130,17 +130,38 @@ video {
     margin: 0 auto; /* Centra il testo */
 }
 
-/* Stile per il bottone "Torna al Menu" */
-.back-button {
-    font-family: 'Montserrat', sans-serif; /* Imposta un font moderno */
-    font-size: 1.2rem; /* Aumenta la dimensione del font */
-    font-weight: 600; /* Imposta un font bold per un maggiore impatto */
-    color: #fbff00; /* Colore del testo bianco */
-    padding: 10px 20px; /* Aggiunge un po' di spazio intorno al testo */
-    border-radius: 5px; /* Angoli arrotondati */
-    display: inline-block; /* Assicura che il link sia trattato come un blocco per il padding */
-    transition: all 0.3s ease-in-out; /* Aggiunge un effetto di transizione */
-    text-shadow: 0 4px 10px rgba(204, 0, 255, 0.466); /* Ombra per dare un effetto tridimensionale */
-    cursor: pointer; /* Cambia il cursore in "pointer" per evidenziare il link come cliccabile */
-    margin-top: 5px; /* Distanza dal contenuto sopra */
+
+
+/* Ogni elemento di testo e immagine */
+.text-image-item-project {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif; /* Font moderno e informale */
+}
+
+/* Testo */
+.text-image-item-project p {
+    font-size: 18px; /* Testo più leggibile */
+    margin: 0;
+    color: #f5f5f5; /* Colore chiaro per contrasto */
+    font-weight: 400; /* Peso normale per un look più rilassato */
+    text-transform: none; /* No maiuscolo forzato per naturalezza */
+    letter-spacing: 0.3px; /* Distanza più equilibrata tra le lettere */
+    line-height: 1.4; /* Migliora la leggibilità */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.responsive {
+    max-width: 100%; /* Ensures the image width doesn't exceed the container's width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Removes any unwanted space below the image */
 }
