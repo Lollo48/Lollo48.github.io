@@ -178,7 +178,7 @@ body {
 }
 
 .column:hover {
-    transform: translateY(-50px);
+    transform: translateY(-5px);
 }
 
 .w-900 {
@@ -970,7 +970,6 @@ footer {
 
 #regardes {
     margin-top: 30px;
-    padding: var(--container-padding);
     color: #fd8700; /* Colore del testo */
 }
 
@@ -983,7 +982,6 @@ footer {
 .contact-info {
     display: flex;
     justify-content: space-between; /* Spazio tra email e telefono */
-    padding: 0 var(--container-padding); /* Padding laterale */
     width: 100%; /* Occupare tutta la larghezza disponibile */
 }
 
