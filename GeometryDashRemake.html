@@ -130,68 +130,78 @@
         <section class="margin-auto">
         </section>
         <section class="justify align-center">
-            <p class="quote uppercase">Introduction</p>
-            <p>This project marks my first foray into game development using Unity and C#, created in 2023. It showcases my journey into understanding core game mechanics, such as state machines, grid management, and dynamic game logic. Inspired by the famous Candy Crush game, I implemented a match-three game loop that reflects my growing proficiency in C# programming and Unity's powerful game engine. This project is a testament to my learning process, experimentation, and passion for creating engaging and interactive games.</p>
-
-        </section>
-    </section>
-
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Difficult</p>
-            <p>One of the main challenges I encountered while developing this project was the creation of the grid system, which was my first time implementing such a structure. I had to ensure the grid dynamically updated, responding to player interactions while keeping the game logic clean and efficient. Handling the candy positions, making sure that no candy would overlap or be placed in incorrect cells, was tricky, especially when ensuring smooth transitions and that candies always fit within the grid boundaries.
-
-                Another significant challenge was building the state machine, as it was my first time implementing this design pattern. Managing the different game states (like swapping candies, checking combos, and refilling the grid) and ensuring the game moved between states without errors was complex. At first, managing these state transitions felt overwhelming, but it ultimately helped me organize the game logic and make the entire gameplay experience more structured and modular.
-
-                Finally, managing the candy movement between grid cells was also a challenge.The candies should not only move visually, but also have their positions correctly updated in the game’s logic.
-
-                These challenges, though tough, provided valuable learning experiences and allowed me to better understand state management, animation, and dynamic game mechanics in Unity.</p>
-        </section>
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Game Core</p>
-            <section class="description-section">
-                <p><strong>This project showcases a state-driven game loop built in C# using Unity, designed for a Candy Crush-style match-three game. The system is structured around a state machine architecture, ensuring smooth gameplay and efficient game logic execution.</strong></p>
-                <h4>🔄 State Machine Architecture</h4>
-                <ul>
-                    <li><strong>SwapCandyState</strong> – Handles player input, allowing candies to be swapped and validating whether the move is legal.</li>
-                    <li><strong>CheckCombosState</strong> – Detects and processes valid matches of three or more candies.</li>
-                    <li><strong>ReFillState</strong> – Refills the grid by introducing new candies while ensuring no empty spaces remain.</li>
-                    <li><strong>StateManager</strong> – Orchestrates transitions between states, ensuring smooth and automatic progression based on game logic.</li>
-                </ul>
-            </section>
-        </section>
-    </section>
-    <section class="image-container">
-        <img src="ProjectsImage/CandyCrush/CandyCrushGrid.png" alt="center" class="responsive">
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Grid</p>
-            <p>The grid system dynamically updates based on the player’s interactions and game logic. Key functionalities include:</p>
+            <p class="quote uppercase">Game Overview</p>
+            <p>Geometry Dash Remake is a 2D platformer game developed in Unity 3D, inspired by the popular mobile game Geometry Dash. The player controls a cube that must jump through a series of obstacles with precise timing, synchronizing with the background music.</p>
+            <p><strong>Game Goal:</strong></p>
+            <p>The main goal of the game is to complete the level by avoiding obstacles and collecting bonus points along the way. The game focuses on the player's coordination and reflexes.</p>
+            <p><strong>Key Features:</strong></p>
             <ul>
-                <li><strong>GridControllerManager</strong> – Maintains the logical representation of the grid, tracking candy positions and updating the board after every move.</li>
-                <li><strong>GridManager</strong> – Spawn the grid with custom size.</li>
-                <li><strong>RefillManager</strong> – Adds new candies into empty slots while preventing infinite loops and ensuring no immediate matches occur upon refill.</li>
-                <li><strong>CheckComboManager</strong> – Detects and processes valid matches, applying effects like cascading combos, special candy activations, and score multipliers.</li>
-                <li><strong>CandySpawner (ScriptableObject)</strong> – The candies are spawned using a ScriptableObject, which contains all the possible candy types. This allows for easy addition of new candy types and customization of candy attributes.</li>
+                <li>Attractive graphics</li>
+                <li>Rhythm-based gameplay</li>
+                <li>Pawn controls</li>
+                <li>Progressively challenging levels</li>
+                <li>Scoring system to challenge friends</li>
             </ul>
-            <p>This system ensures high performance, preventing unnecessary calculations while keeping the game responsive. It also supports dynamic board sizes and different candy types, making it adaptable for future game expansions.</p>
-            <p>This modular and scalable game loop serves as a solid foundation for any match-three puzzle game.</p>
+            <p><strong>Gameplay:</strong></p>
+            <p>The game takes place on a two-dimensional plane where the player controls a cube that moves automatically to the right. The player can make the cube jump by touching the screen or pressing a key. The objective is to avoid obstacles by jumping at the right time, synchronizing with the background music for a smooth and engaging gameplay experience.</p>
+            <p><strong>Game Mechanics:</strong></p>
+            <ul>
+                <li><strong>Jumping:</strong> The player can make the cube jump to avoid obstacles. The duration of the jump depends on the length of the touch.</li>
+                <li><strong>Obstacles:</strong> Obstacles are strategically placed to challenge the player's coordination and reflexes.</li>
+                <li><strong>Checkpoints:</strong> Some levels feature checkpoints that allow the player to resume from an intermediate point in case of failure.</li>
+                <li><strong>Bonus Points:</strong> The player can collect bonus points along the way to increase the final score.</li>
+                <li><strong>Graphics:</strong> The visual design is simple yet colorful, with geometric shapes and smooth animations. Each level has a unique visual theme that makes the gaming experience varied.</li>
+                <li><strong>Sound:</strong> The soundtrack is an essential part of the game, with musical tracks synchronized with the gameplay to enhance immersion and rhythm.</li>
+            </ul>
         </section>
     </section>
     <section class="image-container">
-        <img src="ProjectsImage/CandyCrush/CandyCrushScriptableObject.png" alt="center" class="responsive">
+        <img src="ProjectsImage/GeometryDash/GeometryDash.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Difficulties</p>
+            <p>During the development of this project, I encountered several challenges that were crucial for the game's functionality and performance. Among these, managing the physics, speed, and data for each spaceship, and utilizing ScriptableObjects to handle their unique behaviors, were particularly complex:</p>
+
+            <ul>
+                <li><strong>Physics Management:</strong> Each spaceship had its own unique set of physics characteristics that needed to be implemented separately. For example, the spaceship needed to move in a way that felt fluid while maintaining consistent collision detection with obstacles. Ensuring that the physics were consistent across different game states, such as gravity changes and propulsion, required precise fine-tuning.</li>
+                <li><strong>Speed Adjustment:</strong> Speed control was another significant challenge. Each spaceship had different movement speeds based on its design, but I also needed to adjust its speed dynamically based on power-ups and the level progression. Ensuring that the player could control the spaceship without experiencing lag or jittering, while keeping the controls responsive, was a delicate balancing act.</li>
+                <li><strong>Data Management through ScriptableObjects:</strong> I used ScriptableObjects to manage the data for each spaceship, which allowed for easy customization of each ship's attributes (such as speed, gravity, and movement patterns) in the Unity Editor. However, managing these ScriptableObjects, especially when dealing with multiple game pieces and ensuring that data changes reflected immediately in the gameplay, required careful attention to avoid inconsistencies. For example, syncing changes in data with the game's physics system sometimes led to unexpected behaviors if not managed properly.</li>
+            </ul>
+
+            <p>Despite these challenges, these obstacles helped me learn a great deal about managing dynamic game elements and data-driven design, as well as fine-tuning complex interactions between physics, player input, and game state transitions.</p>
+        </section>
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Personal Contribution</p>
+            <ul>
+                <li><strong>Creation of all player pieces:</strong> I was responsible for designing and implementing all the player pieces in the game. Each piece was created as a ScriptableObject, allowing for unique designs, behaviors, and functionality. The player pieces I developed are:</li>
+                <ul>
+                    <li><strong>Cube:</strong> The basic player piece, which can jump to avoid obstacles.</li>
+                    <li><strong>Spaceship:</strong> A player piece with the ability to fly, offering a different movement style.</li>
+                    <li><strong>Robot:</strong> A player piece with a special ability to interact with obstacles in a unique way.</li>
+                    <li><strong>UFO:</strong> A player piece that can levitate, providing a new gameplay experience.</li>
+                    <li><strong>Gear:</strong> A player piece that can rotate, adding a mechanic to navigate through challenging environments.</li>
+                    <li><strong>Spider:</strong> A player piece with the ability to cling to surfaces and move in an unconventional way.</li>
+                </ul>
+                <p>Each of these pieces was integrated into its own state in a state machine, which allowed for smooth transitions and distinct behaviors based on the player's actions. I also developed the animations and interactions specific to each player piece to enhance the overall gaming experience.</p>
+                <li><strong>Input System Development:</strong> I developed the input system for the game, including touch controls. This system ensures smooth and responsive player interactions on touchscreen devices.</li>
+                <li><strong>Player Death Mechanics:</strong> I implemented the mechanics for player death, ensuring proper game responses, including animations and sound effects.</li>
+                <li><strong>Portal Mechanics:</strong> I created various portals, including: Change Portal, Gravity Portal, Size Portal, Speed Portal, Teleport Portal, Meteora Portal, and Jump Pads.</li>
+                <li><strong>Event Management:</strong> I managed all game events, defining and handling event triggers such as collisions, achievements, and interactions.</li>
+                <li><strong>Visual Effects (VFX) and Sound Management:</strong> I managed visual effects (VFX) and sound in the game, including background music integration and sound effects for various game events.</li>
+            </ul>
+        </section>
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/GeometryDash/GeometryDash1.png" alt="center" class="responsive">
     </section>
 
     <!-- contact me -->
