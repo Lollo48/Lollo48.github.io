@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Review this part and modify it to your liking -->
+    <meta name="description" content="Sample text for portfolio template meta tag">
+    <meta name="keywords" content="Sample text for portfolio template meta tag">
+    <meta name="author" content="Sample text for portfolio template meta tag">
+    <title>My portfolio website</title>
+    <!-- Adding favicon for older and modern browsers,
+        It is best to add favicon to the main folder, 
+        I used an only ico converter for best result,
+        Do not forget to clear you cache to see the changes -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="pong.css">
+    <!-- font for the quote -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- font for the body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- navigation bar -->
+<nav class="sticky">
+    <label for="drop" class="toggle" id="main-toggle">
+        <span class="nav-icon"></span>
+    </label>
+    <input type="checkbox" id="drop">
+    <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-me.html">About me</a></li>
+        <li><a href="skill-set.html">Skill-set</a></li>
+        <li><a href="#contact-me">Contact me</a></li>
+
+        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
+            <img src="Logos/Linkedin.png" class="nav-image" />
+        </a>
+        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
+            <img src="Logos/Instagram.png" class="nav-image" />
+        </a>
+        <a href="https://github.com/Lollo48" target="_blank">
+            <img src="Logos/Github.png" class="nav-image" />
+        </a>
+        <div class="discord-container">
+            <img src="Logos/Discord.png" class="nav-image" />
+            </a>
+            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
+        </div>
+    </ul>
+</nav>
+<main>
+    <section class="video-container">
+        <h3 class="video-title"> B2B Museum application</h3>
+        <video controls autoplay loop>
+            <source src="Videos/B2B.mp4" type="video/mp4" />
+            Il tuo browser non supporta i video.
+        </video>
+    </section>
+
+    <section class="wrapper">
+        <section class="column card justify flex">
+            <h4 class="padding bold center"> B2B Museum application</h4>
+            <div class="text-image-container">
+                <div class="text-image-item-project">
+                    <p> School Game Lab.
+                    </p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>Original mobile game for brera Museum.</p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>  Application developed in a friendly way for adults and children with simple interfaces and an intuitive way of navigation. All embellished with vuforia (AR) for an interaction even on site.
+                    </p>
+                </div>
+                <div class="text-image-item-project">
+                    <p> Developed in association with the Brera Museum in Milan</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="column card justify flex">
+            <h4 class="padding bold center">Project info</h4>
+            <div class="text-image-container">
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
+                    <p>10 School game lab</p>
+                </div>
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
+                    <p>November 10th - December 22th, 2023, five weeks</p>
+                </div>
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
+                    <p>Unity</p>
+                </div>
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
+                    <p>Windows</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="button-container">
+        <a href="index.html" class="button">Home</a>
+        <a href="https://github.com/Team-2-Mobile-App/Team2MobileApp/releases/tag/Release" class="button">Repository</a>
+    </div>
+
+    <!-- about me -->
+    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Game Overview</p>
+            <p>Museum is a mobile application developed using Unity 3D that offers an interactive and educational virtual tour of a museum. The app allows users to explore various exhibits and artworks in a museum setting from the comfort of their own device.</p>
+        </section>
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Game Goal</p>
+            <p>The primary goal of Museum is for users to reconstruct all the artworks within the virtual museum. By doing so, players unlock detailed information about each piece and earn rewards that include discounts for real-life museum visits. Additionally, the player can scan artworks on-site to unlock additional information via the Vuforia system.</p>
+        </section>
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Key Features</p>
+            <ul>
+                <li><strong>Virtual Museum Exploration:</strong> Navigate through a detailed 3D representation of a museum, exploring different rooms and exhibits.</li>
+                <li><strong>Interactive Exhibits:</strong> Tap and interact with various artworks and artifacts to learn more about their history and significance.</li>
+                <li><strong>User-Friendly Controls:</strong> Intuitive touch controls for smooth navigation and interaction, optimized for mobile devices.</li>
+                <li><strong>Interactive Art Reconstruction:</strong> Players can interact with various paintings, noticing missing elements. They must search throughout the museum to find and collect these missing pieces. Once the artwork is fully restored, players unlock new information and insights about the piece.</li>
+                <li><strong>Rewards System:</strong> By reconstructing all the artworks within the museum, players can unlock exclusive information about each piece and earn discounts that can be used for real-life visits to the museum.</li>
+            </ul>
+        </section>
+    </section>
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/B2B/B2B.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Gameplay</p>
+            <p>Players navigate through the museum using simple on-screen arrows that guide them from one location to another. The intuitive navigation system ensures that players can easily move through the museum's different rooms and sections. Players can tap on various artworks and artifacts to view detailed descriptions and learn about their significance. Throughout the museum, players will find artworks with missing pieces. They need to search for these pieces and collect them. Once an artwork is fully restored, players unlock additional information and insights about the piece.</p>
+        </section>
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Game Mechanics</p>
+            <ul>
+                <li><strong>Exploration:</strong> Navigation, Movement, and Environment interaction.</li>
+                <li><strong>Interaction:</strong> Tapping to access and reconstruct artworks, as well as retrieving information.</li>
+                <li><strong>Saving Progress:</strong> The game supports saving the player's progress, ensuring no loss of data between sessions.</li>
+                <li><strong>Login and Player Saving:</strong> User accounts and profile management allow players to log in and manage their game data.</li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Personal Contribution</p>
+            <ul>
+                <li><strong>Camera Manager/Controller:</strong> Designed and implemented the camera manager and controller to ensure smooth and dynamic camera movements within the virtual museum. This system allows the camera to follow the player's movements.</li>
+                <li><strong>Input Manager:</strong> Created the input manager to handle touch controls and user interactions, ensuring a responsive and intuitive control scheme on mobile devices.</li>
+                <li><strong>Inventory Management and UI:</strong> Implemented the inventory system, allowing players to collect and manage items such as missing pieces of artworks. The UI displays collected items and allows easy management.</li>
+                <li><strong>State Pattern for Game States:</strong> Applied the state pattern to manage different game states (exploring, interacting, and reconstructing artworks), ensuring efficient organization of game logic.</li>
+                <li><strong>Dialogue System:</strong> Created a system to manage in-game interactions and conversations, providing context and additional information about the artworks and artifacts.</li>
+                <li><strong>Map Controller:</strong> Implemented a system allowing players to view and navigate the museum map, assisting in exploration.</li>
+                <li><strong>Pause Menu:</strong> Developed the pause menu, enabling players to pause the game, access settings, and manage their progress.</li>
+                <li><strong>Vuforia Management:</strong> Integrated Vuforia, an augmented reality (AR) platform, allowing players to unlock additional information by scanning artworks with their devices.</li>
+                <li><strong>Animations:</strong> Created various animations, including animations for doors and other objects within the museum.</li>
+                <li><strong>Sound Management:</strong> Managed the implementation of sound effects and background music, enriching the immersive experience.</li>
+            </ul>
+        </section>
+    </section>
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/B2B/B2B1.png" alt="center" class="responsive">
+    </section>
+
+    <!-- contact me -->
+    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
+    <section id="contact-me" class="grid-system-2 w-900 padding">
+        <section class="margin-auto align-center">
+            <h1 class="large contact-title">Let's get in touch!</h1>
+            <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
+            <section class="box-contact margin-auto padding-top">
+            </section>
+        </section>
+    </section>
+
+    <!-- special thanks -->
+    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
+
+    <section id="contatti">
+        <div class="contact-info">
+            <div class="contact-item">
+                <p>Email: <span class="email-text">tuoemail@example.com</span></p>
+            </div>
+            <div class="contact-item">
+                <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="regardes">
+        <p class="small thanks justify w-900 padding-left">*Based on :
+
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
+
+        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
+
+        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
+    </footer>
+</main>
+</body>
+</html>
