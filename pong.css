@@ -1,121 +1,28 @@
-:root {
-    --video-margin-top: 80px; /* Variabile per determinare lo spazio sopra il video */
-    --header-padding: 40px; /* Padding per l'header */
-    --header-background-color: #000; /* Colore di sfondo dell'intestazione */
-    --border-thickness: 2px; /* Spessore del bordo per la descrizione */
 
-    --box-width: 45%; /* Larghezza di ciascun box */
-    --box-gap: 40px; /* Spazio tra i due box */
-    --box-padding: 10px; /* Padding interno dei box */
-    --box-border-radius: 30px; /* Raggio del bordo dei box */
-    --box-shadow-color: rgba(0, 255, 76, 0.3); /* Colore dell'ombra */
-    --box-background-color: #332f2f; /* Colore di sfondo dei box */
-    --description-box-border: 2px solid #000000; /* Bordo della descrizione */
-    --description-box-padding: 10px; /* Padding della descrizione */
-    --description-box-bg: #332f2f;
-); /* Sfondo semi-trasparente della descrizione */
-    --description-title-font-size: 2vw; /* Dimensione del titolo scalabile */
-    --margin-left: 10%; /* Margine sinistro personalizzabile */
-    --margin-right: 10%; /* Margine destro personalizzabile */
 
-    /* Variabili per i pulsanti */
-    --button-border-radius: 5px; /* Raggio del bordo */
-    --button-border-color: #007bff; /* Colore del bordo */
-    --button-background-color: #007bff; /* Colore di sfondo del pulsante */
-    --button-hover-background-color: #0056b3; /* Colore di sfondo al passaggio del mouse */
-    --button-font-size: 16px; /* Dimensione del font */
-    --button-border-width: 2px; /* Spessore del bordo */
-
-    --container-padding: 60px; /* Padding ai lati del contenitore */
-    --border-radius: 30px;
-
-    --button-background-color: #000000;
-    --button-border-color: #ff01ea;
-    --button-border-width: 3px;
-    --button-border-radius: 8px;
-    --button-font-size: 20px;
-    --button-hover-background-color: #9dff00; /* Raggio di rotondità per le skill */
-}
-/* styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000000; /* Colore di sfondo */
-    color: #ffa600; /* Colore del testo */
-    overflow-x: hidden; /* Nasconde lo scroll orizzontale */
+.discord-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 
-/* Header - rendilo fisso */
-header {
-    position: fixed; /* Fissa l'intestazione in cima alla pagina */
-    top: 0; /* Posiziona l'intestazione in alto */
-    left: 0; /* Allinea a sinistra */
-    right: 0; /* Allinea a destra */
-    z-index: 1000; /* Assicura che l'intestazione sia sopra altri contenuti */
-    padding: var(--header-padding) 20px; /* Padding attorno all'header */
-    background-color: var(
-            --header-background-color
-    ); /* Colore di sfondo dell'intestazione */
+.discord-hover-image {
+    display: none;
+    position: absolute;
+    top: 110%; /* Posiziona l'immagine sotto l'icona */
+    left: -200%;
+    transform: translateX(-60%);
+    width: 400px; /* Regola la dimensione dell'immagine */
+    border-radius: 10px;
 }
 
-/* Aggiungi un margine superiore al contenuto principale */
-body {
-    padding-top: 400px; /* Aggiungi un margine superiore per evitare che il contenuto venga coperto dall'header */
+.discord-container:hover .discord-hover-image {
+    display: block;
 }
 
-/* Sezione introduttiva */
-.header-content {
-    display: flex; /* Abilita Flexbox */
-    justify-content: space-between; /* Spazia tra gli elementi */
-    align-items: center; /* Allinea gli elementi verticalmente al centro */
-}
-
-.left {
-    flex: 1; /* Permette alla parte sinistra di occupare lo spazio disponibile */
-    text-align: left; /* Allinea il testo a sinistra */
-}
-
-.header-content h1 {
-    margin: 0;
-    font-size: 3vw; /* Dimensione del font scalabile */
-}
-
-.header-content h2 {
-    margin: 5px 0 0;
-    font-size: 2vw; /* Dimensione del font scalabile */
-}
-
-.right {
-    display: flex; /* Abilita Flexbox per le icone */
-    align-items: center; /* Allinea le icone verticalmente */
-}
-
-.right a {
-    margin: 0 10px; /* Margine tra le icone */
-}
-
-.portfolio-image {
-    width: 60px; /* Larghezza dell'immagine */
-    height: 60px; /* Altezza dell'immagine */
-    object-fit: cover; /* Adatta l'immagine al contenitore */
-    border-radius: 50%; /* Arrotonda gli angoli dell'immagine */
-    transition: transform 0.3s, opacity 0.3s, filter 0.3s; /* Transizione per l'effetto hover */
-}
-
-.portfolio-image:hover {
-    transform: scale(1.2); /* Effetto zoom al passaggio del mouse */
-    filter: brightness(
-            0.8
-    ); /* Cambia colore dell'immagine al passaggio del mouse */
-    opacity: 1; /* Assicura che l'opacità sia al massimo durante l'hover */
-}
 
 .video-container {
-    margin-top: var(
-            --video-margin-top
-    ); /* Utilizza la variabile per il margine superiore */
+    margin-top: 300px; /* Utilizza la variabile per il margine superiore */
     padding: 20px; /* Spaziatura attorno al video */
     border-radius: 10px; /* Angoli arrotondati */
     text-align: center; /* Allinea il video al centro */
@@ -158,83 +65,42 @@ video {
 }
 
 .container {
-    margin-left: var(--margin-left); /* Margine sinistro */
-    margin-right: var(--margin-right); /* Margine destro */
+    margin-left: 100px; /* Margine sinistro */
+    margin-right: 100px; /* Margine destro */
     margin-top: 0px; /* Margine superiore */
     margin-bottom: 0px; /* Margine inferiore */
     display: flex;
     height: auto;
     justify-content: space-between; /* Spaziatura tra i box */
-    gap: var(--box-gap); /* Spazio tra i due box */
+    gap:100px; /* Spazio tra i due box */
     overflow: hidden; /* Nasconde qualsiasi overflow */
 }
 
 .box {
-    background-color: var(--box-background-color); /* Colore di sfondo */
-    border-radius: var(--box-border-radius); /* Raggio del bordo */
+    background-color:  #ffffff; /* Colore di sfondo */
+    border-radius: 100px; /* Raggio del bordo */
     height: auto;
-    padding: var(--box-padding); /* Padding interno */
-    width: var(--box-width); /* Larghezza del box */
-    box-shadow: 0px 0px 40px var(--box-shadow-color); /* Ombra */
+    padding: 100px; /* Padding interno */
+    width: 100px; /* Larghezza del box */
+    box-shadow: 0px 0px 40px #ffffff; /* Ombra */
 }
 
 .description-title {
-    font-size: var(
-            --description-title-font-size
-    ); /* Dimensione del titolo scalabile */
+    font-size: 2pc; /* Dimensione del titolo scalabile */
     margin-bottom: 10px; /* Margine inferiore */
     color: #ffffff;
 }
 
 .description-box {
-    border: var(--description-box-border); /* Bordo della descrizione */
-    padding: var(--description-box-padding); /* Padding interno */
+    border: #ffffff;/* Bordo della descrizione */
+    padding: 100px; /* Padding interno */
     border-radius: 20px; /* Angoli arrotondati */
-    background-color: var(--description-box-bg); /* Sfondo semi-trasparente */
+    background-color: #ffffff;/* Sfondo semi-trasparente */
     margin-top: 0px; /* Margine superiore */
 }
 
-/* Stile per i pulsanti */
-.button-container {
-    display: flex; /* Abilita Flexbox per i pulsanti */
-    justify-content: center; /* Centra i pulsanti */
-    margin: 50px 0; /* Margini superiori e inferiori */
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Spazio uniforme tra i pulsanti */
-    margin: 50px 0;
-}
-
-.button {
-    background-color: var(--button-background-color);
-    color: #fd8700;
-    border: var(--button-border-width) solid var(--button-border-color);
-    border-radius: var(--button-border-radius);
-    padding: 12px 25px;
-    margin: 0;
-    cursor: pointer;
-    font-size: var(--button-font-size);
-    font-weight: bold;
-    letter-spacing: 1px; /* Spaziatura del testo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombra */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-
-.button:hover {
-    transform: translateY(-3px); /* Leggera elevazione */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombra accentuata */
-}
-
-.button:active {
-    transform: translateY(0); /* Rimuove l'elevazione */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Ombra ridotta */
-}
 
 /* descrizione progetto*/
-
 .image-description {
     width: 100%; /* Occupa tutta la larghezza del contenitore */
     max-width: 1200px; /* Larghezza massima per il contenitore */
@@ -264,47 +130,17 @@ video {
     margin: 0 auto; /* Centra il testo */
 }
 
-/* Contatti */
-#contatti {
-    padding-top: 200px;
-    padding: var(--container-padding);
-    background-color:  #000000;
-    color: #fd8700; /* Colore del testo */
+/* Stile per il bottone "Torna al Menu" */
+.back-button {
+    font-family: 'Montserrat', sans-serif; /* Imposta un font moderno */
+    font-size: 1.2rem; /* Aumenta la dimensione del font */
+    font-weight: 600; /* Imposta un font bold per un maggiore impatto */
+    color: #fbff00; /* Colore del testo bianco */
+    padding: 10px 20px; /* Aggiunge un po' di spazio intorno al testo */
+    border-radius: 5px; /* Angoli arrotondati */
+    display: inline-block; /* Assicura che il link sia trattato come un blocco per il padding */
+    transition: all 0.3s ease-in-out; /* Aggiunge un effetto di transizione */
+    text-shadow: 0 4px 10px rgba(204, 0, 255, 0.466); /* Ombra per dare un effetto tridimensionale */
+    cursor: pointer; /* Cambia il cursore in "pointer" per evidenziare il link come cliccabile */
+    margin-top: 5px; /* Distanza dal contenuto sopra */
 }
-
-#contatti h2 {
-    text-align: center; /* Centra il titolo */
-    font-size: 3vw; /* Dimensione del font scalabile */
-    margin-bottom: 20px; /* Margine sotto il titolo */
-}
-
-.contact-info {
-    display: flex;
-    justify-content: space-between; /* Spazio tra email e telefono */
-    padding: 0 var(--container-padding); /* Padding laterale */
-    width: 100%; /* Occupare tutta la larghezza disponibile */
-}
-
-.email,
-.phone {
-    flex: 1; /* Permette di espandere le colonne */
-    display: flex; /* Usa flexbox all'interno delle colonne */
-    justify-content: center; /* Centra il testo orizzontalmente */
-    align-items: center; /* Centra il testo verticalmente */
-    margin: 0 10px; /* Margine laterale per spaziatura */
-}
-
-.email-text,
-.phone-text {
-    color: #ff0062;
-    font-size: 1.5rem; /* Dimensione del testo */
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color:  #000000;/* Colore di sfondo del footer */
-    color: #ffffff; /* Colore del testo del footer */
-}
-  
