@@ -1,0 +1,692 @@
+/****************************************TYPOGRAPHY ***************************************************/
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #999999;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    color: #433b88;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 3.998em;
+}
+h2 {
+    font-size: 2.827em;
+}
+h3 {
+    font-size: 1.999em;
+}
+h4 {
+    font-size: 1.414em;
+}
+p {
+    font-size: 1em;
+    color: #020202;
+}
+
+/* Prima sezione del sito che occupa tutta la pagina */
+#introduction {
+    height: 100vh; /* Imposta l'altezza al 100% della finestra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6b6a8b; /* Puoi scegliere il colore che preferisci */
+    color: white;
+    transition: all 0.5s ease; /* Animazione per transizioni fluide */
+}
+
+/* Animazione quando scorre la pagina */
+#introduction.animate-scroll {
+    transform: translateY(-100px); /* Effetto di scivolamento mentre si scorre */
+    opacity: 0; /* Nascondi la sezione durante lo scorrimento */
+}
+
+/* Effetto di apparizione della sezione durante lo scorrimento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Imposta lo spostamento iniziale */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#introduction.show-on-scroll {
+    animation: fadeIn 1s ease-out forwards; /* Applica l'animazione */
+}
+
+/* Effetto per la navbar che cambia quando si scorre */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.navbar.scroll-down {
+    background-color: rgba(44, 62, 80, 0.9); /* Cambia il colore della navbar */
+}
+
+.navbar {
+    background-color: #2c3e50; /* Colore scuro elegante */
+    border-bottom: 3px solid #e74c3c; /* Bordo rosso per contrasto */
+}
+
+.navbar-nav li a {
+    color: #6835f3 !important; /* Testo bianco per leggibilità */
+    font-size: 18px; /* Dimensione più grande per migliore visibilità */
+    font-weight: bold;
+    padding: 15px 20px; /* Spaziatura migliorata */
+    transition: 0.3s; /* Effetto di transizione per il colore e la grandezza */
+}
+
+.navbar-nav li a:hover {
+    font-size: 20px; /* Aumenta la grandezza del testo */
+    padding: 20px 25px; /* Spaziatura leggermente aumentata per effetto */
+    text-shadow: 0px 0px 6px rgb(176, 5, 255);
+}
+
+.navbar-divider {
+    border-top: 2px solid #e74c3c;
+}
+
+.navbar {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    border: 0px;
+    padding-top: 30px;
+    transition: all 0.5s ease;
+}
+.navbar-brand {
+    padding: 0;
+}
+.navbar-brand img {
+    max-height: 50px;
+}
+.navbar-default .navbar-nav > li > a {
+    font-family: "Montserrat", sans-serif;
+    color: #ff0000;
+    text-transform: uppercase;
+}
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+    color: #ff0000;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #ff0000;
+}
+.navbar-nav > li > a.btn-navbar:hover {
+    color: #ff0000;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+.navbar-nav > li > a.btn-navbar {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.navbar-divider {
+    width: 100%;
+    height: 1px;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+}
+.colored-nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.colored-nav .navbar-divider {
+    display: none;
+}
+.cta {
+    color: #fff;
+}
+.cta-btn-group {
+    margin-top: 15px;
+}
+.cta-btn-group .btn {
+    margin: 10px;
+}
+.btn-orange.focus,
+.btn-orange:focus,
+.btn-orange.active,
+.btn-orange:active {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
+}
+.btn-white.focus,
+.btn-white:focus,
+.btn-white.active,
+.btn-white:active {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
+}
+.btn-violat.focus,
+.btn-violat:focus,
+.btn-violat.active,
+.btn-violat:active {
+    color: #fff;
+    background-color: #286090;
+    border-color: #122b40;
+}
+
+/*******************************************SLIDER HOME***************************************************/
+.sliding-card-with-bottom-image .image-container img {
+    max-width: 50%; /* Imposta la larghezza massima dell'immagine al 80% del suo contenitore */
+    height: auto; /* Mantieni l'aspect ratio originale */
+    position: relative;
+    margin: 0 auto;
+    padding-top: 0px;
+}
+
+.image-right-slide-bg {
+    background-repeat: no-repeat !important;
+    background-position-x: 100% !important;
+    background-size: auto 100% !important;
+    padding: 18rem 0;
+}
+
+.slider-para {
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    text-align: center; /* Centra il testo */
+}
+
+/* Per schermi più piccoli */
+@media (max-width: 768px) {
+    .slider-para {
+        font-size: 1.2em; /* Riduce la dimensione del testo per schermi più piccoli */
+    }
+}
+
+/* Per schermi molto piccoli (come telefoni) */
+@media (max-width: 480px) {
+    .slider-para {
+        font-size: 1em; /* Ulteriore riduzione per schermi molto piccoli */
+    }
+}
+
+/* Per schermi più grandi */
+@media (min-width: 1200px) {
+    .slider-para {
+        font-size: 1.8em; /* Aumenta la dimensione del testo per schermi più grandi */
+    }
+}
+
+/* Box per il testo */
+.box-container {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid white; /* Bordo bianco attorno al testo */
+    border-radius: 10px; /* Angoli arrotondati */
+    width: 100%; /* Si estende per tutta la larghezza disponibile */
+    max-width: 90%; /* Limita la larghezza massima del box */
+    text-align: center; /* Centra il testo nel box */
+    font-size: 1em; /* Puoi anche usare unità come vw per rendere il testo scalabile */
+    margin: 20px auto; /* Centra il box nella pagina */
+}
+
+/* Aggiungi responsività per schermi più piccoli */
+@media (max-width: 768px) {
+    .box-container {
+        width: 100%; /* Rende il box sempre largo al 100% */
+        max-width: 95%; /* Adatta meglio la larghezza per dispositivi più piccoli */
+        padding: 15px; /* Diminuisce il padding su schermi piccoli */
+    }
+}
+
+/* Aggiungi regole per schermi più grandi, se necessario */
+@media (min-width: 1200px) {
+    .box-container {
+        width: 100%;
+        max-width: 80%; /* Imposta una larghezza massima del 80% per schermi grandi */
+        padding: 25px; /* Aumenta il padding per schermi più grandi */
+    }
+}
+/*******************************************ELEMENT STYLES*******************************************/
+.btn-orange,
+.btn-violat {
+    color: #fff;
+}
+.btn-violat,
+.gradient-violat {
+    background-image: -moz-linear-gradient(
+            135deg,
+            rgb(244, 202, 216) 0%,
+            rgb(129, 112, 137) 35%,
+            rgb(14, 21, 58) 100%
+    );
+    background-image: -webkit-linear-gradient(
+            135deg,
+            rgb(244, 202, 216) 0%,
+            rgb(129, 112, 137) 35%,
+            rgb(14, 21, 58) 100%
+    );
+    background-image: -ms-linear-gradient(
+            135deg,
+            rgb(244, 202, 216) 0%,
+            rgb(129, 112, 137) 35%,
+            rgb(14, 21, 58) 100%
+    );
+}
+.btn-orange,
+.gradient-orange {
+    background-image: -webkit-linear-gradient(
+            35deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    background-image: -o-linear-gradient(
+            35deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    background-image: linear-gradient(
+            125deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    box-shadow: 0px 8px 27px 0px rgba(116, 44, 69, 0.21);
+}
+
+.btn-white,
+.gradient-white {
+    background-image: linear-gradient(125deg, #ffffff, #e1e1e1);
+    color: #6b6a8b;
+}
+.border-none {
+    border: 0px !important;
+}
+.btn-rounded-corner {
+    border-radius: 50px;
+}
+.btn-video {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-user-select: none;
+}
+.text-center {
+    text-align: center;
+}
+.img-responsive {
+    max-width: 100%;
+}
+.text-violat {
+    color: #6b6a8b;
+}
+.padding-top-bottom-120 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.padding-top-bottom-90 {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.bg-image {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+.margin-top-30 {
+    margin-top: 3 0px;
+}
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+.text-white {
+    color: #fff;
+}
+.bg-fit {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.bg-image-fit-50 {
+    background-repeat: no-repeat !important;
+    background-position-x: 100% !important;
+    background-size: 50% 100% !important;
+}
+.btn-navbar {
+    line-height: 1;
+}
+.btn-link i {
+    font-size: 18px;
+    vertical-align: middle;
+}
+.btn-video {
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+.btn-video:hover {
+    text-decoration: none;
+    color: #e86c6c;
+}
+.btn-video:hover .icon-rounded {
+    border-color: #e86c6c;
+    box-shadow: 0px 8px 27px 0px rgba(116, 44, 69, 0.21);
+    color: #e86c6c;
+}
+.btn.gradient-orange:hover {
+    background-color: #e86c6c !important;
+    background-image: none !important;
+}
+.btn-orange.active,
+.btn-orange:active {
+    color: #fff;
+    background-image: -webkit-linear-gradient(
+            35deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    background-image: -o-linear-gradient(
+            35deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    background-image: linear-gradient(
+            125deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    border: 0px;
+    border-color: transparent;
+}
+.btn-violat.active,
+.btn-violat:active {
+    color: #fff;
+    background-image: -moz-linear-gradient(
+            135deg,
+            rgb(244, 202, 216) 0%,
+            rgb(129, 112, 137) 35%,
+            rgb(14, 21, 58) 100%
+    );
+    background-image: -webkit-linear-gradient(
+            135deg,
+            rgb(244, 202, 216) 0%,
+            rgb(129, 112, 137) 35%,
+            rgb(14, 21, 58) 100%
+    );
+    background-image: -ms-linear-gradient(
+            135deg,
+            rgb(244, 202, 216) 0%,
+            rgb(129, 112, 137) 35%,
+            rgb(14, 21, 58) 100%
+    );
+    border: 0px;
+    border-color: transparent;
+}
+.btn-violat:hover,
+.btn-white:hover {
+    background-image: -webkit-linear-gradient(
+            35deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    background-image: -o-linear-gradient(
+            35deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    background-image: linear-gradient(
+            125deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    border: 0px;
+    border-color: transparent;
+}
+
+.icon-rounded {
+    width: 49px;
+    height: 49px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 5px;
+    transition: all 0.5s ease;
+}
+.icon-rounded i {
+    font-size: 3rem;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-left: 12px;
+    transition: all 0.5s ease;
+}
+/*******************************************BACKGROUND-STYLES****************************************/
+.bg-transparent {
+    background-color: transparent;
+}
+.max-width-100 {
+    max-width: 100% !important;
+}
+.italic {
+    font-style: italic;
+}
+.blog-category {
+    text-transform: uppercase;
+    color: #433b88 !important;
+    font-weight: 600;
+}
+.margin-bottom-80 {
+    margin-bottom: 80px;
+}
+.margin-bottom-25 {
+    margin-bottom: 25px;
+}
+.padding-top-90 {
+    padding-top: 0px;
+}
+.margin-top-bottom-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.bordered-ios {
+    background-color: transparent;
+    border-color: #fff;
+    border: 1px solid;
+}
+
+/*******************************************SCROLL TOP ICON*****************************************/
+.display-none {
+    display: none;
+    transition: all 0.5s ease;
+}
+.scroll-top-div {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    top: calc(100vh - 70px);
+    left: calc(100vw - 62px);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.scroll-top-icon-container {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(
+            35deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    background-image: -o-linear-gradient(
+            35deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    background-image: linear-gradient(
+            125deg,
+            rgb(232, 88, 137) 0%,
+            rgb(232, 98, 123) 32%,
+            rgb(232, 108, 108) 100%
+    );
+    color: #fff;
+}
+.scroll-top-icon-container i {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 28px;
+}
+/*******************************************OVERLAY*************************************************/
+@media screen and (max-width: 768px) {
+    .sm-padding-top-bottom-50-75 {
+        padding-top: 50px;
+        padding-bottom: 75px;
+    }
+    .testimonial-content {
+        padding: 0.5rem 1rem;
+    }
+    .sm-display-none {
+        display: none;
+    }
+    .image-right-slide-wraper .image-right-slide-content {
+        text-align: center;
+    }
+    .image-right-slide-bg {
+        background-image: none !important;
+    }
+    .image-right-slide-bg {
+        padding: 4rem 15px;
+    }
+    .home-slider h2 {
+        font-size: 1.999em;
+    }
+    .home-slider .slider-para {
+        font-size: 1em;
+    }
+    .padding-top-bottom-120 {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    .padding-top-bottom-90 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .padding-top-120 {
+        padding-top: 75px;
+    }
+    .padding-top-90 {
+        padding-top: 60px;
+    }
+    .card-block {
+        padding: 2rem;
+    }
+    .navbar {
+        background-image: -webkit-linear-gradient(
+                305deg,
+                rgb(232, 88, 137) 0%,
+                rgb(232, 98, 123) 32%,
+                rgb(232, 108, 108) 100%
+        );
+        background-image: -o-linear-gradient(
+                305deg,
+                rgb(232, 88, 137) 0%,
+                rgb(232, 98, 123) 32%,
+                rgb(232, 108, 108) 100%
+        );
+        background-image: linear-gradient(
+                35deg,
+                rgb(232, 88, 137) 0%,
+                rgb(232, 98, 123) 32%,
+                rgb(232, 108, 108) 100%
+        );
+    }
+    .navbar-divider {
+        display: none;
+    }
+    .navbar-toggle {
+        margin-top: 2px;
+    }
+    .logo-colored img,
+    .logo-white img {
+        max-height: 40px;
+    }
+}
+@media screen and (min-width: 769px) {
+    .image-right-slide-wraper {
+        display: table;
+        width: 100%;
+    }
+    .image-right-slide-wraper .image-right-slide-content {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+    }
+    .image-right-slide-wraper .image-container {
+        float: none;
+        display: table-cell;
+    }
+}
+
+/***************************************OWL CAROUSEL ******************************************************************/
+
+.owl-theme .owl-controls .owl-page span {
+    background: #fff;
+}
+.owl-theme .owl-controls .owl-buttons div {
+    font-size: 45px;
+    background-color: transparent;
+    color: #fff;
+}
+.home-slider .owl-controls {
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 35px);
+}
+.home-slider .owl-buttons {
+    position: relative;
+}
+.home-slider .owl-prev {
+    position: absolute;
+    left: 0;
+}
+.home-slider .owl-next {
+    position: absolute;
+    right: 0;
+}

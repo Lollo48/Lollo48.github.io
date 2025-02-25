@@ -1,550 +1,400 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="no-js">
+<!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <title>My portfolio website</title>
-    <!-- Adding favicon for older and modern browsers,
-        It is best to add favicon to the main folder, 
-        I used an only ico converter for best result,
-        Do not forget to clear you cache to see the changes -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8" />
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.main.css" />
+  <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+          rel="stylesheet"
+  />
+  <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Lollo</title>
+
+  <!-- meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- google fonts -->
+  <link
+          href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500|Lato:300,400,700,900,300italic,400italic,700italic,900italic|Raleway:400,200,300,500,100|Titillium+Web:400,200,300italic,300,200italic"
+          rel="stylesheet"
+          type="text/css"
+  />
+
+  <script src="assets/js/modernizr.js"></script>
 </head>
+<body id="body">
 
-<body>
-<!-- navigation bar -->
-<nav class="sticky">
-    <label for="drop" class="toggle" id="main-toggle">
-        <span class="nav-icon"></span>
-    </label>
-    <input type="checkbox" id="drop">
-    <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about-me.html">About me</a></li>
-        <li><a href="skill-set.html">Skill-set</a></li>
-        <li><a href="#contact-me">Contact me</a></li>
+<header id="home" class="gradient-violat">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="logo-wraper logo-white">
+                <img src="Logos/Dragone.png" alt="">
+              </span></a>
+      </div>
 
-        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
-            <img src="Logos/Linkedin.png" class="nav-image" />
-        </a>
-        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
-            <img src="Logos/Instagram.png" class="nav-image" />
-        </a>
-        <a href="https://github.com/Lollo48" target="_blank">
-            <img src="Logos/Github.png" class="nav-image" />
-        </a>
-        <div class="discord-container">
-            <img src="Logos/Discord.png" class="nav-image" />
-            </a>
-            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
-        </div>
-    </ul>
-</nav>
-
-<!-- introduction -->
-<header class="grid-system-2 w-900 padding">
-    <section class="align-center">
-        <h1 class="medium-spacing">Game programming</h1>
-        <h1 class="large">Grasso Lorenzo</h1>
-        <p class="principalText">
-            <span class="boldText">Hey</span>,I'm<span class="boldText"> Lorenzo</span>, I'm a <span class="boldText">game programming</span> student.
-            I'm trying to specialize in the development of the <span class="boldText">AI</span> and I'm focused on the <span class="boldText">multiplayer</span> part.
-        </p>
-    </section>
-    <section class="center align-center">
-        <img class="header-img max-width max-height" src="Logos/Dragone.png" alt="profile-picture">
-    </section>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about-me" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      <hr class="navbar-divider">
+    </div><!-- /.container-fluid -->
+  </nav>
 </header>
+<section id="introduction" class="gradient-violat padding-top-90 home-slider">
+  <div class="sliding-card-with-bottom-image text-center padding-top-90">
+    <h2 class="cta-heading text-white"></h2>
 
-
-<!-- quote -->
-<article class="baby-pink">
-    <p class="quote uppercase">"Welcome to my world, where every line of code tells a story, and every game is an adventure waiting to unfold. Just remember: In my world, the only bug that exists is the one you don’t fix."</p>
-</article>
-</section>
-<section class="center align-center">
-    <img class="header-img max-width max-height" src="Logos/Dragone.png" alt="profile-picture">
-</section>
-<!-- about me -->
-<!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
-<section class="wrapper">
-    <section class="margin-auto">
-    </section>
-    <section class="justify align-center">
-        <p class="quote uppercase">About me</p>
-        Hi, as mentioned above, I'm Lorenzo, a 27-year-old game developer with a <span class="secondboldText">passion for gaming.</span>
-        I’ve always loved video games, and that’s what inspired me to start programming.
-        I'm a <span class="secondboldText">proactive</span> and <span class="secondboldText">generous</span> person, always eager to collaborate and work in teams to create something <span class="secondboldText">amazing.</span>
-        In addition to game development, I have a love for <span class="secondboldText">travel</span> and <span class="secondboldText">food</span>, which allows me to explore new cultures and experiences that often inspire my work.
-        If you want to learn more about me and my projects, just hit the button below!
-        <p class="padding-top"><a href="about-me.html" class="button-outline">More info</a></p>
-    </section>
-</section>
-
-<!-- skills -->
-<!-- use this to showcase your skills, if you make changes, do not forget to modify the css accordingly -->
-<section>
-    <h3 class="main-title center padding">Skills</h3>
-</section>
-<section class="wrapper">
-    <section class="column">
-        <section class="skills">
-            <ul class="no-bullet-list no-padding-list-item">
-                <li>
-                    <p>C++</p>
-                    <span class="progress-bar"><span class="html"></span></span>
-                </li>
-                <li>
-                    <p>Unreal Engine</p>
-                    <span class="progress-bar"><span class="css"></span></span>
-                </li>
-                <li>
-                    <p>Git Flow</p>
-                    <span class="progress-bar"><span class="javascript"></span></span>
-                </li>
-            </ul>
-        </section>
-    </section>
-    <section class="column">
-        <section class="skills">
-            <ul class="no-bullet-list no-padding-list-item">
-                <li>
-                    <p>C#</p>
-                    <span class="progress-bar"><span class="comm-adapt"></span></span>
-                </li>
-                <li>
-                    <p>Unity</p>
-                    <span class="progress-bar"><span class="team-player"></span></span>
-                </li>
-                <li>
-                    <p>OOP</p>
-                    <span class="progress-bar"><span class="problem-solving"></span></span>
-                </li>
-            </ul>
-        </section>
-    </section>
-</section>
-</section>
-
-<!-- Projects -->
-<section>
-    <h3 class="main-title center padding">Projects</h3>
-</section>
-
-<section class="wrapper">
-    <section class="column card justify flex">
-        <h4 class="padding bold center">ProjectBW</h4>
-        <div class="video-wrapper" onclick="window.location.href='portfolio.html'">
-            <video autoplay loop muted>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
-                </div>
-            </div>
+    <div class="image-container text-center">
+      <div class="card animated fadeIn">
+        <center>
+          <img class="center animated avatar-rollin avatar-image" src="Logos/Dragone.png" alt="avatar" />
+        </center>
+        <div class="name">Lorenzo</div>
+        <p class="subtitle">Game Programmer</p>
+        <p class="icons animated pulse">
+         
+        <!-- Immagini sotto -->
+        <div class="image-links">
+          <a href="https://www.example1.com" target="_blank">
+            <img src="Logos/Linkedin.png" alt="Image 1" />
+          </a>
+          <a href="https://www.example2.com" target="_blank">
+            <img src="Logos/Github.png" alt="Image 2" />
+          </a>
+          <a href="https://www.example3.com" target="_blank">
+            <img src="Logos/Instagram.png" alt="Image 3" />
+          </a>
+          <a href="https://www.example4.com" target="_blank">
+            <img src="Logos/Discord.png" alt="Image 4" />
+          </a>
         </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
+        <p class="text-white slider-para"></p>
+        <p class="text-white slider-para">I'm <span class="boldText">Lorenzo</span>, I'm a <span class="boldText">game programming</span> student.
+          I'm trying to specialize in the development of <span class="boldText">AI</span> and I'm focused on the <span class="boldText">multiplayer</span> part.</p>
+        <p class="text-white slider-para">
+          <span class="box-container">"Welcome to my world, where every line of code tells a story, and every game is an adventure waiting to unfold. Just remember: In my world, the only bug that exists is the one you don’t fix."</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Content Area -->
+
+<!-- services section -->
+<section id="about-me" class="gradient-violat">
+  <div class="container">
+    <h2 class="block_title">About me </h2>
+    <div class="row port cs-style-3">
+      <section class="center align-center">
+        <img class="header-img max-width max-height" src="images/Discord.png" alt="profile-picture">
+      </section>
+      <!-- about me -->
+      <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+      <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+          Hi,I'm Lorenzo, a 27-year-old game developer with a <span class="secondboldText">passion for gaming.</span>
+          I’ve always loved video games, and that’s what inspired me to start programming.
+          I'm a <span class="secondboldText">proactive</span> and <span class="secondboldText">generous</span> person, always eager to collaborate and work in teams to create something <span class="secondboldText">amazing.</span>
+          In addition to game development, I have a love for <span class="secondboldText">travel</span> and <span class="secondboldText">food</span>, which allows me to explore new cultures and experiences that often inspire my work.
+          If you want to learn more about me and my projects, just hit the button below!
+          <p class="padding-top"><a href="about-me.html" class="button-outline">More info</a></p>
+        </section>
+      </section>
+
+      <!-- skills -->
+      <!-- use this to showcase your skills, if you make changes, do not forget to modify the css accordingly -->
+      <section id="skills" class="portfolio-area">
+        <div class="container">
+          <h2 class="block_title">My Skills</h2>
+          <div class="row port cs-style-3">
+            <section class="wrapper">
+              <section class="column">
+                <section class="skills">
+                  <ul class="no-bullet-list no-padding-list-item">
+                    <li>
+                      <p>C++</p>
+                    </li>
+                    <li>
+                      <p>Unreal Engine</p>
+                    </li>
+                    <li>
+                      <p>Git Flow</p>
+                    </li>
+                  </ul>
+                </section>
+              </section>
+              <section class="column">
+                <section class="skills">
+                  <ul class="no-bullet-list no-padding-list-item">
+                    <li>
+                      <p>C#</p>
+                    </li>
+                    <li>
+                      <p>Unity</p>
+                    </li>
+                    <li>
+                      <p>OOP</p>
+                    </li>
+                  </ul>
+                </section>
+              </section>
+            </section>
+      <p class="padding-top"><a href="about-me.html" class="button-outline">More info</a></p>
+      <!-- services -->
+
+      <!-- Portfolio Area -->
+      <!-- <section id="portfolio" class="portfolio-area" style="background: linear-gradient(to right, #f0461c, #feb47b);"> -->
+      <!-- <section id="portfolio" class="portfolio-area" style="background-color: #ffffff;">-->
+      <!-- <section id="portfolio" class="portfolio-area" style="background: url('images/1_back.png') no-repeat center center; background-size: cover;">-->
+
+      <section id="projects" class="portfolio-area" >
+        <div class="container">
+          <h2 class="block_title">Working-On</h2>
+          <div class="row port cs-style-3">
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls onclick="window.location.href='Prova.html'">
+                  <source src="Videos/GeometryDash.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>More info</h3>
+                  <span>Geometry dash remake</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls>
+                  <source src="Videos/B2B.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>More info</h3>
+                  <span>B2B</span>
+                </figcaption>
+              </figure>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <section id="portfolio" class="portfolio-area">
+        <div class="container">
+          <h2 class="block_title">Projects</h2>
+          <div class="row port cs-style-3">
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls onclick="window.location.href='assets/ciao.html'">
+                  <source src="assets/videos/your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>More info</h3>
+                  <span>Jacob Cummings</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls>
+                  <source src="assets/videos/your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>Settings</h3>
+                  <span>Jacob Cummings</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls onclick="window.location.href='assets/ciao.html'">
+                  <source src="assets/videos/your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>More info</h3>
+                  <span>Jacob Cummings</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls onclick="window.location.href='assets/ciao.html'">
+                  <source src="assets/videos/your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>More info</h3>
+                  <span>Jacob Cummings</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls onclick="window.location.href='assets/ciao.html'">
+                  <source src="assets/videos/your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>More info</h3>
+                  <span>Jacob Cummings</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls onclick="window.location.href='assets/ciao.html'">
+                  <source src="assets/videos/your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>More info</h3>
+                  <span>Jacob Cummings</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls onclick="window.location.href='assets/ciao.html'">
+                  <source src="assets/videos/your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>More info</h3>
+                  <span>Jacob Cummings</span>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 item-space">
+              <figure>
+                <video width="250%" height="auto" controls onclick="window.location.href='assets/ciao.html'">
+                  <source src="assets/videos/your-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                  <h3>More info</h3>
+                  <span>Jacob Cummings</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- portfolio -->
+
+      <section id="contact" class="portfolio-area">
+        <div class="container">
+          <h2 class="block_title">Contacts</h2>
+          <section id="contact-me" class="grid-system-2 w-900 padding">
+            <section class="margin-auto align-center contact-content">
+              <h1 class="large contact-title">Let's get in touch!</h1>
+              <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
+            </section>
+          </section>
+        </div>
+
+        <section id="contact-me" class="grid-system-2 w-900 padding">
+          <section class="margin-auto align-center contact-content">
+            <div class="text-image-container">
+              <div class="text-image-item" onclick="window.location.href='portfolio.html'">>
+                <img src="Logos/Linkedin.png" alt="Descrizione dell'immagine 1" class="side-image" />
                 <p>13 School game lab</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>December 7th - In Progress, 2025</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Unreal Engine 5</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Windows</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">ProjectBW</a></p>
-    </section>
-
-    <section class="column card justify flex">
-        <h4 class="padding bold center">Project Tank</h4>
-        <div class="video-wrapper" onclick="window.location.href='portfolio.html'">
-            <video autoplay loop muted>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
+              </div>
+              <div class="text-image-container">
+                <div class="text-image-item" onclick="window.location.href='portfolio.html'">>
+                  <img src="Logos/Github.png" alt="Descrizione dell'immagine 1" class="side-image" />
+                  <p>13 School game lab</p>
                 </div>
-            </div>
-        </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                <p>1 personal project</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>September 19th - In Progress, 2024/2025</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Unity</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Mobile IOS/Android</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Project Tank</a></p>
-    </section>
-</section>
-
-
-<section class="wrapper">
-    <section class="column card justify flex">
-        <h4 class="padding bold center">Jules</h4>
-        <div class="video-wrapper" onclick="window.location.href='portfolio.html'">
-            <video autoplay loop muted>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
+                <div class="text-image-container">
+                  <div class="text-image-item" onclick="window.location.href='assets/ciao.html'">>
+                    <img src="Logos/Instagram.png" alt="Descrizione dell'immagine 1" class="side-image" />
+                    <p>13 School game lab</p>
+                  </div>
+                  <div class="text-image-container">
+                    <div class="text-image-item" onclick="window.location.href='portfolio.html'">>
+                      <img src="Logos/Discord.png" alt="Descrizione dell'immagine 1" class="side-image" />
+                      <p>13 School game lab</p>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                <p>3 (13) School game lab</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>January 10th - July 10th, 2024</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Unreal Engine 5</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Windows</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Jules</a></p>
-    </section>
-
-    <section class="column card justify flex">
-        <h4 class="padding bold center">Pong Remake</h4>
-        <div class="video-wrapper" onclick="window.location.href='portfolio.html'">
-            <video autoplay loop muted>
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
                 </div>
-            </div>
-        </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                <p>1 school exam</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>June 21th - July 18th, 2024</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Unity</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Windows</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Pong Remake</a></p>
-    </section>
-</section>
-
-<section class="wrapper">
-    <section class="column card justify flex">
-        <h4 class="padding bold center">HLSL Shader "Crystal"</h4>
-        <div class="video-wrapper" onclick="window.location.href='Shader.html'">
-            <video autoplay loop muted>
-                <source src="Videos/Shader.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
                 </div>
-            </div>
-        </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                <p>1 school exam</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>May 14th - June 28th, 2024</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Unity</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Built-in</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="Shader.html" class="button-outline">Shader "Crystal"</a></p>
-    </section>
-
-    <section class="column card justify flex">
-        <h4 class="padding bold center">Tool House Scatter</h4>
-        <div class="video-wrapper" onclick="window.location.href='Tool.html'">
-            <video autoplay loop muted>
-                <source src="Videos/Tools.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
-                </div>
-            </div>
-        </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                <p>1 school exam</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>February 15th - March 5th, 2024</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Untiy</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Windows</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="Tool.html" class="button-outline">House Scatter</a></p>
-    </section>
-</section>
-
-<section class="wrapper">
-    <section class="column card justify flex">
-        <h4 class="padding bold center">B2B Brera Museum </h4>
-        <div class="video-wrapper" onclick="window.location.href='B2B.html'">
-            <video autoplay loop muted>
-                <source src="Videos/B2B.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
-                </div>
-            </div>
-        </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                <p>10 School game lab</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>November 10th - December 22th, 2023</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Unity</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Mobile Android</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="B2B.html" class="button-outline">B2B</a></p>
-    </section>
-
-    <section class="column card justify flex">
-        <h4 class="padding bold center">Sandwich Remake</h4>
-        <div class="video-wrapper" onclick="window.location.href='SandwichRemake.html'">
-            <video autoplay loop muted>
-                <source src="Videos/SandwichRemake.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
-                </div>
-            </div>
-        </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                <p>1 school exam </p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>December 4th - December 22th, 2023</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Unity</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Mobile Android</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="SandwichRemake.html" class="button-outline">Sandwich Remake</a></p>
-    </section>
-</section>
-
-<section class="wrapper">
-    <section class="column card justify flex">
-        <h4 class="padding bold center">Geometry Dash Remake</h4>
-        <div class="video-wrapper" onclick="window.location.href='GeometryDashRemake.html'">
-            <video autoplay loop muted>
-                <source src="Videos/GeometryDash.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
-                </div>
-            </div>
-        </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                <p>8 School game lab</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>October 6th - November 8th, 2023</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Unity</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Mobile Android</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Geometry Dash Remake</a></p>
-    </section>
-
-    <section class="column card justify flex">
-        <h4 class="padding bold center">Candy Crush Remake</h4>
-        <div class="video-wrapper" onclick="window.location.href='CandyCrushRemake.html'">
-            <video autoplay loop muted>
-                <source src="Videos/CandyCrushRemake.mp4" type="video/mp4">
-                Il tuo browser non supporta il video.
-            </video>
-            <div class="video-info">
-                <div class="video-info-item">
-                    <img src="Logos/VideoLogos/Arrow.jpg" class="nav-image-video-info" />
-                </div>
-            </div>
-        </div>
-        <div class="text-image-container">
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                <p>1 school exam </p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                <p>April 21th - May 10th, 2023</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                <p>Unity</p>
-            </div>
-            <div class="text-image-item">
-                <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                <p>Windows</p>
-            </div>
-        </div>
-        <p class="padding-top bottom"><a href="CandyCrushRemake.html" class="button-outline">Candy Crush Remake</a></p>
-    </section>
-</section>
-
-<!-- contact me -->
-<!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
-<section id="contact-me" class="grid-system-2 w-900 padding">
-    <section class="margin-auto align-center">
-        <h1 class="large contact-title">Let's get in touch!</h1>
-        <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
-        <section class="box-contact margin-auto padding-top">
+          </section>
         </section>
-    </section>
-</section>
-
-<!-- special thanks -->
-<!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
-
-<section id="contatti">
-    <div class="contact-info">
-        <div class="contact-item">
-            <p>Email: <span class="email-text">loory4895@gmail.com</span></p>
-        </div>
-        <div class="contact-item">
-            <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
-        </div>
+        </section>
+    </div>
     </div>
 </section>
 
 <section id="regardes">
-    <p class="small thanks justify w-900 padding-left">*Based on :
+  <p class="small thanks justify w-900 padding-left">*Based on :
 
-        <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
+    <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
 
-    <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
-        <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
+  <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
+    <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
 
-    <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
-        <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
-        <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
-        <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
-        <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
-        <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
+  <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
+    <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
+    <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
+    <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
+    <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
+    <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
+  <p class="small thanks justify w-900 padding-left">@2025 Grasso Lorenzo. All rights reserved.</p>
 </section>
-<footer>
-    <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
-</footer>
+
+
+
+<script src="js/jquery.mini.js"></script>
+<script src="js/bootstrap.mini.js"></script>
+<script src="js/owl.carousel.mini.js"></script>
+<script src="js/script.js"></script>
+
+<script src="assets/js/jquery-2.1.3.mini.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
