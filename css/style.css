@@ -38,10 +38,6 @@ p {
     display: flex;
     justify-content: center; /* Centra il contenuto orizzontalmente */
     align-items: center; /* Centra il contenuto verticalmente */
-    height: 100vh; /* La sezione occupa l'intera altezza della finestra */
-    width: 100%; /* La sezione occupa l'intera larghezza della finestra */
-    overflow: hidden; /* Evita il scroll non voluto */
-    position: relative;
 }
 
 /* Animazione quando scorre la pagina */
