@@ -222,6 +222,22 @@ a:focus {
     margin-bottom: 30px;
 }
 
+.video-container {
+    width: 100%; /* Occupa tutta la larghezza del genitore */
+    height: 250px; /* Altezza personalizzabile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-container video {
+    width: 100%; /* Occupa tutta la larghezza */
+    height: 100%; /* Occupa tutta l'altezza */
+    object-fit: cover; /* Assicura che il video si adatti senza distorsioni */
+}
+
 /* ///////////////////////////////////////////////////////////////////// 
 //  09 - Responsive Fixes
 /////////////////////////////////////////////////////////////////////*/
