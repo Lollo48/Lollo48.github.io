@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Review this part and modify it to your liking -->
+    <meta name="description" content="Sample text for portfolio template meta tag">
+    <meta name="keywords" content="Sample text for portfolio template meta tag">
+    <meta name="author" content="Sample text for portfolio template meta tag">
+    <title>My portfolio website</title>
+    <!-- Adding favicon for older and modern browsers,
+        It is best to add favicon to the main folder, 
+        I used an only ico converter for best result,
+        Do not forget to clear you cache to see the changes -->
+    <link rel="stylesheet" type="text/css" href="ProjectPage.css">
+    <!-- font for the quote -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- font for the body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- navigation bar -->
+<nav class="sticky">
+    <label for="drop" class="toggle" id="main-toggle">
+        <span class="nav-icon"></span>
+    </label>
+    <input type="checkbox" id="drop">
+    <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-me.html">About me</a></li>
+        <li><a href="index.html">Skill-set</a></li>
+        <li><a href="#contact-me">Contact me</a></li>
+
+        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
+            <img src="Logos/Linkedin.png" class="nav-image" />
+        </a>
+        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
+            <img src="Logos/Instagram.png" class="nav-image" />
+        </a>
+        <a href="https://github.com/Lollo48" target="_blank">
+            <img src="Logos/Github.png" class="nav-image" />
+        </a>
+        <div class="discord-container">
+            <img src="Logos/Discord.png" class="nav-image" />
+            </a>
+            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
+        </div>
+    </ul>
+</nav>
+<main>
+    <section class="video-container">
+        <h3 class="video-title"> Jules </h3>
+        <video controls autoplay loop>
+            <source src="Videos/Jules.mp4" type="video/mp4" />
+            Il tuo browser non supporta i video.
+        </video>
+    </section>
+
+    <section class="wrapper">
+        <section class="column card justify flex">
+            <h4 class="padding bold center"> Jules</h4>
+            <div class="text-image-container">
+                <div class="text-image-item-project">
+                    <p>School Game Lab.
+                    </p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>  KEY FEATURES :  </p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>Gauntlet Mechanic</p>
+                </div>
+                <div class="text-image-item-project">
+                    <p> environmental progression</p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>  Light Interactables</p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>   Base Interaction</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="column card justify flex">
+            <h4 class="padding bold center">Project info</h4>
+            <div class="text-image-container">
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
+                    <p>3 (13) School Game Lab.</p>
+                </div>
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
+                    <p>January 10th - July 10th, 2024, six months</p>
+                </div>
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
+                    <p>Unreal</p>
+                </div>
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
+                    <p>Windows</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="button-container">
+        <a href="index.html" class="button">Home</a>
+        <a href="https://eventhorizonschool.itch.io/jules" class="button">Repository</a>
+    </div>
+
+    <!-- about me -->
+    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Project Overview</p>
+            <p>"Jules" is a Puzzle-Adventure game where players must reactivate the functions of machines
+                in a gigantic library divided into 4 sectors. Each sector will feature a number "x" of rooms, in
+                each of which players will face an environmental puzzle using the protagonist's unique ability
+                to transfer energy from one machine or object to another, thereby activating and deactivating
+                their functions accordingly.</p>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/Jules/Jules.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Game Goal</p>
+            <p>The main goal of the game is to complete every single puzzle in order to unlock parts of the
+                map that help the player to understand the narrative of the game.</p>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/Jules/Jules1.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Key Features</p>
+            <section class="description-section">
+                <p><strong></strong></p>
+                <h4>Features</h4>
+                <ul>
+                    <li><strong>Gauntlet Mechanic:</strong> A key feature of Jules is the use of a specialized glove for interacting with
+                        objects.Many objects in the game are designed to respond to the light. When players
+                        shine light on these objects, they collect and store the light energy. Each object has a
+                        specific light threshold it needs to reach. Once the required number of light
+                        interactions is achieved, the object activates and begins to perform its intended
+                        behavior or function.</li>
+                    <li><strong>environmental progression :</strong> The continuous progression of the environment each time you complete a puzzle.</li>
+                    <li><strong>Light Interactables :</strong> Different objects that are activated only through the reception of lights.
+                        Players can interact with objects by activating and deactivating their functions.</li>
+                    <li><strong>Base Interaction:</strong> Inside the game there are sheets of paper where the player will discover parts of the
+                        narrative by interacting with them.</li>
+                </ul>
+            </section>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/Jules/Jules2.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Personal contribution</p>
+            <section class="description-section">
+                <p><strong>The House Scatter Tool combines real-time visualization, snapping mechanics, and optimized object placement to improve level design workflows. Its UI-based prefab selection and intuitive controls ensure a seamless experience. Below are the key mechanics that define how the tool functions.</strong></p>
+                <h4>Additional information:</h4>
+                <ul>
+                    <li><strong>Player Input and Movement:</strong></li>
+                    <li><strong>Gauntlet Mechanic:</strong>Created the glove mechanic, which is a central feature of the game.
+                        Design: Developing the glove as an interactive tool for manipulating light and objects within
+                        the game.
+                        Animations: Implementing animations for the glove, including its activation, light emission,
+                        and interaction with objects. Ensured that the animations were smooth and visually coherent
+                        with the game’s aesthetic.</li>
+                    <li><strong>Light Interactables:</strong>Developed the light mechanic, including the creation and management of light.
+                        Light Creation: Implemented the functionality for the glove to take and give light onto
+                        various objects.
+                        Animations: Designed and integrated animations for light interactions, ensuring that light
+                        transitions and effects were visually appealing and integrated seamlessly into the gameplay.
+                        Added ring animations that allow the player to understand how many lights the object needs
+                        to function</li>
+                    <li><strong>Object Behaviors with Light Interaction:</strong> Worked on defining and programming the different behaviors of interactive objects that
+                        respond to light.
+                        These include:
+                        Altar: Implemented an altar that serves as a repository for collected lights. This object
+                        accumulates light and plays a role in gameplay progression by storing and managing light
+                        resources.
+                        Light Door: Created a door that opens and closes based on the number of light interactions.
+                        The door’s movement is triggered when the required light threshold is met.
+
+                        Generator: Created a generator that activates additional light-interactive objects once it
+                        receives the correct amount of light.
+                        Moving Platform: Designed a platform that moves along a spline path once it receives the
+                        correct amount of light.
+                        Rotating Platform: Created a rotating platform that can rotate around any axis once it
+                        receives the correct amount of light.
+                        Sequence Altar: altars that must be activated with a specific sequence to activate their
+                        behavior</li>
+
+                    <li><strong>Base Interactive System:</strong>Created a system of basic interactive objects that help players better understand the
+                        narrative. </li>
+                    <li><strong>Gauntlet Power-Ups:</strong>
+                        Power-Up Design: Created various power-ups that provide temporary enhancements or
+                        new abilities for the gauntlet, such as the number of storing lights.</li>
+                    <li><strong>Player Health:</strong>Managed the health system for the player, including:
+                        Health States: Implemented health status tracking, including the player's health, death
+                        state, and respawn mechanics.
+                        Death and Respawn: Developed the system to handle player death, including triggering
+                        respawn sequences and managing game states during these transitions.
+                        Death Animations: Added animations for player death to enhance the visual impact of
+                        dying in the game. These animations help convey the consequences of player failure and
+                        provide feedback to the player.</li>
+
+                    <li><strong>Damage System:</strong>Implemented the damage system, which is intricately linked to the player health
+                        management:
+                        Damage Mechanics: Designed and programmed mechanics for handling damage inflicted
+                        on the player, including sources of damage and how it affects the player's health.</li>
+
+                    <li><strong>Camera Shake and Camera Management:</strong>
+                        Camera Shake: Implemented camera shake effects to simulate player walking.
+                        Camera Manager: Developed a camera management system to control camera behavior,
+                        including transitions.</li>
+
+                    <li><strong>Visual Effects (VFX):</strong>
+                        VFX: Designed and integrated visual effects to enhance gameplay and feedback, including
+                        light effects, environmental effects, and interactive object responses.</li>
+
+                    <li><strong>Sound Management:</strong></li>
+
+                    <li><strong>Save System Implementation:</strong>Designed and implemented the save system for the game:
+                        Progress Saving: Ensured that player progress, including collected items, activated objects,
+                        and game states, is saved accurately.
+                        Restore Functionality: Developed the restore functionality to allow players to resume their
+                        game from the most recent save point without losing significant progress.</li>
+
+                    <li><strong>Menu Settings and Resolution Options:</strong>Implemented the settings menu that allows players to customize their gameplay experience.
+                        This included:
+                        Resolution Settings: Provided options for players to adjust the game’s resolution based on
+                        their preferences and device capabilities.</li>
+                </ul>
+            </section>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/Jules/Jules3.png" alt="center" class="responsive">
+    </section>
+
+
+    <!-- contact me -->
+    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
+    <section id="contact-me" class="grid-system-2 w-900 padding">
+        <section class="margin-auto align-center">
+            <h1 class="large contact-title">Let's get in touch!</h1>
+            <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
+            <section class="box-contact margin-auto padding-top">
+            </section>
+        </section>
+    </section>
+
+    <!-- special thanks -->
+    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
+
+    <section id="contatti">
+        <div class="contact-info">
+            <div class="contact-item">
+                <p>Email: <span class="email-text">loory4895@gmail.com</span></p>
+            </div>
+            <div class="contact-item">
+                <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="regardes">
+        <p class="small thanks justify w-900 padding-left">*Based on :
+
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
+
+        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
+
+        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
+    </footer>
+    </div>
+</main>
+</body>
+</html>
