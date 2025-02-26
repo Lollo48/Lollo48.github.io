@@ -131,13 +131,14 @@ body {
 }
 
 .baby-pink-light {
-    background-color: rgb(255, 0, 221);
+    background-color: rgba(0, 0, 0, 0.822);
     margin: 20px auto; /* Top and bottom margin, auto for left/right centering */
     margin-left: 40px; /* Space on the left */
     margin-right: 40px; /* Space on the right */
     padding: 20px;
     text-align: center;
-    border: 3px solid rgb(255, 0, 221); /* Border width, style, and color */
+    border-radius: 20px; /* Rounded corners */
+    border: 2px solid rgb(255, 0, 221); /* Border width, style, and color */
 }
 
 /* Setting alignments and sizing */
