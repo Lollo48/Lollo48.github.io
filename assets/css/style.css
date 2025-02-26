@@ -160,10 +160,6 @@ a:focus {
     color: #fff; //colore testo video
 }
 
-.port figcaption span:before {
-    content: "by ";
-}
-
 .port figcaption a {
     text-align: center;
     padding: 8px 15px;

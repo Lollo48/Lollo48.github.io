@@ -1,137 +1,240 @@
 ﻿<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio di Grasso Lorenzo</title>
-    <link rel="stylesheet" href="pong.css" />
-</head>
-<body>
-<header>
-    <div class="header-content">
-        <div class="left">
-            <h1>Grasso Lorenzo</h1>
-            <h2>Game Programming</h2>
-        </div>
-        <div class="right">
-            <a
-                    href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/"
-                    target="_blank"
-            >
-                <img src="Logos/Linkedin.png" class="portfolio-image" />
-            </a>
-            <a href="https://www.instagram.com/lorenzo_grasso/#" target="_blank">
-                <img src="Logos/Instagram.png" class="portfolio-image" />
-            </a>
-            <a href="https://github.com/Lollo48" target="_blank">
-                <img src="Logos/Github.png" class="portfolio-image" />
-            </a>
-        </div>
-    </div>
-</header>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Review this part and modify it to your liking -->
+    <meta name="description" content="Sample text for portfolio template meta tag">
+    <meta name="keywords" content="Sample text for portfolio template meta tag">
+    <meta name="author" content="Sample text for portfolio template meta tag">
+    <title>My portfolio website</title>
+    
+    <link rel="stylesheet" type="text/css" href="ProjectPage.css">
+    <!-- font for the quote -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- font for the body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- navigation bar -->
+<nav class="sticky">
+    <label for="drop" class="toggle" id="main-toggle">
+        <span class="nav-icon"></span>
+    </label>
+    <input type="checkbox" id="drop">
+    <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-me.html">About me</a></li>
+        <li><a href="skill-set.html">Skill-set</a></li>
+        <li><a href="#contact-me">Contact me</a></li>
+
+        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
+            <img src="Logos/Linkedin.png" class="nav-image" />
+        </a>
+        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
+            <img src="Logos/Instagram.png" class="nav-image" />
+        </a>
+        <a href="https://github.com/Lollo48" target="_blank">
+            <img src="Logos/Github.png" class="nav-image" />
+        </a>
+        <div class="discord-container">
+            <img src="Logos/Discord.png" class="nav-image" />
+            </a>
+            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
+        </div>
+    </ul>
+</nav>
 <main>
     <section class="video-container">
-        <h3 class="video-title">Il Mio Video di Game Programming</h3>
+        <h3 class="video-title"> Pong Remake </h3>
         <video controls autoplay loop>
-            <source src="video1.mp4" type="video/mp4" />
+            <source src="Videos/CandyCrushRemake.mp4" type="video/mp4" />
             Il tuo browser non supporta i video.
         </video>
     </section>
 
-    <div class="navigation">
-        <a href="index.html" class="back-button">&lt; Torna al Menu</a>
-    </div>
+    <section class="wrapper">
+        <section class="column card justify flex">
+            <h4 class="padding bold center"> Pong Remake</h4>
+            <div class="text-image-container">
+                <div class="text-image-item-project">
+                    <p>school exam.
+                    </p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>  FEATURES :
+                    </p>
+                </div>
 
-    <section class="titles">
-        <div class="container">
-            <div class="box">
-                <h4 class="description-title">Descrizione 1</h4>
-                <!-- Titolo sopra la descrizione -->
-                <div class="description-box">
-                    <p>
-                        Questo è un esempio di descrizione per il primo contenitore. In
-                        questo paragrafo, parliamo di alcuni dettagli importanti
-                        riguardanti il contenuto.
-                    </p>
-                    <p>
-                        Nel secondo paragrafo, approfondiamo ulteriormente il tema
-                        trattato, fornendo ulteriori informazioni e chiarimenti.
-                    </p>
-                    <p>
-                        Infine, nel terzo paragrafo, possiamo includere qualche aneddoto
-                        o esempio pratico che aiuti a comprendere meglio il messaggio.
-                    </p>
+                <div class="text-image-item-project">
+                    <p>Players: Each player controls a bar, which moves vertically within the limits of the map.</p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>  Ball: It is thrown in a random direction at the start of the game.
+                        At each impact with the bar of one of the players it accelerates.</p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>  Goal: Behind the two players are the respective goals. If the ball does not touch one, it is a point for the opponent.</p>
+                </div>
+                <div class="text-image-item-project">
+                    <p>  user interface: - Lobby menu (max 2 players)
+                        - Players' score.</p>
                 </div>
             </div>
-            <div class="box">
-                <h4 class="description-title">Descrizione 2</h4>
-                <!-- Titolo sopra la descrizione -->
-                <div class="description-box">
-                    <p>
-                        Questo è un esempio di descrizione per il secondo contenitore.
-                        Qui possiamo discutere di argomenti correlati e fornire una
-                        visione diversa.
-                    </p>
-                    <p>
-                        Nel secondo paragrafo, possiamo esplorare altri aspetti del
-                        tema, includendo dati interessanti o statistiche.
-                    </p>
-                    <p>
-                        Il terzo paragrafo può includere suggerimenti pratici o
-                        raccomandazioni, rendendo il contenuto più utile per i lettori.
-                    </p>
+        </section>
+
+        <section class="column card justify flex">
+            <h4 class="padding bold center">Project info</h4>
+            <div class="text-image-container">
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
+                    <p>1 School exam</p>
+                </div>
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
+                    <p>june 21th - july 18th, 2024, three weeks</p>
+                </div>
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
+                    <p>Unity</p>
+                </div>
+                <div class="text-image-item">
+                    <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
+                    <p>Windows</p>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
 
     <div class="button-container">
-        <button class="button">Pulsante 1</button>
-        <button class="button">Pulsante 2</button>
+        <a href="index.html" class="button">Home</a>
+        <a href="https://github.com/Lollo48/PongExam/releases/tag/Release1.0" class="button">Repository</a>
     </div>
 
-    <section class="image-description">
-        <h2 class="image-title">Il Mio Progetto</h2>
-        <img
-                src="path/to/your/image.jpg"
-                alt="Descrizione dell'immagine"
-                class="project-image"
-        />
-        <p class="image-description-text">
-            Questa è una descrizione del progetto. Qui puoi aggiungere dettagli
-            sulla tua esperienza e su cosa hai imparato.
-        </p>
+    <!-- about me -->
+    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Game Overview</p>
+            <p>Pong Multiplayer is a school project developed as an exam to explore multiplayer game programming. The game is built around a state management system synchronized across clients, ensuring smooth and responsive gameplay. With the integration of Mirror and Steam APIs, matchmaking and player connections are efficient and seamless.</p>
+        </section>
     </section>
 
-    <section class="image-description">
-        <h2 class="image-title">Il Mio Progetto</h2>
-        <img
-                src="path/to/your/image.jpg"
-                alt="Descrizione dell'immagine"
-                class="project-image"
-        />
-        <p class="image-description-text">
-            Questa è una descrizione del progetto. Qui puoi aggiungere dettagli
-            sulla tua esperienza e su cosa hai imparato.
-        </p>
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Game Goal</p>
+            <p>The goal of the project was to develop a fully functional multiplayer Pong match, ensuring smooth gameplay and synchronization between clients. A **FlowGame Manager** was used to handle game states, while Mirror provided real-time data synchronization. Additionally, Steam APIs were integrated for matchmaking and player connectivity.</p>
+        </section>
     </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Key Features</p>
+            <section class="description-section">
+                <p><strong>The game employs an advanced management system that synchronizes every action between clients. Mirror handles networking, while Steam APIs enable matchmaking and player connections.</strong></p>
+                <h4>Features</h4>
+                <ul>
+                    <li><strong>FlowGame Manager:</strong> Manages game states across clients, ensuring a smooth experience.</li>
+                    <li><strong>Mirror Networking:</strong> Implements real-time synchronization between players.</li>
+                    <li><strong>Steam API Integration:</strong> Enables matchmaking and user connection management.</li>
+                </ul>
+            </section>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/Pong/Pong.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Game Mechanics</p>
+            <section class="description-section">
+                <p><strong>Pong Multiplayer utilizes a client-server architecture to ensure optimal synchronization. Mirror handles communication between clients, while Steam APIs provide an integrated matchmaking system. The FlowGame Manager enables smooth transitions between game phases, ensuring stability and reliability.</strong></p>
+                <h4>Additional information:</h4>
+                <ul>
+                    <li><strong>State Management:</strong> The FlowGame Manager synchronizes game phases across clients.</li>
+                    <li><strong>Networking with Mirror:</strong> Implements communication between clients with an optimized architecture.</li>
+                    <li><strong>Steam Integration:</strong> Uses APIs for matchmaking and player connections.</li>
+                </ul>
+            </section>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/Pong/Pong1.png" alt="center" class="responsive">
+    </section>
+
+
+    <!-- contact me -->
+    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
+    <section id="contact-me" class="grid-system-2 w-900 padding">
+        <section class="margin-auto align-center">
+            <h1 class="large contact-title">Let's get in touch!</h1>
+            <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
+            <section class="box-contact margin-auto padding-top">
+            </section>
+        </section>
+    </section>
+
+    <!-- special thanks -->
+    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
 
     <section id="contatti">
-        <h2>Contatti</h2>
         <div class="contact-info">
-            <div class="email">
-                <p>Email: <span class="email-text">tuoemail@example.com</span></p>
+            <div class="contact-item">
+                <p>Email: <span class="email-text">loory4895@gmail.com</span></p>
             </div>
-            <div class="phone">
-                <p>Telefono: <span class="phone-text">+39 123 456 7890</span></p>
+            <div class="contact-item">
+                <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
             </div>
         </div>
     </section>
 
+    <section id="regardes">
+        <p class="small thanks justify w-900 padding-left">*Based on :
+
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
+
+        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
+
+        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
+    </section>
     <footer>
         <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
     </footer>
+    </div>
 </main>
 </body>
 </html>
