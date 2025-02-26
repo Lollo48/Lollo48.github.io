@@ -75,6 +75,38 @@ a:focus {
     margin-right: -42%;
 }
 
+.block_title1 {
+    color: #00f100;
+    font-size: 2em;
+    font-weight: 300;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    background: linear-gradient(90deg, #ff0080, #ff0080); /* Effetto gradiente */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.block_title1:before,
+.block_title1:after {
+    content: "";
+    background: #080000;
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    width: 42%;
+    vertical-align: middle;
+}
+.block_title1:before {
+    right: 0.5em;
+    margin-left: -42%;
+}
+.block_title1:after {
+    left: 0.5em;
+    margin-right: -42%;
+}
+
+
 /* ///////////////////////////////////////////////////////////////////// 
 //  05 - Portfolio
 /////////////////////////////////////////////////////////////////////*/
