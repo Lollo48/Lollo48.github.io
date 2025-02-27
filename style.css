@@ -436,13 +436,13 @@ boxtest:hover {
 
 /* Nome e professione */
 .name {
-    font-size: 1.8em; /* Aumentato il font */
+    font-size: 2.5em; /* Aumentato il font */
     font-weight: bold;
     margin-top: 10px;
 }
 
 .subtitle {
-    font-size: 1.4em; /* Aumentato il font per la professione */
+    font-size: 2em; /* Aumentato il font per la professione */
     color: #000000;
 }
 
@@ -471,6 +471,12 @@ boxtest:hover {
     max-width: 100%;
     box-sizing: border-box;
     transition: transform 0.3s ease-in-out; /* Aggiungi transizione per effetto di ingrandimento */
+}
+
+.image-links a img {
+    width: 150px; /* Dimensione personalizzata */
+    height: auto; /* Mantiene le proporzioni */
+    transition: transform 0.3s ease-in-out;
 }
 
 .image-links img {
