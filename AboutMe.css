@@ -39,3 +39,66 @@
         height: auto;
     }
 }
+
+.skills-section {
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.skills-section {
+    text-align: center;
+    background: #1a1a1a;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+/* Grid layout - Responsive */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Individual skill card */
+.skill-item {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+/* Hover effect */
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Icons */
+.skill-icon {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+/* Headings and text */
+.skill-item h4 {
+    margin: 10px 0;
+    color: #00f100;
+}
+
+.skill-item p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
