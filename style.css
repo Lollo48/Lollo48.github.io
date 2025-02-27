@@ -41,11 +41,12 @@ h6 {
 .secondboldText {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #00ff0d; /* Colore desiderato per le parole in grassetto */
+    color: #000000; /* Colore desiderato per le parole in grassetto */
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .padding-top {
     align-items: center;
+    margin-top: 30px;
 }
 
 /* Stile generale per i bottoni */
@@ -225,8 +226,8 @@ boxtest:hover {
     margin: 0px;
     background-image: linear-gradient(
             135deg,
-            rgb(251, 255, 0) 0%,
-                /* COLORE TITOLO PRINCIPALE */ rgb(255, 0, 162) 80%
+            rgb(0, 0, 0) 0%,
+                /* COLORE TITOLO PRINCIPALE */ rgb(0, 0, 0) 80%
         /* COLORE TITOLO PRINCIPALE */
     );
     background-clip: text;
@@ -323,8 +324,8 @@ boxtest:hover {
 
 .boldText {
     font-weight: bold;
-    color: #15ff00; /* Colore desiderato per le parole in grassetto */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000; /* Colore desiderato per le parole in grassetto */
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .text-image-container {
@@ -537,7 +538,7 @@ boxtest:hover {
 
 /* Individual skill card */
 .skill-item {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 40px;
     text-align: center;
@@ -559,12 +560,12 @@ boxtest:hover {
 /* Headings and text */
 .skill-item h4 {
     margin: 10px 0;
-    color: #00f100;
+    color: #000000;
 }
 
 .skill-item p {
     font-size: 1.8rem;
-    color: #ccc;
+    color: #000000;
 }
 
 /* Responsive for smaller screens */
@@ -573,4 +574,5 @@ boxtest:hover {
         grid-template-columns: 1fr;
     }
 }
+
 

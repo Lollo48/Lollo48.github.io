@@ -46,13 +46,13 @@ a:focus {
 }
 
 .block_title {
-    color: #00f100;
-    font-size: 5em;
+    font-size: 2em;
     font-weight: 300;
     text-align: center;
     overflow: hidden;
-    margin-bottom: 70px;
-    background: linear-gradient(90deg, #ff0080, #ff0080); /* Effetto gradiente */
+    margin-bottom: 50px;
+    margin-top: 0px;
+    background: linear-gradient(to right, #000000, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -76,14 +76,13 @@ a:focus {
 }
 
 .block_title1 {
-    color: #00f100;
     font-size: 2em;
     font-weight: 300;
     text-align: center;
     overflow: hidden;
     margin-bottom: 50px;
     margin-top: 0px;
-    background: linear-gradient(90deg, #ff0080, #ff0080); /* Effetto gradiente */
+    background: linear-gradient(to right, #000000, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

@@ -64,6 +64,11 @@ p {
 
 /* Effetto per la navbar che cambia quando si scorre */
 .navbar {
+    background: linear-gradient(
+            to right,
+            #f0ecec,
+            #d4cfcf
+    );
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -141,7 +146,7 @@ p {
     width: 100%;
     height: 1px;
     border: 0px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(0, 0, 0);
     transition: all 0.5s ease;
 }
 .colored-nav {
@@ -266,18 +271,7 @@ img.avatar-image {
     }
 }
 
-/* Box per il testo */
-.box-container {
-    display: inline-block;
-    padding: 20px;
-    border: 2px solid white; /* Bordo bianco attorno al testo */
-    border-radius: 10px; /* Angoli arrotondati */
-    width: 100%; /* Si estende per tutta la larghezza disponibile */
-    max-width: 90%; /* Limita la larghezza massima del box */
-    text-align: center; /* Centra il testo nel box */
-    font-size: 1em; /* Puoi anche usare unità come vw per rendere il testo scalabile */
-    margin: 20px auto; /* Centra il box nella pagina */
-}
+
 
 /* Aggiungi responsività per schermi più piccoli */
 @media (max-width: 768px) {
@@ -304,25 +298,9 @@ img.avatar-image {
 }
 .btn-violat,
 .gradient-violat {
-    background-image: -moz-linear-gradient(
-            135deg,
-            rgb(244, 202, 216) 0%,
-            rgb(129, 112, 137) 35%,
-            rgb(14, 21, 58) 100%
-    );
-    background-image: -webkit-linear-gradient(
-            135deg,
-            rgb(244, 202, 216) 0%,
-            rgb(129, 112, 137) 35%,
-            rgb(14, 21, 58) 100%
-    );
-    background-image: -ms-linear-gradient(
-            135deg,
-            rgb(244, 202, 216) 0%,
-            rgb(129, 112, 137) 35%,
-            rgb(14, 21, 58) 100%
-    );
+    background-color: #ffffff;
 }
+
 .btn-orange,
 .gradient-orange {
     background-image: -webkit-linear-gradient(
@@ -394,7 +372,8 @@ img.avatar-image {
     overflow-x: hidden;
 }
 .text-white {
-    color: #fff;
+    color: #000000;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .bg-fit {
     background-repeat: no-repeat !important;
