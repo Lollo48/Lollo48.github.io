@@ -37,8 +37,9 @@ h6 {
 
 .header-img {
     border-radius: 70%;
-    max-width: 50%;
+    width: 20%;
     height: auto;
+    max-width: 150px;
 }
 .secondboldText {
     font-size: 2.5rem;
