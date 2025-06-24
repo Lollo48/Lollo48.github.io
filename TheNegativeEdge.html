@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Review this part and modify it to your liking -->
+    <meta name="description" content="Sample text for portfolio template meta tag">
+    <meta name="keywords" content="Sample text for portfolio template meta tag">
+    <meta name="author" content="Sample text for portfolio template meta tag">
+    <link rel="icon" type="image/png" href="Logos/Dragone.png">
+    <title>My portfolio website</title>
+    <!-- Adding favicon for older and modern browsers,
+        It is best to add favicon to the main folder, 
+        I used an only ico converter for best result,
+        Do not forget to clear you cache to see the changes -->
+    <link rel="stylesheet" type="text/css" href="ProjectPage.css">
+    <!-- font for the quote -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- font for the body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- navigation bar -->
+<nav class="sticky">
+    <label for="drop" class="toggle" id="main-toggle">
+        <span class="nav-icon"></span>
+    </label>
+    <input type="checkbox" id="drop">
+    <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutMe.html">About me</a></li>
+        <li><a href="index.html">Skill-set</a></li>
+        <li><a href="#contact-me">Contact me</a></li>
+
+        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
+            <img src="Logos/Linkedin.png" class="nav-image" />
+        </a>
+        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
+            <img src="Logos/Instagram.png" class="nav-image" />
+        </a>
+        <a href="https://github.com/Lollo48" target="_blank">
+            <img src="Logos/Github.png" class="nav-image" />
+        </a>
+        <div class="discord-container">
+            <img src="Logos/Discord.png" class="nav-image" />
+            </a>
+            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
+        </div>
+    </ul>
+</nav>
+<main>
+    <section class="video-container">
+        <h3 class="video-title"> TheNegativeEdge </h3>
+        <video controls autoplay loop>
+            <source src="Videos/TheNegativeEdge.mp4" type="video/mp4" />
+            Il tuo browser non supporta i video.
+        </video>
+    </section>
+    <div class="button-container">
+        <a href="index.html" class="button">Home</a>
+        <a href="https://eventhorizonschool.itch.io/the-negative-edge" class="button">ITCH</a>
+    </div>
+
+    <!-- about me -->
+    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Project Overview</p>
+            <p><strong>The Negative Edge</strong> is a fast-paced third-person arena shooter where players battle against monstrous enemies in striking black-and-white dystopian arenas. Agile movement, dynamic combat, and unique mobility mechanics are at the heart of the experience.</p>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/TheNegativeEdge/Over.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Game Goal</p>
+            <p>Your mission is simple but vital: survive waves of relentless enemies and complete each arena to push forward in your desperate quest to save planet Earth from total annihilation.</p>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/TheNegativeEdge/GamePlay.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="margin-auto">
+        </section>
+        <section class="justify align-center">
+            <p class="quote uppercase">Key Features</p>
+            <section class="description-section">
+                <p><strong></strong></p>
+                <li><strong>Unique Black & White Visuals:</strong> A bold, dystopian look that sets the mood for every battle.</li>
+                <li><strong>Advanced Movement System:</strong> Use your grappling hook, wall running, and rail grinding to outmaneuver enemies and dominate the arena.</li>
+                <li><strong>Challenging Enemy Encounters:</strong> Each arena throws unique, monstrous creatures at you, requiring fast reflexes and tactical thinking.</li>
+                <li><strong>Fast-Paced Arena Combat:</strong> Combat is intense, rewarding quick decisions and precision.</li>
+            </section>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/TheNegativeEdge/Enemies.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="justify align-center">
+            <p class="quote uppercase">Personal Contribution</p>
+            <section class="description-section">
+                <p>
+                    I was responsible for the entire enemy system and AI architecture in The Negative Edge, developing all the code. Starting from scratch in C++, I structured three base classes (enemy, controller), which I then specialized into four unique enemy types, each with distinct behaviors and attack strategies:
+                </p>
+                <ul>
+                    <li><strong>Melee:</strong> Sword-wielding enemies that aggressively pursue and attack the player up close.</li>
+                    <li><strong>Ranged:</strong> Keep their distance and shoot at the player from afar.</li>
+                    <li><strong>Explosive:</strong> Charge towards the player and explode, requiring quick reactions to avoid damage.</li>
+                    <li><strong>Agile Flying:</strong> Highly mobile aerial units that can activate special totems, making all other enemies invulnerable until the totem is destroyed.</li>
+                </ul>
+                <p>
+                    To manage the intensity and pacing of the gameplay, I developed a custom wave system for the arenas, handling the logic for enemy spawning, progression, and increasing difficulty.
+                </p>
+                <ul>
+                    <li><strong>Wave System:</strong> Designed and implemented a robust wave-based spawning system that controls enemy numbers, types, and progression, adapting the challenge dynamically as the player advances.</li>
+                    <li><strong>Pending Attack System:</strong> Created a custom system to manage how many enemies can attack the player simultaneously, ensuring combat remains challenging but fair.</li>
+                    <li><strong>General EQS (Environmental Query System):</strong> Developed a global EQS manager for enemy AI, controlling movement points, attack positions, and adaptive tactics for all enemy types.</li>
+                    <li><strong>Zone & Area Management:</strong> Built a modular zone system to coordinate enemy behaviors and spawning within different areas of each arena, optimizing AI performance and encounter variety.</li>
+                </ul>
+                <p>
+                    All enemy logic, behaviors, and interactions were fully integrated with the game's fast-paced movement and combat systems, resulting in intense, reactive, and memorable encounters throughout every wave.
+                </p>
+            </section>
+        </section>
+    </section>
+
+    </section>
+    <section class="image-container">
+        <img src="ProjectsImage/TheNegativeEdge/Areas.png" alt="center" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="justify align-center">
+            <p class="quote uppercase">AI & System Design Highlights</p>
+            <section class="description-section system-highlights">
+                <div class="system-feature">
+                    <h4>Modular & Custom AI Architecture</h4>
+                    <p>
+                        All core AI systems are fully custom and modular, designed from scratch in C++. This allows maximum flexibility for adding new behaviors, enemy types, and arena mechanics without sacrificing performance or scalability.
+                    </p>
+                </div>
+                <div class="system-feature">
+                    <h4>Zone & Region Logic with EQS Backbone</h4>
+                    <p>
+                        A bespoke <strong>Environmental Query System (EQS)</strong> serves as the backbone for all enemy movement and positioning. The system leverages dynamic zones and regions, enabling enemies to make intelligent decisions about navigation, attacks, and area control, always adapting to the player's location and actions.
+                    </p>
+                </div>
+                <div class="system-feature">
+                    <h4>Advanced Wave System</h4>
+                    <p>
+                        An integrated <strong>Wave System</strong> manages enemy spawning, progression, and variety. Each wave brings different challenges by mixing enemy types and behaviors, ensuring a dynamic and escalating combat experience with every new arena.
+                    </p>
+                </div>
+                <div class="system-feature">
+                    <h4>Pending Attack System</h4>
+                    <p>
+                        To keep combat both challenging and fair, a <strong>Pending Attack System</strong> controls how many enemies can attack the player at once. Additional enemies are queued and rotated in, maintaining tension without overwhelming the player.
+                    </p>
+                </div>
+                <div class="system-feature">
+                    <h4>Deep System Integration</h4>
+                    <p>
+                        All systems are deeply interconnected: the EQS manages contextual decision-making, the wave manager sets the encounter pace, and the attack controller balances gameplay flow. This ensures a sophisticated AI experience and highlights the technical depth of the project.
+                    </p>
+                </div>
+            </section>
+        </section>
+    </section>
+
+
+    <!-- contact me -->
+    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
+    <section id="contact-me" class="grid-system-2 w-900 padding">
+        <section class="margin-auto align-center">
+            <h1 class="large contact-title">Let's get in touch!</h1>
+            <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
+            <section class="box-contact margin-auto padding-top">
+            </section>
+        </section>
+    </section>
+
+    <!-- special thanks -->
+    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
+
+    <section id="contatti">
+        <div class="contact-info">
+            <div class="contact-item">
+                <p>Email: <span class="email-text">loory4895@gmail.com</span></p>
+            </div>
+            <div class="contact-item">
+                <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="regardes">
+        <p class="small thanks justify w-900 padding-left">*Based on :
+
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
+
+        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
+            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
+
+        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
+            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
+    </footer>
+    </div>
+</main>
+</body>
+</html>
