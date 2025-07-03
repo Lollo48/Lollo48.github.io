@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Review this part and modify it to your liking -->
+    <meta name="description" content="Sample text for portfolio template meta tag">
+    <meta name="keywords" content="Sample text for portfolio template meta tag">
+    <meta name="author" content="Sample text for portfolio template meta tag">
+    <link rel="icon" type="image/png" href="Logos/Dragone.png">
+    <title>My portfolio website</title>
+    <!-- Adding favicon for older and modern browsers,
+        It is best to add favicon to the main folder, 
+        I used an only ico converter for best result,
+        Do not forget to clear you cache to see the changes -->
+    <link rel="stylesheet" type="text/css" href="ProjectPage.css">
+    <!-- font for the quote -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <!-- font for the body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- navigation bar -->
+<nav class="sticky">
+    <label for="drop" class="toggle" id="main-toggle">
+        <span class="nav-icon"></span>
+    </label>
+    <input type="checkbox" id="drop">
+    <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AboutMe.html">About me</a></li>
+        <li><a href="index.html">Skill-set</a></li>
+        <li><a href="#contact-me">Contact me</a></li>
+
+        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
+            <img src="Logos/Linkedin.png" class="nav-image" />
+        </a>
+        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
+            <img src="Logos/Instagram.png" class="nav-image" />
+        </a>
+        <a href="https://github.com/Lollo48" target="_blank">
+            <img src="Logos/Github.png" class="nav-image" />
+        </a>
+        <div class="discord-container">
+            <img src="Logos/Discord.png" class="nav-image" />
+            </a>
+            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
+        </div>
+    </ul>
+</nav>
+<main>
+    <section class="video-container">
+        <h3 class="video-title"> Dragon Boss </h3>
+        <video controls autoplay loop>
+            <source src="Videos/DragonBoss.mp4" type="video/mp4" />
+            Il tuo browser non supporta i video.
+        </video>
+    </section>
+    <div class="button-container">
+        <a href="index.html" class="button">Home</a>
+        <a href="https://github.com/Lollo48/SkillTest" class="button">ITCH</a>
+    </div>
+
+
+    <section class="wrapper">
+        <section class="justify align-center">
+            <p class="quote uppercase">Overview</p>
+            <p><strong>Name:</strong> DragonBoss AI<br>
+                <strong>Engine:</strong> Unreal Engine 5<br>
+                <strong>Language:</strong> C++<br>
+                <strong>Type:</strong> Advanced AI Boss with dynamic, modular design<br>
+                <strong>States:</strong> Idle/Patrolling, Attacking, Investigating<br>
+                <strong>Unique Mechanics:</strong>
+            <ul>
+                <li>Dynamic flying transitions</li>
+                <li>Combo-based attack selection</li>
+                <li>Target re-acquisition during investigation</li>
+                <li>Behavior Tree integrated logic</li>
+            </ul>
+            </p>
+        </section>
+    </section>
+
+    <section class="wrapper">
+        <section class="justify align-center">
+            <p class="quote uppercase">Project Goal</p>
+            <p>
+                The primary objective of this project is to recreate an authentic boss fight experience featuring a dragon as the main boss, leveraging the full power of Unreal Engine 5 and C++ programming.<br><br>
+                The DragonBoss is designed as an intelligent and formidable entity, built to deliver a dynamic, visually spectacular, and technically advanced challenge. Its AI simulates realistic, unpredictable, and adaptive behavior, forcing the player to constantly adjust their combat strategies.
+            </p>
+            <ul>
+                <li><strong>Epic Combat Experience:</strong> Multi-phase boss with aerial maneuvers and advanced AI decision-making.</li>
+                <li><strong>Realistic & Reactive:</strong> Adapts to player actions with investigation phases, varied combo attacks, and airborne chases.</li>
+                <li><strong>Full FX Integration:</strong> Every state paired with custom animation and audio-visual feedback.</li>
+                <li><strong>Modular/Scalable:</strong> AI logic via custom C++ Behavior Tree nodes for easy future expansion.</li>
+                <li><strong>Technical Mastery:</strong> Demonstrates advanced proficiency in Unreal Engine, Behavior Trees, and data-driven design (UAttackDataAsset).</li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="wrapper">
+        <section class="justify align-center">
+            <p class="quote uppercase">AI States & Mechanics</p>
+            <section class="description-section">
+                <ul>
+                    <li>
+                        <strong>Idle/Patrolling:</strong>
+                        <ul>
+                            <li>Ground patrol using NavMesh and spline path</li>
+                            <li>Triggers flying transition (takeoff) at path end</li>
+                            <li>Aerial patrol in circular loops, managed via EFlyingActionState enum</li>
+                            <li>Visual FX: Walking/flying animations, wing-flap effects</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Attacking:</strong>
+                        <ul>
+                            <li>Target detection via AI Perception (sight)</li>
+                            <li>Walks/flies to optimal attack range</li>
+                            <li><strong>Dynamic Combo System:</strong> Uses UAttackDataAsset, filters by range/priority/cooldown, auto-selects best attack via UBTTask_DragonSelectionComboAttack</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Investigating:</strong>
+                        <ul>
+                            <li>Triggered on target loss</li>
+                            <li>Random movement in investigation sphere (FAISphereInvestigationRadius)</li>
+                            <li>10–100s search, then re-engages or resumes patrol</li>
+                            <li>Alert animations, vocal cues, flying swirl</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+
+    <section class="image-container">
+        <img src="ProjectsImage/DragonBoss/DragonBoss1.png" alt="Dragon AI States" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="justify align-center">
+            <p class="quote uppercase">C++ AI Behavior Tree Nodes</p>
+            <section class="description-section system-highlights">
+                <div class="system-feature">
+                    <h4>Task Nodes</h4>
+                    <ul>
+                        <li><strong>UBTTask_DragonSelectionComboAttack:</strong> Chooses best attack, stores in blackboard, fallback to default if none</li>
+                        <li><strong>UBTTask_DragonFlyToLocation:</strong> Flies to patrol points with flight physics</li>
+                        <li><strong>UBTTask_DragonInvestigateArea:</strong> Random sphere investigation, ends on timer</li>
+                    </ul>
+                </div>
+                <div class="system-feature">
+                    <h4>Service Nodes</h4>
+                    <ul>
+                        <li><strong>UBTService_UpdateFlyingState:</strong> Triggers takeoff, updates IsFlying on blackboard</li>
+                        <li><strong>UBTService_CheckTargetLost:</strong> Monitors target, starts investigation on loss</li>
+                        <li><strong>UBTService_UpdateCooldowns:</strong> Updates attack cooldowns in real time</li>
+                    </ul>
+                </div>
+                <div class="system-feature">
+                    <h4>Decorator Nodes</h4>
+                    <ul>
+                        <li><strong>UBTDecorator_CanAttack:</strong> Validates attack selection & range</li>
+                        <li><strong>UBTDecorator_IsTargetVisible:</strong> Checks target sight</li>
+                        <li><strong>UBTDecorator_HasReachedSplineEnd:</strong> Triggers flying transition</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <section class="image-container">
+        <img src="ProjectsImage/DragonBoss/DragonBoss2.png" alt="DragonBoss Behavior Tree" class="responsive">
+    </section>
+
+    <section class="wrapper">
+        <section class="justify align-center">
+            <p class="quote uppercase">Supporting Classes</p>
+            <section class="description-section">
+                <ul>
+                    <li><strong>UAttackDataAsset:</strong> Modular data config for attacks; fully data-driven for tuning damage, cooldown, animation</li>
+                    <li><strong>ABossController:</strong> Manages perception, state transitions, attack selection logic</li>
+                    <li><strong>ABossDragonCharacter:</strong> Handles all movement, attacks, animation, FX, combo/cooldown management</li>
+                </ul>
+            </section>
+        </section>
+    </section>
+    <section class="wrapper">
+        <section class="justify align-center">
+            <p class="quote uppercase">Technical & Design Highlights</p>
+            <section class="description-section">
+                <ul>
+                    <li><strong>Modular, Scalable AI:</strong> All logic in custom C++ nodes, enabling rapid iteration and expansion</li>
+                    <li><strong>Data-driven Systems:</strong> Attacks and states tuned via assets, not hardcoded</li>
+                    <li><strong>Full Integration:</strong> AI, Animation, VFX, SFX all managed and triggered programmatically</li>
+                    <li><strong>Advanced Use of Unreal BT & Perception:</strong> Complex AI decisions and transitions, built from scratch</li>
+                </ul>
+            </section>
+        </section>
+    </section>
+
+    <section id="contact-me" class="grid-system-2 w-900 padding">
+        <section class="margin-auto align-center">
+            <h1 class="large contact-title">Let's get in touch!</h1>
+            <p class="contact-description">Interested in AI, boss design, or Unreal tech? Reach out—let’s talk dragons, C++, or game development!</p>
+            <!-- Add contact info or links as you wish -->
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
+    </footer>
+</main>
+</body>
+</html>
