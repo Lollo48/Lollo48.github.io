@@ -3,7 +3,7 @@
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
-    color: #999999;
+    color: #ffffff; /* TESTO BASE -> BIANCO */
 }
 h1,
 h2,
@@ -12,7 +12,7 @@ h4,
 h5,
 h6 {
     font-family: "Montserrat", sans-serif;
-    color: #433b88;
+    color: #ffffff; /* TITOLI -> BIANCHI */
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -30,7 +30,7 @@ h4 {
 }
 p {
     font-size: 1em;
-    color: #020202;
+    color: #ffffff; /* PARAGRAFI -> BIANCHI */
 }
 
 /* Prima sezione del sito che occupa tutta la pagina */
@@ -64,11 +64,7 @@ p {
 
 /* Effetto per la navbar che cambia quando si scorre */
 .navbar {
-    background: linear-gradient(
-            to right,
-            #f0ecec,
-            #d4cfcf
-    );
+    background: #0f1115; /* NAVBAR UNIFORME NERA */
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -76,35 +72,36 @@ p {
 }
 
 .navbar.scroll-down {
-    background-color: rgba(44, 62, 80, 0.9); /* Cambia il colore della navbar */
+    background-color: #0f1115; /* resta nera in scroll */
 }
 
 .navbar {
-    background-color: #2c3e50; /* Colore scuro elegante */
-    border-bottom: 3px solid #e74c3c; /* Bordo rosso per contrasto */
+    background-color: #0f1115; /* Colore scuro elegante */
+    border-bottom: 3px solid #0f1115; /* stesso nero (invisibile) */
 }
 
 .navbar-nav li a {
-    color: #1b0653 !important;
-    font-size: 18px; /* Dimensione più grande per migliore visibilità */
+    color: #ffffff !important; /* LINK NAV -> BIANCHI */
+    font-size: 18px;
     font-weight: bold;
-    padding: 15px 20px; /* Spaziatura migliorata */
-    transition: 0.3s; /* Effetto di transizione per il colore e la grandezza */
+    padding: 15px 20px;
+    transition: 0.3s;
 }
 
 .navbar-nav li a:hover {
-    font-size: 20px; /* Aumenta la grandezza del testo */
-    padding: 20px 25px; /* Spaziatura leggermente aumentata per effetto */
-    text-shadow: 0px 0px 6px rgb(176, 5, 255);
+    font-size: 20px;
+    padding: 20px 25px;
+    text-shadow: 0px 0px 6px rgba(255, 216, 77, 0.6); /* alone giallo */
+    color: #FFD84D !important; /* HOVER -> GIALLO */
 }
 
 .navbar-divider {
-    border-top: 2px solid #e74c3c;
+    border-top: 2px solid #0f1115; /* nascosta sul nero */
 }
 
 .navbar {
-    background-color: transparent !important;
-    border-color: transparent !important;
+    background-color: #23282b !important; /* niente trasparenze */
+    border-color: #23282b !important;
     border: 0px;
     padding-top: 30px;
     transition: all 0.5s ease;
@@ -117,25 +114,25 @@ p {
 }
 .navbar-default .navbar-nav > li > a {
     font-family: "Montserrat", sans-serif;
-    color: #ff0000;
+    color: #ffffff; /* nav bianca */
     text-transform: uppercase;
 }
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover {
-    color: #ff0000;
+    color: #FFD84D; /* hover giallo */
     background-color: transparent;
 }
 .navbar-default .navbar-nav > li > a:hover {
-    color: #ff0000;
+    color: #FFD84D;
 }
 .navbar-nav > li > a.btn-navbar:hover {
-    color: #ff0000;
+    color: #FFD84D;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-    color: #fff;
+    color: #ffffff;
     background-color: transparent;
 }
 .navbar-nav > li > a.btn-navbar {
@@ -144,9 +141,9 @@ p {
 }
 .navbar-divider {
     width: 100%;
-    height: 1px;
+    height: 2px;
     border: 0px;
-    background-color: rgb(0, 0, 0);
+    background-color: #ffffff;
     transition: all 0.5s ease;
 }
 .colored-nav {
@@ -157,7 +154,7 @@ p {
     display: none;
 }
 .cta {
-    color: #fff;
+    color: #ffffff;
 }
 .cta-btn-group {
     margin-top: 15px;
@@ -169,25 +166,25 @@ p {
 .btn-orange:focus,
 .btn-orange.active,
 .btn-orange:active {
-    color: #fff;
-    background-color: #286090;
-    border-color: #122b40;
+    color: #111;
+    background-color: #FFD84D; /* giallo */
+    border-color: #FFD84D;
 }
 .btn-white.focus,
 .btn-white:focus,
 .btn-white.active,
 .btn-white:active {
-    color: #fff;
-    background-color: #286090;
-    border-color: #122b40;
+    color: #111;
+    background-color: #FFD84D;
+    border-color: #FFD84D;
 }
 .btn-violat.focus,
 .btn-violat:focus,
 .btn-violat.active,
 .btn-violat:active {
-    color: #fff;
-    background-color: #286090;
-    border-color: #122b40;
+    color: #111;
+    background-color: #FFD84D;
+    border-color: #FFD84D;
 }
 
 /*******************************************SLIDER HOME***************************************************/
@@ -218,6 +215,7 @@ img.avatar-image {
 
 .text-white {
     font-size: 1.1em;
+    color: #ffffff !important; /* text-white davvero bianco */
 }
 
 .sliding-card-with-bottom-image .image-container img {
@@ -239,6 +237,7 @@ img.avatar-image {
     font-size: 1.5em;
     font-family: "Montserrat", sans-serif;
     text-align: center; /* Centra il testo */
+    color: #ffffff; /* bianco */
 }
 
 @media screen and (max-height: 600px) {
@@ -271,8 +270,6 @@ img.avatar-image {
     }
 }
 
-
-
 /* Aggiungi responsività per schermi più piccoli */
 @media (max-width: 768px) {
     .box-container {
@@ -294,40 +291,25 @@ img.avatar-image {
 /*******************************************ELEMENT STYLES*******************************************/
 .btn-orange,
 .btn-violat {
-    color: #fff;
+    color: #111; /* testo scuro su giallo */
 }
 .btn-violat,
 .gradient-violat {
-    background-color: #ffffff;
+    background-color: #0f1115; /* sezioni scure */
 }
 
 .btn-orange,
 .gradient-orange {
-    background-image: -webkit-linear-gradient(
-            35deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    background-image: -o-linear-gradient(
-            35deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    background-image: linear-gradient(
-            125deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    box-shadow: 0px 8px 27px 0px rgba(116, 44, 69, 0.21);
+    background-image: none;
+    background-color: #FFD84D; /* giallo pieno */
+    box-shadow: 0px 8px 27px 0px rgba(255, 216, 77, 0.21);
 }
 
 .btn-white,
 .gradient-white {
-    background-image: linear-gradient(125deg, #ffffff, #e1e1e1);
-    color: #6b6a8b;
+    background-image: none;
+    background-color: #0f1115; /* dismesso il bianco di fondo */
+    color: #ffffff;
 }
 .border-none {
     border: 0px !important;
@@ -349,7 +331,7 @@ img.avatar-image {
     max-width: 100%;
 }
 .text-violat {
-    color: #6b6a8b;
+    color: #FFD84D; /* usalo come accento giallo */
 }
 .padding-top-bottom-120 {
     padding-top: 120px;
@@ -372,7 +354,7 @@ img.avatar-image {
     overflow-x: hidden;
 }
 .text-white {
-    color: #000000;
+    color: #ffffff !important; /* corretto */
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .bg-fit {
@@ -398,85 +380,35 @@ img.avatar-image {
 }
 .btn-video:hover {
     text-decoration: none;
-    color: #e86c6c;
+    color: #FFD84D; /* hover giallo */
 }
 .btn-video:hover .icon-rounded {
-    border-color: #e86c6c;
-    box-shadow: 0px 8px 27px 0px rgba(116, 44, 69, 0.21);
-    color: #e86c6c;
+    border-color: #FFD84D;
+    box-shadow: 0px 8px 27px 0px rgba(255, 216, 77, 0.21);
+    color: #111;
 }
 .btn.gradient-orange:hover {
-    background-color: #e86c6c !important;
+    background-color: #e6c23d !important; /* giallo leggermente più scuro */
     background-image: none !important;
 }
 .btn-orange.active,
 .btn-orange:active {
-    color: #fff;
-    background-image: -webkit-linear-gradient(
-            35deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    background-image: -o-linear-gradient(
-            35deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    background-image: linear-gradient(
-            125deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
+    color: #111;
+    background-color: #FFD84D;
     border: 0px;
     border-color: transparent;
 }
 .btn-violat.active,
 .btn-violat:active {
-    color: #fff;
-    background-image: -moz-linear-gradient(
-            135deg,
-            rgb(244, 202, 216) 0%,
-            rgb(129, 112, 137) 35%,
-            rgb(14, 21, 58) 100%
-    );
-    background-image: -webkit-linear-gradient(
-            135deg,
-            rgb(244, 202, 216) 0%,
-            rgb(129, 112, 137) 35%,
-            rgb(14, 21, 58) 100%
-    );
-    background-image: -ms-linear-gradient(
-            135deg,
-            rgb(244, 202, 216) 0%,
-            rgb(129, 112, 137) 35%,
-            rgb(14, 21, 58) 100%
-    );
+    color: #111;
+    background-color: #FFD84D;
     border: 0px;
     border-color: transparent;
 }
 .btn-violat:hover,
 .btn-white:hover {
-    background-image: -webkit-linear-gradient(
-            35deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    background-image: -o-linear-gradient(
-            35deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    background-image: linear-gradient(
-            125deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
+    background-image: none;
+    background-color: #FFD84D;
     border: 0px;
     border-color: transparent;
 }
@@ -486,7 +418,7 @@ img.avatar-image {
     height: 49px;
     display: inline-block;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #ffffff;
     vertical-align: middle;
     position: relative;
     margin-right: 5px;
@@ -518,7 +450,7 @@ img.avatar-image {
 }
 .blog-category {
     text-transform: uppercase;
-    color: #433b88 !important;
+    color: #FFD84D !important; /* accento */
     font-weight: 600;
 }
 .margin-bottom-80 {
@@ -536,7 +468,7 @@ img.avatar-image {
 }
 .bordered-ios {
     background-color: transparent;
-    border-color: #fff;
+    border-color: #ffffff;
     border: 1px solid;
 }
 
@@ -559,25 +491,8 @@ img.avatar-image {
     display: table;
     width: 100%;
     height: 100%;
-    background-image: -webkit-linear-gradient(
-            35deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    background-image: -o-linear-gradient(
-            35deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    background-image: linear-gradient(
-            125deg,
-            rgb(232, 88, 137) 0%,
-            rgb(232, 98, 123) 32%,
-            rgb(232, 108, 108) 100%
-    );
-    color: #fff;
+    background: #FFD84D; /* bottone scroll giallo */
+    color: #111;
 }
 .scroll-top-icon-container i {
     display: table-cell;
@@ -630,24 +545,7 @@ img.avatar-image {
         padding: 2rem;
     }
     .navbar {
-        background-image: -webkit-linear-gradient(
-                305deg,
-                rgb(232, 88, 137) 0%,
-                rgb(232, 98, 123) 32%,
-                rgb(232, 108, 108) 100%
-        );
-        background-image: -o-linear-gradient(
-                305deg,
-                rgb(232, 88, 137) 0%,
-                rgb(232, 98, 123) 32%,
-                rgb(232, 108, 108) 100%
-        );
-        background-image: linear-gradient(
-                35deg,
-                rgb(232, 88, 137) 0%,
-                rgb(232, 98, 123) 32%,
-                rgb(232, 108, 108) 100%
-        );
+        background: #0f1115; /* mobile: niente gradienti */
     }
     .navbar-divider {
         display: none;
@@ -679,12 +577,12 @@ img.avatar-image {
 /***************************************OWL CAROUSEL ******************************************************************/
 
 .owl-theme .owl-controls .owl-page span {
-    background: #fff;
+    background: #ffffff;
 }
 .owl-theme .owl-controls .owl-buttons div {
     font-size: 45px;
     background-color: transparent;
-    color: #fff;
+    color: #ffffff;
 }
 .home-slider .owl-controls {
     position: absolute;
@@ -702,3 +600,5 @@ img.avatar-image {
     position: absolute;
     right: 0;
 }
+
+

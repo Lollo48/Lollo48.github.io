@@ -1,20 +1,33 @@
+/* ==========================================================
+   Lorenzo Grasso — style.css (ripulito + commentato)
+   NOTE: Ho mantenuto la tua struttura e le classi esistenti.
+   Ho solo pulito duplicati, corretto piccoli errori e aggiunto commenti
+   su dove/come usare ogni blocco rispetto all'HTML che mi hai mandato.
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   BASE / RESET
+   - Applica font globale e previeni lo scroll orizzontale
+   - In HTML: nessuna classe necessaria (global)
+   ---------------------------------------------------------- */
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif; /* In HTML carichi Montserrat/OpenSans: va bene. Se vuoi Roboto, aggiungi anche Roboto a Google Fonts */
     overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Montserrat", sans-serif;
+/* Titoli globali (usati ovunque) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif; /* coerente con i link Google Fonts nel tuo <head> */
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;            /* titoli bianchi */
     font-weight: bold;
 }
-/* General Reset */
+
+/* ----------------------------------------------------------
+   LAYOUT WRAPPER
+   - Usata nel blocco About me (section.wrapper) e in altre sezioni
+   - Fornisce larghezza max + spacing orizzontale + layout flessibile
+   ---------------------------------------------------------- */
 .wrapper {
     max-width: 1500px;
     padding-left: 10%;
@@ -22,32 +35,48 @@ h6 {
     margin: auto;
     display: flex;
     gap: 25px;
+    justify-content: space-between; /* seconda definizione unita qui */
+    margin-top: 40px;               /* seconda definizione unita qui */
 }
-.margin-auto {
-    margin: auto;
-}
-.quote {
+
+/* Utility per centrare gli elementi figli dentro la .wrapper */
+.margin-auto { margin: auto; }
+
+/* ----------------------------------------------------------
+   TIPOGRAFIA SPARSE / UTILITY TESTO
+   ---------------------------------------------------------- */
+.quote { /* non vedo un .quote nell'HTML attuale ma la lascio disponibile */
     font-family: "Covered By Your Grace", cursive, sans-serif;
     font-size: 1.5em;
 }
-.uppercase {
-    color: rgb(251, 255, 0);
+
+.uppercase { /* classi stile inline su parole/frasi */
+    color: #FFD84D; /* giallo */
     text-transform: uppercase;
 }
 
-
-.secondboldText {
+.secondboldText { /* usata nel paragrafo About me */
     font-size: 2.5rem;
     font-weight: bold;
-    color: #000000; /* Colore desiderato per le parole in grassetto */
+    color: #FFD84D; /* grassetti -> gialli */
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.padding-top {
+
+.padding-top { /* usata sul <p> che contiene il bottone "More info" */
     align-items: center;
     margin-top: 30px;
 }
 
-/* Stile generale per i bottoni */
+.boldText { /* usata nell'hero: "Hi, I'm Lorenzo" */
+    font-weight: bold;
+    color: #FFD84D; /* grassetti -> gialli */
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ----------------------------------------------------------
+   BUTTONS (usati per "More info" e futuri CTA)
+   - In HTML: <a class="button"> o <a class="button-outline">
+   ---------------------------------------------------------- */
 .button,
 .button-outline {
     display: inline-block;
@@ -65,119 +94,102 @@ h6 {
     overflow: hidden;
 }
 
-/* Bottone principale */
+/* Bottone pieno */
 .button {
-    background: linear-gradient(135deg, #00ff87, #0084ff);
-    color: white;
+    background: #FFD84D; /* giallo pieno */
+    color: #111111;
     border: none;
 }
 
-/* Bottone con bordo */
+/* Bottone outline (usato in About me) */
 .button-outline {
-    border: 3px solid #ff0080;
-    color: #ff0080;
+    border: 3px solid #FFD84D;
+    color: #FFD84D;
     background: transparent;
 }
 
-/* Effetti hover */
+/* Hover comuni */
 .button:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 255, 135, 0.5);
+    box-shadow: 0 6px 15px rgba(255, 216, 77, 0.35);
 }
-
 .button-outline:hover {
-    background: #ff0080;
-    color: white;
+    background: #FFD84D;
+    color: #111111;
     transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(255, 0, 128, 0.5);
+    box-shadow: 0 6px 15px rgba(255, 216, 77, 0.35);
 }
 
-/* Centrare il bottone */
+/* Wrapper opzionale per centrare i bottoni */
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
-.wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-}
 
-.skills p {
+/* ----------------------------------------------------------
+   BLOCCO "SKILLS" (legacy e attuale)
+   - Nell'HTML attuale usi: .skills-section, .skills-grid, .skill-item
+   - Le regole su .skills p / .skills ul sono legacy: usale solo se inserisci
+     un wrapper con class="skills" attorno a testi/lista
+   ---------------------------------------------------------- */
+.skills p { /* LEGACY */
     font-size: 22px;
     font-weight: bold;
-    color: #000000;
+    color: #ffffff; /* testo bianco */
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 2px;
     padding: 10px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: inline-block;
 }
+.skills p:hover { transform: scale(1.1); box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); }
+.no-bullet-list { list-style: none; padding: 0; margin: 0; } /* utility generica */
+.skills ul { list-style: none; padding: 0; margin: 0; }      /* LEGACY */
 
-.skills p:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-}
-.no-bullet-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.skills ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
+/* Testo centrato e più grande per un blocco (es. About me) */
 .justify.align-center {
-    font-size: 2rem; /* Puoi aumentare il valore a piacere */
-    line-height: 1.6; /* Migliora la leggibilità */
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #ffffff; /* testo bianco */
 }
 
-boxtest {
-    font-family: "Poppins", sans-serif; /* Cambia con Montserrat, Raleway o un altro font */
-    font-size: 1.2rem; /* Aumenta la dimensione del testo */
-    font-weight: 600; /* Rende il testo più marcato */
-    letter-spacing: 1px; /* Aggiunge spazio tra le lettere */
-    text-transform: uppercase; /* Rende il testo tutto maiuscolo */
-    color: #fff; /* Cambia colore a piacere */
-    transition: color 0.3s ease-in-out; /* Effetto al passaggio del mouse */
+/* FIX: selector corretto -> class="boxtest" in HTML se vuoi usare questo stile */
+.boxtest {
+    /* Applicalo a un box evidenziato: <div class="boxtest">Testo</div> */
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
 }
+.boxtest:hover { color: #FFD84D; }
 
-boxtest:hover {
-    color: #f39c12; /* Cambia colore al passaggio del mouse */
-}
-
-/* Cambia il cursore a mano quando si passa sopra il video */
+/* ----------------------------------------------------------
+   PORTFOLIO CARDS (hover e ombra)
+   - Usate per i riquadri video nelle sezioni Projects/Multiplayer/Evolution/Beginning
+   ---------------------------------------------------------- */
 .portfolio-area .item-space figure:hover {
-    cursor: pointer; /* Mostra il cursore a mano */
-    transform: scale(1.05); /* Aggiungi un piccolo effetto di ingrandimento */
-    transition: transform 0.3s ease-in-out; /* Aggiungi una transizione dolce */
+    cursor: pointer;                         /* mano in hover */
+    transform: scale(1.05);                  /* leggero zoom */
+    transition: transform 0.3s ease-in-out;  /* transizione */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);/* ombra */
 }
 
-/* Aggiungi un effetto di ombra o contorno per evidenziare il video */
-.portfolio-area .item-space figure:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra sottile */
-}
+/* ----------------------------------------------------------
+   CONTATTI (sezione finale)
+   ---------------------------------------------------------- */
+.box-contact { display: block; width: 100%; text-align: center; }
+.logo { width: 50px; }
 
-/* CONTACT ME */
-.box-contact {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-.logo {
-    width: 50px;
-}
-
-/* Centrare il testo */
+/* Contenitore principale "Contact me" */
 #contact-me {
     display: flex;
     justify-content: center;
@@ -187,47 +199,54 @@ boxtest:hover {
     margin-top: 100px;
 }
 
-/* Titolo */
-.contact-title {
-    font-size: 2rem;
-    font-weight: bold;
-}
+/* Titolo interno (h1.large.contact-title) */
+.contact-title { font-size: 2rem; font-weight: bold; color: #ffffff; }
 
-/* Descrizione */
-.contact-description {
+/* Descrizione breve sotto il titolo (versione 1 — iniziale) */
+.contact-description { /* usata nel blocco Contacts e nel testo introduttivo */
     font-size: 1.2rem;
-    max-width: 600px; /* Evita che il testo sia troppo largo */
-    margin: 0 auto 20px auto; /* Centra il paragrafo */
-    color: #ddd; /* Colore leggermente più tenue per lo stile */
-}
-/* Contact Section Styling */
-.contact-area {
-    background-color: #f9f9f9;
-    padding: 60px 0;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    color: #ffffff; /* bianco */
 }
 
+/* Tema alternativo della stessa classe (versione 2 — più recente nel tuo CSS) */
+.contact-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;        /* bianco */
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Wrapper sezione contact con sfondo chiaro (se lo usi) */
+.contact-area { background-color: #0f1115; padding: 60px 0; }
+
+/* Titolo sezione (usato come <h2 class="block_title">Contacts</h2>) */
 .block_title {
     font-size: 2.5rem;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
     text-align: center;
     margin-bottom: 50px;
+    color: #ffffff; /* bianco */
 }
 
+
+/* ----------------------------------------------------------
+   VARIANTI TIPOGRAFICHE (large / medium-spacing) usate nella sezione Contacts
+   ---------------------------------------------------------- */
 .large {
-    font-weight: normal;
     line-height: normal;
     font-family: "Oswald", Arial, sans-serif;
     font-size: 3rem;
     letter-spacing: 4px;
     font-weight: bold;
     margin: 0px;
-    background-image: linear-gradient(
-            135deg,
-            rgb(0, 0, 0) 0%,
-                /* COLORE TITOLO PRINCIPALE */ rgb(0, 0, 0) 80%
-        /* COLORE TITOLO PRINCIPALE */
-    );
+    /* testo bianco con gradient bianco->bianco */
+    background-image: linear-gradient(135deg, #ffffff 0%, #ffffff 80%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -235,97 +254,66 @@ boxtest:hover {
 }
 
 .medium-spacing {
-    color: transparent; /* Imposta il colore del testo su trasparente */
-    font-weight: normal;
+    color: transparent;
     line-height: normal;
     font-family: "Oswald", Arial, sans-serif;
     font-size: 2rem;
     letter-spacing: 4px;
     margin: 0px;
-
-    /* Aggiungi il gradiente al testo */
-    background-image: linear-gradient(
-            to right,
-            rgb(251, 255, 0),
-            rgb(255, 0, 162)
-    ); /* Gradiente da rosso a verde e blu */
-    -webkit-background-clip: text; /* Applica il gradiente solo al testo */
-    background-clip: text; /* Per i browser non-Webkit */
+    /* testo giallo con gradient giallo->giallo */
+    background-image: linear-gradient(to right, #FFD84D, #FFD84D);
+    -webkit-background-clip: text;
+    background-clip: text;
     display: inline-block;
 }
 
-.contact-description {
-    font-family: "Poppins", sans-serif; /* Applica il font Poppins */
-    font-size: 25px;
-    text-align: center;
-    color: #000000;
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
+/* ----------------------------------------------------------
+   CREDITS / FOOTER (id="regardes")
+   ---------------------------------------------------------- */
 #regardes {
-    padding-top: 0px; /* Spazio sopra la sezione dei ringraziamenti */
-    padding-bottom: 0px; /* Distanza dal basso */
-    background-color: #4b3f455e; /* Colore di sfondo leggero per la sezione */
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #0f1115; /* stesso nero del sito */
+    color: #ffffff;
 }
 
-.small.thanks {
-    font-size: 14px; /* Dimensione del testo dei ringraziamenti */
-    line-height: 1.6; /* Interlinea per migliorare la leggibilità */
-    margin-bottom: 0px; /* Distanza tra ogni paragrafo */
+.small.thanks { /* <p class="small thanks ..."> */
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0px;
+    color: #ffffff;
 }
 
-.justify {
-    text-align: center; /* Allinea il testo a giustificato */
-}
+.justify { text-align: center; color: #ffffff; }
+.w-900 { width: 90%; margin: 0 auto; }
+.padding-left { padding-left: 20px; }
+.link { text-decoration: none; color: #FFD84D; }
+.colorful-letter { color: #FFD84D; font-weight: bold; }
 
-.w-900 {
-    width: 90%; /* Imposta la larghezza al 90% */
-    margin: 0 auto; /* Centra il contenuto */
-}
-
-.padding-left {
-    padding-left: 20px; /* Aggiungi padding a sinistra per dare un po' di margine */
-}
-
-.link {
-    text-decoration: none; /* Rimuove la sottolineatura dai link */
-}
-
-.colorful-letter {
-    color: #007bff; /* Colore del link */
-    font-weight: bold; /* Rende il link in grassetto */
-}
-
+/* Dati contatti laterali (sezione Contacts) */
 .contact-info h3 {
     margin-top: 70px;
-    font-family: "Arial", sans-serif; /* Sostituisci con il font che desideri */
-    font-size: 50px; /* Imposta la dimensione del font del nome */
-    color: #333; /* Colore del nome */
-    margin-bottom: 10px; /* Distanza inferiore dal nome */
+    font-family: "Arial", sans-serif;
+    font-size: 50px;
+    color: #ffffff; /* bianco */
+    margin-bottom: 10px;
 }
-
 .contact-info p {
-    font-family: "Roboto", sans-serif; /* Sostituisci con il font che desideri */
-    font-size: 20px; /* Imposta la dimensione del font per il testo */
-    color: #555; /* Colore del testo */
-    margin: 5px 0; /* Distanza verticale tra le righe */
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: #ffffff; /* bianco */
+    margin: 5px 0;
 }
-
 .contact-info a {
-    font-family: "Roboto", sans-serif; /* Mantieni lo stesso font o cambia se desideri */
-    color: #007bff; /* Colore blu per i link */
-    text-decoration: none; /* Rimuove la sottolineatura */
-    font-weight: bold; /* Grassetto per i link */
-}
-
-.boldText {
+    font-family: "Roboto", sans-serif;
+    color: #FFD84D; /* accento */
+    text-decoration: none;
     font-weight: bold;
-    color: #000000; /* Colore desiderato per le parole in grassetto */
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+/* ----------------------------------------------------------
+   CONTATTI: icone/link disposti a colonna
+   ---------------------------------------------------------- */
 .text-image-container {
     text-align: center;
     display: flex;
@@ -333,130 +321,94 @@ boxtest:hover {
     gap: 10px;
 }
 
-/* Ogni elemento di testo e immagine */
-.text-image-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-family: "Roboto", sans-serif; /* Font moderno */
-}
-
+.text-image-item,
 .text-image-item1 {
     display: flex;
     align-items: center;
     gap: 20px;
-    font-family: "Roboto", sans-serif; /* Font moderno */
-    margin-bottom: 200px;
+    font-family: "Roboto", sans-serif;
 }
+.text-image-item1 { margin-bottom: 200px; }
 
-/* Immagini */
+/* Icone circolari (LinkedIn, GitHub, Gmail, Discord) */
 .side-image {
     display: flex;
     align-items: center;
-    width: 60px; /* Aumentata la dimensione dell'immagine */
+    width: 60px;
     height: 60px;
     object-fit: cover;
     border-radius: 50%;
     flex-shrink: 0;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.781); /* Aggiunta ombra per un effetto figo */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.781);
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+.side-image:hover { transform: scale(1.1); }
 
-/* Hover solo sulle immagini */
-.side-image:hover {
-    transform: scale(1.1);
-}
-
-/* Testo */
-.text-image-item p {
-    font-size: 20px; /* Testo grande */
-    margin: 0;
-    color: #000000; /* Colore chiaro */
-    font-weight: bold; /* Grassetto */
-    text-transform: uppercase; /* Tutto maiuscolo */
-    letter-spacing: 0.5px; /* Distanza letterale più piccola */
-}
+/* Testo a fianco delle icone */
+.text-image-item p,
 .text-image-item1 p {
-    font-size: 20px; /* Testo grande */
+    font-size: 20px;
     margin: 0;
-    color: #000000; /* Colore chiaro */
-    font-weight: bold; /* Grassetto */
-    text-transform: uppercase; /* Tutto maiuscolo */
-    letter-spacing: 0.5px; /* Distanza letterale più piccola */
+    color: #ffffff; /* bianco */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/*nuova card*/
-
-/* Animazione card fadeIn */
+/* ----------------------------------------------------------
+   ANIMAZIONI (fadeIn + avatar roll-in) usate nell'hero
+   ---------------------------------------------------------- */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Animazione avatar-rollin che arriva da sinistra con effetto di rotolamento */
 @keyframes avatar-rollin {
-    0% {
-        opacity: 0;
-        transform: translateX(-200px) rotate(-90deg);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg);
-    }
+    0% { opacity: 0; transform: translateX(-200px) rotate(-90deg); }
+    100% { opacity: 1; transform: translateX(0) rotate(0deg); }
 }
 
-/* Card principale */
+/* Card principale (hero) */
 .card {
     animation: fadeIn 1s ease-in-out forwards;
-    padding: 50px; /* Aumenta il padding per maggiore spazio interno */
+    padding: 50px;
     border-radius: 10px;
     width: 100%;
-    max-width: 800px; /* Aumenta la larghezza massima della card */
+    max-width: 800px;
     margin: 50px auto;
     text-align: center;
     box-sizing: border-box;
 }
 
-/* Immagine avatar con animazione roll-in */
+/* Avatar nell'hero */
 .avatar-image {
-    width: 80%; /* Aumenta la larghezza dell'immagine per renderla più grande */
+    width: 80%;
     border-radius: 50%;
     animation: avatar-rollin 1s ease-out forwards;
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
-/* Nome e professione */
+/* Titoli/descrizioni nell'hero */
 .name {
-    font-size: 2.5em; /* Aumentato il font */
+    font-size: 2.5em;
     font-weight: bold;
     margin-top: 10px;
+    color: #ffffff; /* bianco */
 }
-
 .subtitle {
-    font-size: 2em; /* Aumentato il font per la professione */
-    color: #000000;
+    font-size: 2em;
+    color: #ffffff; /* bianco */
 }
 
-/* Icone social */
-.icons {
-    margin-bottom: 20px;
-}
+/* Icone social (contenitore testo) */
+.icons { margin-bottom: 20px; }
+.icons a { color: #ffffff; margin: 0 10px; transition: transform 0.3s ease-in-out; }
 
-.icons a {
-    color: #333;
-    margin: 0 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Sezione immagini sotto la card */
+/* ----------------------------------------------------------
+   LINK IMMAGINI (sotto card hero)
+   ---------------------------------------------------------- */
 .image-links {
     display: flex;
     justify-content: space-between;
@@ -464,69 +416,46 @@ boxtest:hover {
     margin-bottom: 100px;
     margin-top: 100px;
 }
-
 .image-links a {
     display: block;
     width: 20%;
     max-width: 100%;
     box-sizing: border-box;
-    transition: transform 0.3s ease-in-out; /* Aggiungi transizione per effetto di ingrandimento */
-}
-
-.image-links a img {
-    width: 150px; /* Dimensione personalizzata */
-    height: auto; /* Mantiene le proporzioni */
     transition: transform 0.3s ease-in-out;
 }
-
+.image-links a img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
 .image-links img {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+.image-links a:hover { transform: scale(1.1); }
 
-.image-links a:hover {
-    transform: scale(1.1);
-}
-
-/* Aggiungere animazione bounce alle immagini sotto */
+/* Animazione ingresso delle icone social */
 @keyframes bounceIn {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    60% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-    }
+    0%   { transform: scale(0);   opacity: 0; }
+    60%  { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
 }
+.image-links img { animation: bounceIn 1s ease-out forwards; }
 
-/* Animazione per le immagini sotto la card */
-.image-links img {
-    animation: bounceIn 1s ease-out forwards;
-}
-
-
-/*Skills*/
+/* ----------------------------------------------------------
+   BLOCCO SKILLS (attuale)
+   ---------------------------------------------------------- */
 .skills-section {
     text-align: center;
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
     padding: 50px 20px;
-    border-radius: 10px;
-}
-
-.skills-section {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.1);
-    color: white;
-    padding: 20px 20px;
     border-radius: 40px;
 }
 
-/* Grid layout - Responsive */
+/* Griglia responsive delle skill card */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -535,43 +464,54 @@ boxtest:hover {
     margin: 0 auto;
 }
 
-/* Individual skill card */
+/* Card singola skill */
 .skill-item {
-    background: rgb(255, 255, 255);
+    background: #151922; /* pannello scuro */
     padding: 20px;
     border-radius: 40px;
     text-align: center;
     transition: transform 0.3s ease-in-out, background 0.3s;
+    border: 1px solid #1f2430;
 }
+.skill-item:hover { transform: translateY(-5px); }
+.skill-icon { height: auto; width: 100px; margin-bottom: 10px; }
+.skill-item h4 { margin: 10px 0; color: #ffffff; }
+.skill-item p { font-size: 1.8rem; color: #ffffff; }
 
-/* Hover effect */
-.skill-item:hover {
-    transform: translateY(-5px);
-}
-
-/* Icons */
-.skill-icon {
-    height: auto;
-    width: 100px;
-    margin-bottom: 10px;
-}
-
-/* Headings and text */
-.skill-item h4 {
-    margin: 10px 0;
-    color: #000000;
-}
-
-.skill-item p {
-    font-size: 1.8rem;
-    color: #000000;
-}
-
-/* Responsive for smaller screens */
+/* Mobile tweak per griglia */
 @media (max-width: 600px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
+    .skills-grid { grid-template-columns: 1fr; }
+}
+
+
+.heading-gold{
+    color:#FFD84D !important;
+    -webkit-text-fill-color:#FFD84D !important;
+    background:none !important;
+    -webkit-background-clip:initial !important;
+    text-shadow:0 0 14px rgba(255,216,77,.25);
+}
+
+/* Divider lines attorno ai titoli */
+.block_title::before,
+.block_title::after,
+.block_title1::before,
+.block_title1::after{
+    background: #fff !important;   /* per chi usa background */
+    border-color: #fff !important;  /* per chi usa border */
+    opacity: 1 !important;
+}
+
+/* (opzionale) dimensioni coerenti delle linee */
+.block_title::before,
+.block_title::after,
+.block_title1::before,
+.block_title1::after{
+    content:"";
+    display:inline-block;
+    width: clamp(40px, 10vw, 140px);
+    height: 2px;
+    margin: 0 .75rem;
 }
 
 
