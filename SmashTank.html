@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smash Tank — Lorenzo Grasso</title>
+  <meta name="description" content="Smash Tank — competitive mobile PvP tank arena game developed in Unity with C#, Netcode for GameObjects, Lobby, Relay and PlayFab.">
+  <meta name="theme-color" content="#090b0e">
+  <link rel="icon" type="image/png" href="Logos/Dragone.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="ProjectPage.css">
+</head>
+<body class="project-page smash-tank-page">
+  <div class="site-noise" aria-hidden="true"></div>
+
+  <header class="site-header is-scrolled" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Portfolio home">
+        <span class="brand-mark">LG</span>
+        <span class="brand-copy"><strong>LORENZO GRASSO</strong><small>GAMEPLAY PROGRAMMER</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a class="is-active" href="index.html#work">Work</a>
+        <a href="AboutMe.html">About Me</a>
+        <a href="index.html#competencies">Competencies</a>
+        <a href="index.html#stack">Stack</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="Documents/CurriculumVitaeLorenzoGrasso.pdf" target="_blank" rel="noreferrer">CV ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-hero">
+      <div class="shell">
+        <a class="project-back reveal" href="index.html#work"><span>←</span> Back to selected work</a>
+
+        <div class="project-hero-grid">
+          <div class="project-hero-copy reveal">
+            <p class="eyebrow">GAMEPLAY &amp; NETWORK PROGRAMMING</p>
+            <h1 class="project-hero-title">Smash<em>Tank</em></h1>
+            <p class="project-hero-summary">
+              A competitive <strong>mobile PvP tank arena game</strong> built in Unity. I developed the core gameplay, multiplayer architecture, backend integration and progression systems with a strong focus on responsive combat and maintainable networked code.
+            </p>
+
+            <div class="project-tags">
+              <span>Unity</span><span>C#</span><span>Mobile</span><span>Netcode for GameObjects</span><span>Lobby &amp; Relay</span><span>PlayFab</span>
+            </div>
+
+            <div class="project-hero-actions">
+              <a class="button ghost" href="index.html#work">Home <span>←</span></a>
+            </div>
+          </div>
+
+          <div class="project-video-frame reveal reveal-delay-1">
+            <video class="autoplay-video" autoplay muted loop playsinline controls preload="metadata" poster="ProjectsImage/SmashTank/Banner-12.png">
+              <source src="Videos/SmashTankTrailer.mp4" type="video/mp4">
+            </video>
+            <div class="project-video-shade"></div>
+            <div class="project-video-label">COMPETITIVE MOBILE PVP</div>
+          </div>
+        </div>
+
+        <div class="project-meta-section reveal">
+          <div class="project-meta-grid">
+            <div class="project-meta-card"><span>Role</span><strong>Gameplay &amp; Network Programmer</strong></div>
+            <div class="project-meta-card"><span>Engine</span><strong>Unity</strong></div>
+            <div class="project-meta-card"><span>Language</span><strong>C#</strong></div>
+            <div class="project-meta-card"><span>Focus</span><strong>Mobile PvP / Networking</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-section">
+      <div class="shell project-content-grid">
+        <div class="project-section-label reveal">
+          <span>01 / CORE GAMEPLAY</span>
+          <h2>Built around fast tank combat</h2>
+        </div>
+        <div class="project-copy reveal reveal-delay-1">
+          <p class="lead">Smash Tank is built around short, readable PvP encounters where movement, aiming and firing need to feel immediate on a mobile device.</p>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <small>MOVEMENT</small>
+              <h3>Tank control</h3>
+              <p>Responsive tank movement designed for mobile input while keeping gameplay state compatible with the multiplayer architecture.</p>
+            </article>
+            <article class="feature-card">
+              <small>COMBAT</small>
+              <h3>Turret, aiming &amp; fire</h3>
+              <p>Gameplay logic covers aiming, projectile firing, hit validation, damage and the feedback needed to keep combat readable.</p>
+            </article>
+            <article class="feature-card">
+              <small>SYSTEMS</small>
+              <h3>Abilities &amp; equipment</h3>
+              <p>Gameplay features are structured as modular systems so new tanks, equipment and abilities can be extended without rewriting the core loop.</p>
+            </article>
+            <article class="feature-card">
+              <small>PROGRESSION</small>
+              <h3>Player growth</h3>
+              <p>Inventory, upgrades, rewards and player progression connect the match loop to persistent account data.</p>
+            </article>
+          </div>
+
+          <figure class="project-media-wide reveal">
+            <img src="ProjectsImage/SmashTank/PitchMain2.png" alt="Smash Tank garage and main menu UI" loading="lazy">
+            <figcaption>Garage, progression currencies, inventory and match entry flow.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-section">
+      <div class="shell project-content-grid">
+        <div class="project-section-label reveal">
+          <span>02 / NETWORKING</span>
+          <h2>Responsive without giving up authority</h2>
+        </div>
+        <div class="project-copy reveal reveal-delay-1">
+          <p class="lead">The networking layer is designed around one rule: the player should get immediate feedback, while authoritative gameplay still decides the final result.</p>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <small>AUTHORITY</small>
+              <h3>Server-authoritative combat</h3>
+              <p>Critical gameplay results such as projectile collision and damage are validated by the authoritative side instead of trusting the local client.</p>
+            </article>
+            <article class="feature-card">
+              <small>LATENCY</small>
+              <h3>Client-side prediction</h3>
+              <p>Latency-sensitive actions provide immediate local feedback so shooting feels responsive even before the authoritative result returns.</p>
+            </article>
+            <article class="feature-card">
+              <small>IDENTITY</small>
+              <h3>Shot IDs &amp; network time</h3>
+              <p>Unique shot identification and network timing keep predicted actions traceable and gameplay timing consistent between peers.</p>
+            </article>
+            <article class="feature-card">
+              <small>PERFORMANCE</small>
+              <h3>Network-aware pooling</h3>
+              <p>Projectile pools avoid constant runtime allocation and unnecessary spawn/despawn churn during repeated combat actions.</p>
+            </article>
+          </div>
+
+          <div class="callout">
+            <p><strong>Networking stack:</strong> Unity Netcode for GameObjects with RPCs, NetworkVariables, network ownership and server-spawned gameplay objects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-section">
+      <div class="shell project-content-grid">
+        <div class="project-section-label reveal">
+          <span>03 / ONLINE SERVICES</span>
+          <h2>Sessions plus persistence</h2>
+        </div>
+        <div class="project-copy reveal reveal-delay-1">
+          <p class="lead">The online flow connects the multiplayer session layer with persistent player identity and progression.</p>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <small>LOBBY</small>
+              <h3>Session discovery</h3>
+              <p>Unity Lobby is used to organize multiplayer sessions and the player flow before entering a match.</p>
+            </article>
+            <article class="feature-card">
+              <small>RELAY</small>
+              <h3>Connectivity</h3>
+              <p>Unity Relay handles client connectivity without requiring players to expose or manually manage direct network endpoints.</p>
+            </article>
+            <article class="feature-card">
+              <small>AUTH</small>
+              <h3>Player identity</h3>
+              <p>Unity Authentication provides the session identity used by the online flow and ties the connected player to persistent data.</p>
+            </article>
+            <article class="feature-card">
+              <small>PLAYFAB</small>
+              <h3>Persistent progression</h3>
+              <p>PlayFab supports account data, currencies, progression and persistent player information beyond a single multiplayer session.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-section">
+      <div class="shell project-content-grid">
+        <div class="project-section-label reveal">
+          <span>04 / CONTENT</span>
+          <h2>Tanks, projectiles, identity</h2>
+        </div>
+        <div class="project-copy reveal reveal-delay-1">
+          <p class="lead">The game supports a visually distinct tank roster while keeping the underlying gameplay systems reusable.</p>
+
+          <div class="asset-grid asset-grid-tanks">
+            <figure class="asset-card reveal">
+              <img src="ProjectsImage/SmashTank/R_Tank001.png" alt="Blue and yellow Smash Tank variant" loading="lazy">
+              <figcaption>Tank variant 01</figcaption>
+            </figure>
+            <figure class="asset-card reveal reveal-delay-1">
+              <img src="ProjectsImage/SmashTank/R_Tank004.png" alt="Purple and red Smash Tank variant" loading="lazy">
+              <figcaption>Tank variant 04</figcaption>
+            </figure>
+            <figure class="asset-card reveal">
+              <img src="ProjectsImage/SmashTank/R_Tank008.png" alt="Blue and orange Smash Tank variant" loading="lazy">
+              <figcaption>Tank variant 08</figcaption>
+            </figure>
+            <figure class="asset-card reveal reveal-delay-1">
+              <img src="ProjectsImage/SmashTank/R_Tank010.png" alt="Blue and red Smash Tank variant" loading="lazy">
+              <figcaption>Tank variant 10</figcaption>
+            </figure>
+          </div>
+
+          <div class="asset-grid asset-grid-projectiles">
+            <figure class="asset-card asset-card-small reveal">
+              <img src="ProjectsImage/SmashTank/R_PGhiaccio.png" alt="Ice projectile variant" loading="lazy">
+              <figcaption>Projectile visual variant — Ice</figcaption>
+            </figure>
+            <figure class="asset-card asset-card-small reveal reveal-delay-1">
+              <img src="ProjectsImage/SmashTank/R_PLava.png" alt="Lava projectile variant" loading="lazy">
+              <figcaption>Projectile visual variant — Lava</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-section">
+      <div class="shell project-content-grid">
+        <div class="project-section-label reveal">
+          <span>05 / TAKEAWAY</span>
+          <h2>What this project represents</h2>
+        </div>
+        <div class="project-copy reveal reveal-delay-1">
+          <p class="lead">Smash Tank is the project where I combined gameplay programming, networking and backend work into one complete multiplayer foundation.</p>
+
+          <ul class="project-list">
+            <li><div><strong>Gameplay architecture:</strong> Core combat and progression systems built as reusable components instead of isolated one-off features.</div></li>
+            <li><div><strong>Networking:</strong> Authority, prediction, timing and pooling considered as part of gameplay design rather than added after the fact.</div></li>
+            <li><div><strong>Backend:</strong> Online sessions and persistent player data connected into the same player journey.</div></li>
+            <li><div><strong>Mobile focus:</strong> Systems designed around responsive interactions and iteration speed on a mobile multiplayer title.</div></li>
+          </ul>
+
+          <figure class="project-media-wide reveal">
+            <img src="ProjectsImage/SmashTank/Banner-12.png" alt="Smash Tank promotional banner" loading="lazy">
+            <figcaption>Smash Tank — competitive mobile PvP tank arena.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-footer-nav">
+      <div class="shell">
+        <div class="project-footer-panel reveal">
+          <a href="index.html#work"><small>Back</small><strong>Selected Work ←</strong></a>
+          <a href="DragonBoss.html"><small>Next project</small><strong>Dragon Boss →</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© <span id="year"></span> Lorenzo Grasso</span>
+      <span>Gameplay • Multiplayer • Systems</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

@@ -1,234 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <link rel="icon" type="image/png" href="Logos/Dragone.png">
-    <title>My portfolio website</title>
-    <!-- Adding favicon for older and modern browsers,
-        It is best to add favicon to the main folder, 
-        I used an only ico converter for best result,
-        Do not forget to clear you cache to see the changes -->
-    <link rel="stylesheet" type="text/css" href="ProjectPage.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crystal Shader — Lorenzo Grasso</title>
+  <meta name="description" content="Custom Unity HLSL crystal shader using refraction, distortion and rim lighting.">
+  <meta name="theme-color" content="#090b0e">
+  <link rel="icon" type="image/png" href="Logos/Dragone.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="ProjectPage.css">
 </head>
+<body class="project-page">
+  <div class="site-noise" aria-hidden="true"></div>
 
-<body>
-<!-- navigation bar -->
-<nav class="sticky">
-    <label for="drop" class="toggle" id="main-toggle">
-        <span class="nav-icon"></span>
-    </label>
-    <input type="checkbox" id="drop">
-    <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="AboutMe.html">About me</a></li>
-        <li><a href="index.html">Skill-set</a></li>
-        <li><a href="#contact-me">Contact me</a></li>
-
-        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
-            <img src="Logos/Linkedin.png" class="nav-image" />
-        </a>
-        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
-            <img src="Logos/Instagram.png" class="nav-image" />
-        </a>
-        <a href="https://github.com/Lollo48" target="_blank">
-            <img src="Logos/Github.png" class="nav-image" />
-        </a>
-        <div class="discord-container">
-            <img src="Logos/Discord.png" class="nav-image" />
-            </a>
-            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
-        </div>
-    </ul>
-</nav>
-<main>
-    <section class="video-container">
-        <h3 class="video-title"> HLSL Shader "Crystal"</h3>
-        <video controls autoplay loop>
-            <source src="Videos/Shader.mp4" type="video/mp4" />
-            Il tuo browser non supporta i video.
-        </video>
-    </section>
-
-    <section class="wrapper">
-        <section class="column card justify flex">
-            <h4 class="padding bold center"> HLSL Shader "Crystal"</h4>
-            <div class="text-image-container">
-                <div class="text-image-item-project">
-                    <p>school exam.
-                    </p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>  FEATURES :
-                    </p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>Transparency: the object to which the shader is applied must be transparent.
-                        The observer must be able to see through the material.</p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>  Refraction: the environment visible through the crystal appears distorted.
-                        The intensity of the distortion is adjustable through a property.</p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>  Rim light: a highlight is visible at the edges of the object to which the shader is applied.
-                        The intensity and color of the highlight are adjustable through a property.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="column card justify flex">
-            <h4 class="padding bold center">Project info</h4>
-            <div class="text-image-container">
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                    <p>1 School exam</p>
-                </div>
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                    <p>may 14th - may 28th, 2024, two weeks</p>
-                </div>
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                    <p>Unity</p>
-                </div>
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                    <p>Built-in</p>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <div class="button-container">
-        <a href="index.html" class="button">Home</a>
-        <a href="https://github.com/Lollo48/DiamondShader/releases/tag/Release1.0" class="button">Repository</a>
+  <header class="site-header is-scrolled" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Portfolio home">
+        <span class="brand-mark">LG</span>
+        <span class="brand-copy"><strong>LORENZO GRASSO</strong><small>GAMEPLAY PROGRAMMER</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a class="is-active" href="index.html#work">Work</a>
+        <a href="AboutMe.html">About Me</a>
+        <a href="index.html#competencies">Competencies</a>
+        <a href="index.html#stack">Stack</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="Documents/CurriculumVitaeLorenzoGrasso.pdf" target="_blank" rel="noreferrer">CV ↗</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- about me -->
-    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+  <main>
+    <section class="project-hero">
+      <div class="shell">
+        <a class="project-back reveal" href="index.html#work"><span>←</span> Back to selected work</a>
+        <div class="project-hero-grid">
+          <div class="project-hero-copy reveal">
+            <p class="eyebrow">GRAPHICS PROGRAMMING</p>
+            <h1 class="project-hero-title">Crystal<em>Shader</em></h1>
+            <p class="project-hero-summary">A custom Unity shader that combines <strong>background refraction, distortion and Fresnel-style rim lighting</strong> to create a configurable crystal material.</p>
+            <div class="project-tags"><span>Unity</span><span>HLSL</span><span>Built-in Pipeline</span><span>GrabPass</span><span>Refraction</span><span>Rim Light</span></div>
+            <div class="project-hero-actions"><a class="button primary" href="https://github.com/Lollo48/DiamondShader/releases/tag/Release1.0" target="_blank" rel="noreferrer">Repository <span>↗</span></a><a class="button ghost" href="index.html#work">Home <span>←</span></a></div>
+          </div>
 
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Shader Overview</p>
-            <p>The Diamond Shader is a custom-built shader developed in Unity for the final shading module exam. It utilizes refraction, distortion, and rim lighting effects to create a dynamic and realistic diamond-like material. The shader employs a grab pass to distort background reflections while maintaining a visually appealing edge glow.</p>
-        </section>
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Shader Goal</p>
-            <p>The shader aims to simulate the optical properties of a diamond-like surface, using refraction and rim lighting. By modifying distortion and hollowness values, the effect can be fine-tuned for different material appearances, adding flexibility and realism.</p>
-        </section>
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Key Features</p>
-            <section class="description-section">
-                <p><strong>The shader manipulates the grab pass texture to achieve a refraction effect. The distortion is influenced by the normal vector and user-defined hollowness values. Additionally, a rim lighting function blends the object’s color with the rim color, based on the viewing angle.</strong></p>
-                <h4>Features</h4>
-                <ul>
-                    <li><strong>Refraction & Distortion:</strong> Implements a grab pass to distort the background based on surface properties.</li>
-                    <li><strong>Rim Lighting:</strong> Uses a Fresnel-based effect to highlight the edges of the object dynamically.</li>
-                    <li><strong>Dynamic Surface Control:</strong> Adjustable hollowness and distortion parameters influence the refraction intensity.</li>
-                    <li><strong>Customizable Material:</strong> Provides user-defined properties to tweak the shader's visual output.</li>
-                </ul>
-            </section>
-        </section>
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Shader Mechanics</p>
-            <section class="description-section">
-                <p><strong>The Diamond Shader utilizes a combination of refraction, distortion, and rim lighting to achieve a visually striking effect. By leveraging GrabPass sampling, the shader distorts background reflections dynamically, creating a realistic glass-like material. Additionally, rim lighting enhances the edges of the object based on the viewing angle, while optimized color blending ensures smooth transitions. Below are the key mechanics that define how the shader functions.</strong></p>
-                <h4>Additional information:</h4>
-                <ul>
-                    <li><strong>GrabPass Sampling:</strong> Captures the scene behind the object to create a refraction effect.</li>
-                    <li><strong>Distortion Calculation:</strong> Modifies the texture coordinates based on surface normals and hollowness values.</li>
-                    <li><strong>Rim Light Effect:</strong> Uses Fresnel equations to highlight object edges.</li>
-                    <li><strong>Color Blending:</strong> Dynamically mixes the base color with the rim color for a smooth transition.</li>
-                    <li><strong>Performance Optimization:</strong> Ensures efficient execution with minimal overhead.</li>
-                </ul>
-            </section>
-        </section>
-    </section>
-
-
-    <!-- contact me -->
-    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto align-center">
-            <h1 class="large contact-title">Let's get in touch!</h1>
-            <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
-            <section class="box-contact margin-auto padding-top">
-            </section>
-        </section>
-    </section>
-
-    <!-- special thanks -->
-    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
-
-    <section id="contatti">
-        <div class="contact-info">
-            <div class="contact-item">
-                <p>Email: <span class="email-text">loory4895@gmail.com</span></p>
-            </div>
-            <div class="contact-item">
-                <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
-            </div>
+          <div class="project-video-frame reveal reveal-delay-1">
+            <video class="autoplay-video" autoplay muted loop playsinline controls preload="metadata">
+              <source src="Videos/Shader.mp4" type="video/mp4">
+            </video>
+            <div class="project-video-shade"></div>
+            <div class="project-video-label">CUSTOM CRYSTAL MATERIAL</div>
+          </div>
         </div>
+
+        <div class="project-meta-section reveal">
+          <div class="project-meta-grid"><div class="project-meta-card"><span>Role</span><strong>Solo Developer</strong></div><div class="project-meta-card"><span>Engine</span><strong>Unity</strong></div><div class="project-meta-card"><span>Duration</span><strong>2 weeks</strong></div><div class="project-meta-card"><span>Pipeline</span><strong>Built-in</strong></div></div>
+        </div>
+      </div>
     </section>
 
-    <section id="regardes">
-        <p class="small thanks justify w-900 padding-left">*Based on :
-
-            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
-
-        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
-            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
-
-        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
-    </footer>
+    <section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>01 / GOAL</span>
+      <h2>A tunable crystal effect</h2>
     </div>
-</main>
+    <div class="project-copy reveal reveal-delay-1">
+      <p class="lead">The shader was built for a shading exam and focuses on the optical cues that make a transparent material read as crystal: distorted background sampling plus a strong view-dependent edge.</p>
+    </div>
+  </div>
+</section>
+<section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>02 / SHADER</span>
+      <h2>How the effect works</h2>
+    </div>
+    <div class="project-copy reveal reveal-delay-1">
+      <div class="feature-grid">
+<article class="feature-card">
+  <small>REFRACTION</small>
+  <h3>GrabPass sampling</h3>
+  <p>Captures the scene behind the object and samples it with distorted UVs.</p>
+</article>
+<article class="feature-card">
+  <small>DISTORTION</small>
+  <h3>Normal-driven offset</h3>
+  <p>Surface normals and exposed parameters control how strongly the background bends.</p>
+</article>
+<article class="feature-card">
+  <small>RIM</small>
+  <h3>Fresnel-style edge light</h3>
+  <p>The object gains a view-dependent highlight around its silhouette.</p>
+</article>
+<article class="feature-card">
+  <small>TUNING</small>
+  <h3>Material properties</h3>
+  <p>Hollowness, distortion strength and rim appearance can be adjusted per material.</p>
+</article>
+</div>
+    </div>
+  </div>
+</section>
+<section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>03 / TAKEAWAY</span>
+      <h2>Graphics fundamentals</h2>
+    </div>
+    <div class="project-copy reveal reveal-delay-1">
+      <div class="callout"><p>This project gave me practical experience connecting shader math, camera/view direction and exposed material parameters to a readable visual result.</p></div>
+    </div>
+  </div>
+</section>
+
+    <section class="project-footer-nav">
+      <div class="shell">
+        <div class="project-footer-panel reveal">
+          <a href="index.html#work"><small>Back</small><strong>Selected Work ←</strong></a>
+          <a href="Tool.html"><small>Next project</small><strong>House Scatter Tool →</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© <span id="year"></span> Lorenzo Grasso</span>
+      <span>Gameplay • Multiplayer • Systems</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
 </body>
 </html>

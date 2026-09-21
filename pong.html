@@ -1,241 +1,146 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <link rel="icon" type="image/png" href="Logos/Dragone.png">
-    <title>My portfolio website</title>
-    
-    <link rel="stylesheet" type="text/css" href="ProjectPage.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pong Multiplayer — Lorenzo Grasso</title>
+  <meta name="description" content="Multiplayer Pong project using Unity, Mirror and Steam APIs.">
+  <meta name="theme-color" content="#090b0e">
+  <link rel="icon" type="image/png" href="Logos/Dragone.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="ProjectPage.css">
 </head>
+<body class="project-page">
+  <div class="site-noise" aria-hidden="true"></div>
 
-<body>
-<!-- navigation bar -->
-<nav class="sticky">
-    <label for="drop" class="toggle" id="main-toggle">
-        <span class="nav-icon"></span>
-    </label>
-    <input type="checkbox" id="drop">
-    <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="AboutMe.html">About me</a></li>
-        <li><a href="index.html">Skill-set</a></li>
-        <li><a href="#contact-me">Contact me</a></li>
-
-        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
-            <img src="Logos/Linkedin.png" class="nav-image" />
-        </a>
-        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
-            <img src="Logos/Instagram.png" class="nav-image" />
-        </a>
-        <a href="https://github.com/Lollo48" target="_blank">
-            <img src="Logos/Github.png" class="nav-image" />
-        </a>
-        <div class="discord-container">
-            <img src="Logos/Discord.png" class="nav-image" />
-            </a>
-            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
-        </div>
-    </ul>
-</nav>
-<main>
-    <section class="video-container">
-        <h3 class="video-title"> Pong Remake </h3>
-        <video controls autoplay loop>
-            <source src="Videos/PongRemake.mp4" type="video/mp4" />
-            Il tuo browser non supporta i video.
-        </video>
-    </section>
-
-    <section class="wrapper">
-        <section class="column card justify flex">
-            <h4 class="padding bold center"> Pong Remake</h4>
-            <div class="text-image-container">
-                <div class="text-image-item-project">
-                    <p>school exam.
-                    </p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>  FEATURES :
-                    </p>
-                </div>
-
-                <div class="text-image-item-project">
-                    <p>Players: Each player controls a bar, which moves vertically within the limits of the map.</p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>  Ball: It is thrown in a random direction at the start of the game.
-                        At each impact with the bar of one of the players it accelerates.</p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>  Goal: Behind the two players are the respective goals. If the ball does not touch one, it is a point for the opponent.</p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>  user interface: - Lobby menu (max 2 players)
-                        - Players' score.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="column card justify flex">
-            <h4 class="padding bold center">Project info</h4>
-            <div class="text-image-container">
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                    <p>1 School exam</p>
-                </div>
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                    <p>june 21th - july 18th, 2024, three weeks</p>
-                </div>
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                    <p>Unity</p>
-                </div>
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                    <p>Windows</p>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <div class="button-container">
-        <a href="index.html" class="button">Home</a>
-        <a href="https://github.com/Lollo48/PongExam/releases/tag/Release1.0" class="button">Repository</a>
+  <header class="site-header is-scrolled" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Portfolio home">
+        <span class="brand-mark">LG</span>
+        <span class="brand-copy"><strong>LORENZO GRASSO</strong><small>GAMEPLAY PROGRAMMER</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a class="is-active" href="index.html#work">Work</a>
+        <a href="AboutMe.html">About Me</a>
+        <a href="index.html#competencies">Competencies</a>
+        <a href="index.html#stack">Stack</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="Documents/CurriculumVitaeLorenzoGrasso.pdf" target="_blank" rel="noreferrer">CV ↗</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- about me -->
-    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+  <main>
+    <section class="project-hero">
+      <div class="shell">
+        <a class="project-back reveal" href="index.html#work"><span>←</span> Back to selected work</a>
+        <div class="project-hero-grid">
+          <div class="project-hero-copy reveal">
+            <p class="eyebrow">MULTIPLAYER EXAM PROJECT</p>
+            <h1 class="project-hero-title">Pong<em>Multiplayer</em></h1>
+            <p class="project-hero-summary">A networked Pong remake built to learn <strong>state synchronization, Mirror networking and Steam-based player connectivity</strong>.</p>
+            <div class="project-tags"><span>Unity</span><span>C#</span><span>Mirror</span><span>Steam API</span><span>Multiplayer</span><span>State Sync</span></div>
+            <div class="project-hero-actions"><a class="button primary" href="https://github.com/Lollo48/PongExam/releases/tag/Release1.0" target="_blank" rel="noreferrer">Repository <span>↗</span></a><a class="button ghost" href="index.html#work">Home <span>←</span></a></div>
+          </div>
 
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Game Overview</p>
-            <p>Pong Multiplayer is a school project developed as an exam to explore multiplayer game programming. The game is built around a state management system synchronized across clients, ensuring smooth and responsive gameplay. With the integration of Mirror and Steam APIs, matchmaking and player connections are efficient and seamless.</p>
-        </section>
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Game Goal</p>
-            <p>The goal of the project was to develop a fully functional multiplayer Pong match, ensuring smooth gameplay and synchronization between clients. A **FlowGame Manager** was used to handle game states, while Mirror provided real-time data synchronization. Additionally, Steam APIs were integrated for matchmaking and player connectivity.</p>
-        </section>
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Key Features</p>
-            <section class="description-section">
-                <p><strong>The game employs an advanced management system that synchronizes every action between clients. Mirror handles networking, while Steam APIs enable matchmaking and player connections.</strong></p>
-                <h4>Features</h4>
-                <ul>
-                    <li><strong>FlowGame Manager:</strong> Manages game states across clients, ensuring a smooth experience.</li>
-                    <li><strong>Mirror Networking:</strong> Implements real-time synchronization between players.</li>
-                    <li><strong>Steam API Integration:</strong> Enables matchmaking and user connection management.</li>
-                </ul>
-            </section>
-        </section>
-    </section>
-
-    </section>
-    <section class="image-container">
-        <img src="ProjectsImage/Pong/Pong.png" alt="center" class="responsive">
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Game Mechanics</p>
-            <section class="description-section">
-                <p><strong>Pong Multiplayer utilizes a client-server architecture to ensure optimal synchronization. Mirror handles communication between clients, while Steam APIs provide an integrated matchmaking system. The FlowGame Manager enables smooth transitions between game phases, ensuring stability and reliability.</strong></p>
-                <h4>Additional information:</h4>
-                <ul>
-                    <li><strong>State Management:</strong> The FlowGame Manager synchronizes game phases across clients.</li>
-                    <li><strong>Networking with Mirror:</strong> Implements communication between clients with an optimized architecture.</li>
-                    <li><strong>Steam Integration:</strong> Uses APIs for matchmaking and player connections.</li>
-                </ul>
-            </section>
-        </section>
-    </section>
-
-    </section>
-    <section class="image-container">
-        <img src="ProjectsImage/Pong/Pong1.png" alt="center" class="responsive">
-    </section>
-
-
-    <!-- contact me -->
-    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto align-center">
-            <h1 class="large contact-title">Let's get in touch!</h1>
-            <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
-            <section class="box-contact margin-auto padding-top">
-            </section>
-        </section>
-    </section>
-
-    <!-- special thanks -->
-    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
-
-    <section id="contatti">
-        <div class="contact-info">
-            <div class="contact-item">
-                <p>Email: <span class="email-text">loory4895@gmail.com</span></p>
-            </div>
-            <div class="contact-item">
-                <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
-            </div>
+          <div class="project-video-frame reveal reveal-delay-1">
+            <video class="autoplay-video" autoplay muted loop playsinline controls preload="metadata">
+              <source src="Videos/PongRemake.mp4" type="video/mp4">
+            </video>
+            <div class="project-video-shade"></div>
+            <div class="project-video-label">MIRROR + STEAM MULTIPLAYER</div>
+          </div>
         </div>
+
+        <div class="project-meta-section reveal">
+          <div class="project-meta-grid"><div class="project-meta-card"><span>Role</span><strong>Solo Developer</strong></div><div class="project-meta-card"><span>Engine</span><strong>Unity</strong></div><div class="project-meta-card"><span>Duration</span><strong>3 weeks</strong></div><div class="project-meta-card"><span>Platform</span><strong>Windows</strong></div></div>
+        </div>
+      </div>
     </section>
 
-    <section id="regardes">
-        <p class="small thanks justify w-900 padding-left">*Based on :
-
-            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
-
-        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
-            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
-
-        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
-    </footer>
+    <section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>01 / GOAL</span>
+      <h2>A small game, real networking</h2>
     </div>
-</main>
+    <div class="project-copy reveal reveal-delay-1">
+      <p class="lead">The scope was intentionally small so I could focus on the multiplayer layer instead of content production.</p><p>The match keeps gameplay states synchronized between clients while Mirror handles network communication and Steam APIs provide player connection and matchmaking integration.</p><figure class="project-media-wide reveal">
+  <img src="ProjectsImage/Pong/Pong.png" alt="Pong multiplayer match" loading="lazy">
+  <figcaption>Pong multiplayer match</figcaption>
+</figure>
+    </div>
+  </div>
+</section>
+<section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>02 / ARCHITECTURE</span>
+      <h2>Core networking pieces</h2>
+    </div>
+    <div class="project-copy reveal reveal-delay-1">
+      <div class="feature-grid">
+<article class="feature-card">
+  <small>FLOW</small>
+  <h3>FlowGame Manager</h3>
+  <p>Coordinates match phases and keeps the progression of the game synchronized across clients.</p>
+</article>
+<article class="feature-card">
+  <small>NETWORK</small>
+  <h3>Mirror</h3>
+  <p>Synchronizes player and match state and handles client/server communication.</p>
+</article>
+<article class="feature-card">
+  <small>CONNECTIVITY</small>
+  <h3>Steam API</h3>
+  <p>Provides player connection and matchmaking support around the multiplayer session.</p>
+</article>
+<article class="feature-card">
+  <small>GAMEPLAY</small>
+  <h3>Authoritative match flow</h3>
+  <p>Ball, score and game progression are treated as shared state instead of independent local simulations.</p>
+</article>
+</div><figure class="project-media-wide reveal">
+  <img src="ProjectsImage/Pong/Pong1.png" alt="Multiplayer state and match flow" loading="lazy">
+  <figcaption>Multiplayer state and match flow</figcaption>
+</figure>
+    </div>
+  </div>
+</section>
+<section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>03 / TAKEAWAY</span>
+      <h2>Networking fundamentals</h2>
+    </div>
+    <div class="project-copy reveal reveal-delay-1">
+      <div class="callout"><p>This project gave me a concrete foundation in ownership, shared state and multiplayer game flow before moving into larger Unity networking systems.</p></div>
+    </div>
+  </div>
+</section>
+
+    <section class="project-footer-nav">
+      <div class="shell">
+        <div class="project-footer-panel reveal">
+          <a href="index.html#work"><small>Back</small><strong>Selected Work ←</strong></a>
+          <a href="Shader.html"><small>Next project</small><strong>Crystal Shader →</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© <span id="year"></span> Lorenzo Grasso</span>
+      <span>Gameplay • Multiplayer • Systems</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
 </body>
 </html>

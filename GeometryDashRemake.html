@@ -1,251 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <link rel="icon" type="image/png" href="Logos/Dragone.png">
-    <title>My portfolio website</title>
-    <!-- Adding favicon for older and modern browsers,
-        It is best to add favicon to the main folder, 
-        I used an only ico converter for best result,
-        Do not forget to clear you cache to see the changes -->
-    <link rel="stylesheet" type="text/css" href="ProjectPage.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geometry Dash Remake — Lorenzo Grasso</title>
+  <meta name="description" content="Unity mobile Geometry Dash remake with multiple player forms, ScriptableObjects and state-based behavior.">
+  <meta name="theme-color" content="#090b0e">
+  <link rel="icon" type="image/png" href="Logos/Dragone.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="ProjectPage.css">
 </head>
+<body class="project-page">
+  <div class="site-noise" aria-hidden="true"></div>
 
-<body>
-<!-- navigation bar -->
-<nav class="sticky">
-    <label for="drop" class="toggle" id="main-toggle">
-        <span class="nav-icon"></span>
-    </label>
-    <input type="checkbox" id="drop">
-    <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="AboutMe.html">About me</a></li>
-        <li><a href="index.html">Skill-set</a></li>
-        <li><a href="#contact-me">Contact me</a></li>
-
-        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
-            <img src="Logos/Linkedin.png" class="nav-image" />
-        </a>
-        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
-            <img src="Logos/Instagram.png" class="nav-image" />
-        </a>
-        <a href="https://github.com/Lollo48" target="_blank">
-            <img src="Logos/Github.png" class="nav-image" />
-        </a>
-        <div class="discord-container">
-            <img src="Logos/Discord.png" class="nav-image" />
-            </a>
-            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
-        </div>
-    </ul>
-</nav>
-<main>
-    <section class="video-container">
-        <h3 class="video-title"> GeometryDash Remake</h3>
-        <video controls autoplay loop>
-            <source src="Videos/GeometryDash.mp4" type="video/mp4" />
-            Il tuo browser non supporta i video.
-        </video>
-    </section>
-
-    <section class="wrapper">
-        <section class="column card justify flex">
-            <h4 class="padding bold center">About GeometryDash</h4>
-            <div class="text-image-container">
-                <div class="text-image-item-project">
-                    <p> School Game Lab.
-                    </p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>Recreate the original mobile game GeometryDash!.</p>
-                </div>
-                <div class="text-image-item-project">
-                    <p>  My GeometryDash remake is a reimagining of this classic game, built in C# to demonstrate my skills.
-                        The project replicates core mechanics.
-                    </p>
-                </div>
-                <div class="text-image-item-project">
-                    <p> Geometry Dash Remake is a 2D platformer game developed in Unity 3D, inspired by the popular mobile game Geometry Dash. The player controls a cube that must jump through a series of obstacles with precise timing, synchronizing with the background music.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="column card justify flex">
-            <h4 class="padding bold center">Project info</h4>
-            <div class="text-image-container">
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/People1.png" alt="Descrizione dell'immagine 1" class="side-image" />
-                    <p>8 School Game Lab</p>
-                </div>
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/Clock1.png" alt="Descrizione dell'immagine 2" class="side-image" />
-                    <p>October 6th - November 8th, 2023, four weeks</p>
-                </div>
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/Engine1.png" alt="Descrizione dell'immagine 3" class="side-image" />
-                    <p>Unity</p>
-                </div>
-                <div class="text-image-item">
-                    <img src="Logos/VideoLogos/Joystick1.png" alt="Descrizione dell'immagine 4" class="side-image" />
-                    <p>Mobile Android</p>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <div class="button-container">
-        <a href="index.html" class="button">Home</a>
-        <a href="https://github.com/Team2MobileGameGeometryDash/GeometryDashTeam2MobileRemake/releases/tag/Release" class="button">Release</a>
+  <header class="site-header is-scrolled" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Portfolio home">
+        <span class="brand-mark">LG</span>
+        <span class="brand-copy"><strong>LORENZO GRASSO</strong><small>GAMEPLAY PROGRAMMER</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a class="is-active" href="index.html#work">Work</a>
+        <a href="AboutMe.html">About Me</a>
+        <a href="index.html#competencies">Competencies</a>
+        <a href="index.html#stack">Stack</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="Documents/CurriculumVitaeLorenzoGrasso.pdf" target="_blank" rel="noreferrer">CV ↗</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- about me -->
-    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+  <main>
+    <section class="project-hero">
+      <div class="shell">
+        <a class="project-back reveal" href="index.html#work"><span>←</span> Back to selected work</a>
+        <div class="project-hero-grid">
+          <div class="project-hero-copy reveal">
+            <p class="eyebrow">UNITY • MOBILE GAMEPLAY</p>
+            <h1 class="project-hero-title">Geometry Dash<em>Remake</em></h1>
+            <p class="project-hero-summary">A mobile 2D platformer remake focused on <strong>responsive touch controls, multiple player forms, portals and data-driven movement behavior</strong>.</p>
+            <div class="project-tags"><span>Unity</span><span>C#</span><span>Android</span><span>State Machine</span><span>ScriptableObject</span><span>Touch Input</span></div>
+            <div class="project-hero-actions"><a class="button primary" href="https://github.com/Team2MobileGameGeometryDash/GeometryDashTeam2MobileRemake/releases/tag/Release" target="_blank" rel="noreferrer">Release <span>↗</span></a><a class="button ghost" href="index.html#work">Home <span>←</span></a></div>
+          </div>
 
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Game Overview</p>
-            <p>Geometry Dash Remake is a 2D platformer game developed in Unity 3D, inspired by the popular mobile game Geometry Dash. The player controls a cube that must jump through a series of obstacles with precise timing, synchronizing with the background music.</p>
-            <p><strong>Game Goal:</strong></p>
-            <p>The main goal of the game is to complete the level by avoiding obstacles and collecting bonus points along the way. The game focuses on the player's coordination and reflexes.</p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-                <li>Attractive graphics</li>
-                <li>Rhythm-based gameplay</li>
-                <li>Pawn controls</li>
-                <li>Progressively challenging levels</li>
-                <li>Scoring system to challenge friends</li>
-            </ul>
-            <p><strong>Gameplay:</strong></p>
-            <p>The game takes place on a two-dimensional plane where the player controls a cube that moves automatically to the right. The player can make the cube jump by touching the screen or pressing a key. The objective is to avoid obstacles by jumping at the right time, synchronizing with the background music for a smooth and engaging gameplay experience.</p>
-            <p><strong>Game Mechanics:</strong></p>
-            <ul>
-                <li><strong>Jumping:</strong> The player can make the cube jump to avoid obstacles. The duration of the jump depends on the length of the touch.</li>
-                <li><strong>Obstacles:</strong> Obstacles are strategically placed to challenge the player's coordination and reflexes.</li>
-                <li><strong>Checkpoints:</strong> Some levels feature checkpoints that allow the player to resume from an intermediate point in case of failure.</li>
-                <li><strong>Bonus Points:</strong> The player can collect bonus points along the way to increase the final score.</li>
-                <li><strong>Graphics:</strong> The visual design is simple yet colorful, with geometric shapes and smooth animations. Each level has a unique visual theme that makes the gaming experience varied.</li>
-                <li><strong>Sound:</strong> The soundtrack is an essential part of the game, with musical tracks synchronized with the gameplay to enhance immersion and rhythm.</li>
-            </ul>
-        </section>
-    </section>
-    <section class="image-container">
-        <img src="ProjectsImage/GeometryDash/GeometryDash.png" alt="center" class="responsive">
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Difficulties</p>
-            <p>During the development of this project, I encountered several challenges that were crucial for the game's functionality and performance. Among these, managing the physics, speed, and data for each spaceship, and utilizing ScriptableObjects to handle their unique behaviors, were particularly complex:</p>
-
-            <ul>
-                <li><strong>Physics Management:</strong> Each spaceship had its own unique set of physics characteristics that needed to be implemented separately. For example, the spaceship needed to move in a way that felt fluid while maintaining consistent collision detection with obstacles. Ensuring that the physics were consistent across different game states, such as gravity changes and propulsion, required precise fine-tuning.</li>
-                <li><strong>Speed Adjustment:</strong> Speed control was another significant challenge. Each spaceship had different movement speeds based on its design, but I also needed to adjust its speed dynamically based on power-ups and the level progression. Ensuring that the player could control the spaceship without experiencing lag or jittering, while keeping the controls responsive, was a delicate balancing act.</li>
-                <li><strong>Data Management through ScriptableObjects:</strong> I used ScriptableObjects to manage the data for each spaceship, which allowed for easy customization of each ship's attributes (such as speed, gravity, and movement patterns) in the Unity Editor. However, managing these ScriptableObjects, especially when dealing with multiple game pieces and ensuring that data changes reflected immediately in the gameplay, required careful attention to avoid inconsistencies. For example, syncing changes in data with the game's physics system sometimes led to unexpected behaviors if not managed properly.</li>
-            </ul>
-
-            <p>Despite these challenges, these obstacles helped me learn a great deal about managing dynamic game elements and data-driven design, as well as fine-tuning complex interactions between physics, player input, and game state transitions.</p>
-        </section>
-    </section>
-
-    <section class="wrapper">
-        <section class="margin-auto">
-        </section>
-        <section class="justify align-center">
-            <p class="quote uppercase">Personal Contribution</p>
-            <ul>
-                <li><strong>Creation of all player pieces:</strong> I was responsible for designing and implementing all the player pieces in the game. Each piece was created as a ScriptableObject, allowing for unique designs, behaviors, and functionality. The player pieces I developed are:</li>
-                <ul>
-                    <li><strong>Cube:</strong> The basic player piece, which can jump to avoid obstacles.</li>
-                    <li><strong>Spaceship:</strong> A player piece with the ability to fly, offering a different movement style.</li>
-                    <li><strong>Robot:</strong> A player piece with a special ability to interact with obstacles in a unique way.</li>
-                    <li><strong>UFO:</strong> A player piece that can levitate, providing a new gameplay experience.</li>
-                    <li><strong>Gear:</strong> A player piece that can rotate, adding a mechanic to navigate through challenging environments.</li>
-                    <li><strong>Spider:</strong> A player piece with the ability to cling to surfaces and move in an unconventional way.</li>
-                </ul>
-                <p>Each of these pieces was integrated into its own state in a state machine, which allowed for smooth transitions and distinct behaviors based on the player's actions. I also developed the animations and interactions specific to each player piece to enhance the overall gaming experience.</p>
-                <li><strong>Input System Development:</strong> I developed the input system for the game, including touch controls. This system ensures smooth and responsive player interactions on touchscreen devices.</li>
-                <li><strong>Player Death Mechanics:</strong> I implemented the mechanics for player death, ensuring proper game responses, including animations and sound effects.</li>
-                <li><strong>Portal Mechanics:</strong> I created various portals, including: Change Portal, Gravity Portal, Size Portal, Speed Portal, Teleport Portal, Meteora Portal, and Jump Pads.</li>
-                <li><strong>Event Management:</strong> I managed all game events, defining and handling event triggers such as collisions, achievements, and interactions.</li>
-                <li><strong>Visual Effects (VFX) and Sound Management:</strong> I managed visual effects (VFX) and sound in the game, including background music integration and sound effects for various game events.</li>
-            </ul>
-        </section>
-    </section>
-    <section class="image-container">
-        <img src="ProjectsImage/GeometryDash/GeometryDash1.png" alt="center" class="responsive">
-    </section>
-
-    <!-- contact me -->
-    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto align-center">
-            <h1 class="large contact-title">Let's get in touch!</h1>
-            <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
-            <section class="box-contact margin-auto padding-top">
-            </section>
-        </section>
-    </section>
-
-    <!-- special thanks -->
-    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
-
-    <section id="contatti">
-        <div class="contact-info">
-            <div class="contact-item">
-                <p>Email: <span class="email-text">loory4895@gmail.com</span></p>
-            </div>
-            <div class="contact-item">
-                <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
-            </div>
+          <div class="project-video-frame reveal reveal-delay-1">
+            <video class="autoplay-video" autoplay muted loop playsinline controls preload="metadata">
+              <source src="Videos/GeometryDash.mp4" type="video/mp4">
+            </video>
+            <div class="project-video-shade"></div>
+            <div class="project-video-label">MOBILE PLATFORMER REMAKE</div>
+          </div>
         </div>
+
+        <div class="project-meta-section reveal">
+          <div class="project-meta-grid"><div class="project-meta-card"><span>Role</span><strong>Gameplay Programmer</strong></div><div class="project-meta-card"><span>Engine</span><strong>Unity</strong></div><div class="project-meta-card"><span>Team</span><strong>8 — School Game Lab</strong></div><div class="project-meta-card"><span>Duration</span><strong>4 weeks</strong></div></div>
+        </div>
+      </div>
     </section>
 
-    <section id="regardes">
-        <p class="small thanks justify w-900 padding-left">*Based on :
-
-            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
-
-        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
-            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
-
-        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
-    </footer>
+    <section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>01 / OVERVIEW</span>
+      <h2>Rhythm, movement, timing</h2>
     </div>
-</main>
+    <div class="project-copy reveal reveal-delay-1">
+      <p class="lead">The remake reproduces the core idea of Geometry Dash: automatic forward movement, precise input timing and obstacle-driven level progression.</p><figure class="project-media-wide reveal">
+  <img src="ProjectsImage/GeometryDash/GeometryDash.png" alt="Geometry Dash remake gameplay" loading="lazy">
+  <figcaption>Geometry Dash remake gameplay</figcaption>
+</figure>
+    </div>
+  </div>
+</section>
+<section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>02 / MY WORK</span>
+      <h2>Player forms & gameplay</h2>
+    </div>
+    <div class="project-copy reveal reveal-delay-1">
+      <div class="feature-grid">
+<article class="feature-card">
+  <small>FORMS</small>
+  <h3>Multiple player pieces</h3>
+  <p>Implemented cube, spaceship, robot, UFO, gear and spider forms with distinct movement behavior.</p>
+</article>
+<article class="feature-card">
+  <small>INPUT</small>
+  <h3>Touch controls</h3>
+  <p>Built the mobile input flow so forms remain responsive on touchscreen devices.</p>
+</article>
+<article class="feature-card">
+  <small>PORTALS</small>
+  <h3>Movement modifiers</h3>
+  <p>Implemented gravity, size, speed, teleport and other portal behaviors plus jump pads.</p>
+</article>
+<article class="feature-card">
+  <small>FEEDBACK</small>
+  <h3>Events, VFX &amp; sound</h3>
+  <p>Connected player state changes, collisions and gameplay events to visual and audio feedback.</p>
+</article>
+</div><figure class="project-media-wide reveal">
+  <img src="ProjectsImage/GeometryDash/GeometryDash1.png" alt="Player forms and gameplay systems" loading="lazy">
+  <figcaption>Player forms and gameplay systems</figcaption>
+</figure>
+    </div>
+  </div>
+</section>
+<section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>03 / CHALLENGES</span>
+      <h2>Data-driven movement</h2>
+    </div>
+    <div class="project-copy reveal reveal-delay-1">
+      <p class="lead">The hardest part was keeping different movement models consistent while still allowing each form to feel unique.</p><ul class="project-list">
+<li><div><strong>Physics:</strong> Each player form needed its own movement characteristics without breaking collision consistency.</div></li>
+<li><div><strong>Speed:</strong> Movement speed had to react to level state and portals without producing jitter or unpredictable control.</div></li>
+<li><div><strong>ScriptableObjects:</strong> Form data was moved into assets so movement values and behavior could be tuned without rewriting code.</div></li>
+<li><div><strong>State separation:</strong> Each player form is represented through state-driven behavior, simplifying transitions between forms.</div></li>
+</ul>
+    </div>
+  </div>
+</section>
+
+    <section class="project-footer-nav">
+      <div class="shell">
+        <div class="project-footer-panel reveal">
+          <a href="index.html#work"><small>Back</small><strong>Selected Work ←</strong></a>
+          <a href="B2B.html"><small>Next project</small><strong>B2B Museum Application →</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© <span id="year"></span> Lorenzo Grasso</span>
+      <span>Gameplay • Multiplayer • Systems</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
 </body>
 </html>

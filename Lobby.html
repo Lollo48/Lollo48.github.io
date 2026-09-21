@@ -1,185 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <link rel="icon" type="image/png" href="Logos/Dragone.png">
-    <title>My portfolio website</title>
-    <!-- Adding favicon for older and modern browsers,
-        It is best to add favicon to the main folder, 
-        I used an only ico converter for best result,
-        Do not forget to clear you cache to see the changes -->
-    <link rel="stylesheet" type="text/css" href="ProjectPage.css">
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lobby System — Lorenzo Grasso</title>
+  <meta name="description" content="Unity multiplayer lobby, matchmaking and session infrastructure built by Lorenzo Grasso.">
+  <meta name="theme-color" content="#090b0e">
+  <link rel="icon" type="image/png" href="Logos/Dragone.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="ProjectPage.css">
 </head>
+<body class="project-page">
+  <div class="site-noise" aria-hidden="true"></div>
 
-<body>
-<!-- navigation bar -->
-<nav class="sticky">
-    <label for="drop" class="toggle" id="main-toggle">
-        <span class="nav-icon"></span>
-    </label>
-    <input type="checkbox" id="drop">
-    <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="AboutMe.html">About me</a></li>
-        <li><a href="index.html">Skill-set</a></li>
-        <li><a href="#contact-me">Contact me</a></li>
-
-        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
-            <img src="Logos/Linkedin.png" class="nav-image" />
-        </a>
-        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
-            <img src="Logos/Instagram.png" class="nav-image" />
-        </a>
-        <a href="https://github.com/Lollo48" target="_blank">
-            <img src="Logos/Github.png" class="nav-image" />
-        </a>
-        <div class="discord-container">
-            <img src="Logos/Discord.png" class="nav-image" />
-            </a>
-            <img src="Logos/DiscordInfo.png" class="discord-hover-image" />
-        </div>
-    </ul>
-</nav>
-<main>
-    <section class="video-container">
-        <h3 class="video-title"> Lobby </h3>
-        <video controls autoplay loop>
-            <source src="Videos/Lobby.mp4" type="video/mp4" />
-            Il tuo browser non supporta i video.
-        </video>
-    </section>
-
-    <div class="button-container">
-        <a href="index.html" class="button">Home</a>
-<!--        <a href="https://eventhorizonschool.itch.io/jules" class="button">ITCH</a>-->
+  <header class="site-header is-scrolled" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Portfolio home">
+        <span class="brand-mark">LG</span>
+        <span class="brand-copy"><strong>LORENZO GRASSO</strong><small>GAMEPLAY PROGRAMMER</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a class="is-active" href="index.html#work">Work</a>
+        <a href="AboutMe.html">About Me</a>
+        <a href="index.html#competencies">Competencies</a>
+        <a href="index.html#stack">Stack</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="Documents/CurriculumVitaeLorenzoGrasso.pdf" target="_blank" rel="noreferrer">CV ↗</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- about me -->
-    <!-- That about me png is something I've made for fun, it has a purple version too, feel free to use it or change it to anything else. -->
+  <main>
+    <section class="project-hero">
+      <div class="shell">
+        <a class="project-back reveal" href="index.html#work"><span>←</span> Back to selected work</a>
+        <div class="project-hero-grid">
+          <div class="project-hero-copy reveal">
+            <p class="eyebrow">MULTIPLAYER INFRASTRUCTURE</p>
+            <h1 class="project-hero-title">Lobby<em>System</em></h1>
+            <p class="project-hero-summary">A custom <strong>Unity multiplayer foundation</strong> for public/private lobbies, real-time player synchronization, Relay connectivity, host migration and persistent moderation.</p>
+            <div class="project-tags"><span>Unity</span><span>C#</span><span>Netcode for GameObjects</span><span>Lobby</span><span>Relay</span><span>Authentication</span></div>
+            <div class="project-hero-actions"><a class="button ghost" href="index.html#work">Home <span>←</span></a></div>
+          </div>
 
-    <section class="wrapper">
-        <section class="justify align-center">
-            <h2 class="quote uppercase" style="font-size:1.4rem; letter-spacing:2px;">🚀 Multiplayer Lobby, Matchmaking & Sync (Unity)</h2>
-            <div class="description-section system-highlights" style="margin-top:2em; margin-bottom:2em;">
-
-                <div class="system-feature" style="margin-bottom:1.6em;">
-                    <h4>Lobby Creation & Matchmaking</h4>
-                    <p>
-                        Custom system for both public and private lobbies, supporting real-time matchmaking and seamless player joins.
-                    </p>
-                </div>
-
-                <div class="system-feature" style="margin-bottom:1.6em;">
-                    <h4>Real-Time Player Synchronization</h4>
-                    <p>
-                        Player data, presence, and state are fully synchronized across all clients, guaranteeing a smooth multiplayer experience.
-                    </p>
-                </div>
-
-                <div class="system-feature" style="margin-bottom:1.6em;">
-                    <h4>Secure Game Start & Host Migration</h4>
-                    <p>
-                        Secure game session initiation via Unity Relay & Netcode for GameObjects. Host migration is automatic: if the host disconnects, another player is instantly promoted with no loss of data or gameplay interruption.
-                    </p>
-                </div>
-
-                <div class="system-feature" style="margin-bottom:1.6em;">
-                    <h4>Dynamic, Responsive UI</h4>
-                    <p>
-                        All UI updates in real time: players instantly see lobby changes, player joins/leaves, status updates, and game events.
-                    </p>
-                </div>
-
-                <div class="system-feature" style="margin-bottom:1.6em;">
-                    <h4>Kick & Persistent Ban System</h4>
-                    <p>
-                        Players can be kicked or banned. Bans are persistent and enforced server-side—banned users are automatically blocked from rejoining, even after restarts.
-                    </p>
-                </div>
-
-                <div class="system-feature" style="margin-bottom:1.6em;">
-                    <h4>Cloud-Powered Scalability</h4>
-                    <p>
-                        Built entirely on <strong>Unity Cloud APIs</strong> for multiplayer: leveraging <b>Netcode for GameObjects</b>, <b>Relay</b>, and <b>Lobby</b> services for reliable, global connections and scalable infrastructure.
-                    </p>
-                </div>
-            </div>
-
-            <div class="hashtags" style="text-align:center; margin-top:2em; opacity:.85;">
-            <span style="color:#767676; font-size:0.92rem;">
-                #Unity #Unity3D #UnityCloud #UnityDevelopers #GameDev #IndieDev #MultiplayerDev #Netcode #Relay #Lobby
-            </span>
-            </div>
-        </section>
-    </section>
-
-
-    <!-- contact me -->
-    <!-- Five logo can be in one row, and if it still not enough, you can create another row, buy doubleing the "box-contact" section -->
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto align-center">
-            <h1 class="large contact-title">Let's get in touch!</h1>
-            <p class="contact-description">Feel free to reach out! Whether you have a question, a project idea, or just want to chat about game development, I’d love to connect.</p>
-            <section class="box-contact margin-auto padding-top">
-            </section>
-        </section>
-    </section>
-
-    <!-- special thanks -->
-    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
-
-    <section id="contatti">
-        <div class="contact-info">
-            <div class="contact-item">
-                <p>Email: <span class="email-text">loory4895@gmail.com</span></p>
-            </div>
-            <div class="contact-item">
-                <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
-            </div>
+          <div class="project-video-frame reveal reveal-delay-1">
+            <video class="autoplay-video" autoplay muted loop playsinline controls preload="metadata">
+              <source src="Videos/Lobby.mp4" type="video/mp4">
+            </video>
+            <div class="project-video-shade"></div>
+            <div class="project-video-label">REAL-TIME MULTIPLAYER FOUNDATION</div>
+          </div>
         </div>
+
+        <div class="project-meta-section reveal">
+          <div class="project-meta-grid"><div class="project-meta-card"><span>Role</span><strong>Network Programmer / Solo Developer</strong></div><div class="project-meta-card"><span>Engine</span><strong>Unity</strong></div><div class="project-meta-card"><span>Language</span><strong>C#</strong></div><div class="project-meta-card"><span>Focus</span><strong>Lobby • Matchmaking • Sync</strong></div></div>
+        </div>
+      </div>
     </section>
 
-    <section id="regardes">
-        <p class="small thanks justify w-900 padding-left">*Based on :
-
-            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> @iluskaland 2024
-
-        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
-            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> byStoryset</p>
-
-        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,</a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font awesome, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"target="_blank">microsoft, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is indurstries, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash</a></span> on Iconfinder </p>
-    </section>
-    <footer>
-        <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
-    </footer>
+    <section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>01 / OVERVIEW</span>
+      <h2>What I built</h2>
     </div>
-</main>
+    <div class="project-copy reveal reveal-delay-1">
+      <p class="lead">I built the lobby and session layer as a reusable multiplayer foundation rather than a one-off menu.</p><p>The system covers the full flow from finding or creating a lobby to synchronizing player state, starting a Relay session and handling ownership changes when the host leaves.</p><div class="feature-grid">
+<article class="feature-card">
+  <small>LOBBIES</small>
+  <h3>Public &amp; private matchmaking</h3>
+  <p>Players can create discoverable or private lobbies and join active sessions through a clean matchmaking flow.</p>
+</article>
+<article class="feature-card">
+  <small>SYNC</small>
+  <h3>Real-time player state</h3>
+  <p>Player data, presence and status updates are synchronized so every client sees lobby changes immediately.</p>
+</article>
+<article class="feature-card">
+  <small>SESSIONS</small>
+  <h3>Relay-backed game start</h3>
+  <p>Unity Relay and Netcode for GameObjects handle connection setup and the transition from lobby state into the game session.</p>
+</article>
+<article class="feature-card">
+  <small>RESILIENCE</small>
+  <h3>Automatic host migration</h3>
+  <p>If the host disconnects, ownership can move to another player while preserving lobby state and minimizing interruption.</p>
+</article>
+</div>
+    </div>
+  </div>
+</section>
+<section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>02 / SYSTEMS</span>
+      <h2>Multiplayer details</h2>
+    </div>
+    <div class="project-copy reveal reveal-delay-1">
+      <p class="lead">The useful part of the project is not the lobby screen — it is the networking and session logic underneath it.</p><ul class="project-list">
+<li><div><strong>Dynamic UI:</strong> Lobby UI reacts to joins, leaves, ready/status changes and session events in real time.</div></li>
+<li><div><strong>Kick &amp; ban:</strong> Players can be removed and persistent bans prevent blocked users from simply rejoining.</div></li>
+<li><div><strong>Cloud services:</strong> The project uses Unity Lobby, Relay and Authentication together instead of treating each service as an isolated feature.</div></li>
+<li><div><strong>Reusable architecture:</strong> Session responsibilities are separated so the same foundation can be extended for different multiplayer game flows.</div></li>
+</ul>
+    </div>
+  </div>
+</section>
+<section class="project-content-section">
+  <div class="shell project-content-grid">
+    <div class="project-section-label reveal">
+      <span>03 / TAKEAWAY</span>
+      <h2>Why this project matters</h2>
+    </div>
+    <div class="project-copy reveal reveal-delay-1">
+      <p class="lead">This project was my first complete pass at treating multiplayer as infrastructure: connection flow, player state, ownership, failure cases and UI all have to agree.</p><div class="callout"><p>It became the base for the way I approach later multiplayer work: keep network responsibilities explicit, keep the UI reactive, and make disconnects part of the design instead of an afterthought.</p></div>
+    </div>
+  </div>
+</section>
+
+    <section class="project-footer-nav">
+      <div class="shell">
+        <div class="project-footer-panel reveal">
+          <a href="index.html#work"><small>Back</small><strong>Selected Work ←</strong></a>
+          <a href="DragonBoss.html"><small>Next project</small><strong>Dragon Boss →</strong></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© <span id="year"></span> Lorenzo Grasso</span>
+      <span>Gameplay • Multiplayer • Systems</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
 </body>
 </html>

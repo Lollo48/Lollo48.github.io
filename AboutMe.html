@@ -1,297 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- Review this part and modify it to your liking -->
-    <meta
-            name="description"
-            content="Sample text for portfolio template meta tag"
-    />
-    <meta
-            name="keywords"
-            content="Sample text for portfolio template meta tag"
-    />
-    <meta name="author" content="Sample text for portfolio template meta tag"/>
-    <link rel="icon" type="image/png" href="Logos/Dragone.png">
-    <title>About me</title>
-    <link rel="stylesheet" type="text/css" href="AboutMe.css"/>
-    <link rel="stylesheet" type="text/css" href="ProjectPage.css"/>
-    <!-- font for the quote -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap"
-            rel="stylesheet"
-    />
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
-            rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
-            rel="stylesheet"
-    />
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap"
-            rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap"
-            rel="stylesheet"
-    />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>About Me — Lorenzo Grasso</title>
+  <meta name="description" content="About Lorenzo Grasso, Gameplay Programmer focused on Unity, Unreal Engine, multiplayer systems, gameplay architecture and AI." />
+  <meta name="theme-color" content="#090b0e" />
+
+  <link rel="icon" type="image/png" href="Logos/Dragone.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio.css" />
 </head>
+<body class="about-page">
+  <div class="site-noise" aria-hidden="true"></div>
 
-<body>
-<!-- navigation bar -->
-<nav class="sticky">
-    <label for="drop" class="toggle" id="main-toggle">
-        <span class="nav-icon"></span>
-    </label>
-    <input type="checkbox" id="drop">
-    <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="AboutMe.html">About me</a></li>
-        <li><a href="index.html">Skill-set</a></li>
-        <li><a href="#contact-me">Contact me</a></li>
+  <header class="site-header is-scrolled" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Back to portfolio home">
+        <span class="brand-mark">LG</span>
+        <span class="brand-copy">
+          <strong>LORENZO GRASSO</strong>
+          <small>GAMEPLAY PROGRAMMER</small>
+        </span>
+      </a>
 
-        <a href="https://www.linkedin.com/in/lorenzo-grasso-68603a22b/" target="_blank">
-            <img src="Logos/Linkedin.png" class="nav-image"/>
-        </a>
-        <a href="https://www.instagram.com/lorenzo_grasso/?hl=it" target="_blank">
-            <img src="Logos/Instagram.png" class="nav-image"/>
-        </a>
-        <a href="https://github.com/Lollo48" target="_blank">
-            <img src="Logos/Github.png" class="nav-image"/>
-        </a>
-        <div class="discord-container">
-            <img src="Logos/Discord.png" class="nav-image"/>
-            </a>
-            <img src="Logos/DiscordInfo.png" class="discord-hover-image"/>
-        </div>
-    </ul>
-</nav>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
 
-<!-- about me -->
-<!-- section1 - introduction -->
-<section class="grid-system-2 w-900 padding">
-    <section class="center align-center">
-        <img class="max-width" src="PersonalImage/PortfolioPersonalImage1.jpeg" alt="picture-of-me"/>
-    </section>
-    <section class="justify">
-        <h2 class="main-title-large">Who Am I?</h2>
-        <p>
-            I am Lorenzo, a passionate game programmer with a deep love for
-            gaming. Ever since I first discovered the world of game development, I
-            have been fascinated by the intricate mechanics that bring virtual
-            worlds to life. Beyond coding, I am an adventurous and reliable
-            individual who enjoys traveling and exploring different cuisines.
-        </p>
-        <p class="quote uppercase center">
-            <span class="colorful-letter">Team working</span>
-        </p>
-        <p>
-            My ability to work in large teams and my strong social skills allow me to collaborate effectively, making
-            teamwork an engaging and productive experience.
-        </p>
-    </section>
-</section>
-
-<!-- section2 - background story -->
-<!-- use this section to tell, why did you choose programming -->
-<section class="grid-system-2 w-900 padding">
-    <section class="justify">
-        <h2 class="main-title-large center">How it all started...</h2>
-        <p>
-            My journey into game development began in 2022, when I decided to enroll at Event Horizon School in Milan
-            for the Game Programming course. Initially, diving into object-oriented programming with C# and C++ was
-            challenging, as it required a completely new way of thinking and problem-solving. However, through
-            dedication and hard work, I gradually mastered these concepts and was able to develop the projects showcased
-            on my homepage.
-
-            I am constantly learning and staying updated on the latest advancements in programming and game development,
-            ensuring that I keep up with the newest trends and technologies shaping the industry.
-        </p>
-        <p class="italic">- Hard work</p>
-    </section>
-    <section class="center align-center">
-        <img
-                class="max-width"
-                src="PersonalImage/PortfolioPersonalImage2.jpeg"
-                alt="story-of-myself"
-        />
-    </section>
-</section>
-
-<section class="w-900 padding">
-    <section class="skills-section">
-        <h3 class="main-title center">Skills</h3>
-        <div class="skills-grid">
-
-            <!-- C# & C++ -->
-            <div class="skill-item">
-                <img src="Logos/SkillsLogo/C%23C++.png" alt="C#" class="skill-icon">
-                <h4>C# & C++</h4>
-                <p>Proficient in both languages, with a strong foundation in Object-Oriented Programming (OOP).</p>
-            </div>
-
-            <!-- Unity & Unreal -->
-            <div class="skill-item">
-                <img src="Logos/SkillsLogo/UnityUnreal.png" alt="Unity" class="skill-icon">
-                <h4>Unity & Unreal Engine</h4>
-                <p>Experience in game development using Unity (C#) and Unreal Engine (C++/Blueprints).</p>
-            </div>
-
-            <!-- OOP & Game Architecture -->
-            <div class="skill-item">
-                <img src="Logos/SkillsLogo/oop.png" alt="OOP" class="skill-icon">
-                <h4>Object Oriented Programming</h4>
-                <p>Skilled in designing modular, scalable, and maintainable code structures.</p>
-            </div>
-
-            <!-- Git & Version Control -->
-            <div class="skill-item">
-                <img src="Logos/SkillsLogo/GitFlow.png" alt="Git Flow" class="skill-icon">
-                <h4>Git & Version Control</h4>
-                <p>Experience with Git Flow for collaborative development and efficient code management.</p>
-            </div>
-
-            <!-- Multiplayer & Networking -->
-            <div class="skill-item">
-                <img src="Logos/SkillsLogo/Multiplayer.png" alt="Multiplayer" class="skill-icon">
-                <h4>Multiplayer & Networking</h4>
-                <p>Knowledgeable in implementing real-time multiplayer using Mirror and Steam APIs.</p>
-            </div>
-
-            <!-- AI Programming -->
-            <div class="skill-item">
-                <img src="Logos/SkillsLogo/AI.png" alt="AI Programming" class="skill-icon">
-                <h4>AI Programming</h4>
-                <p>Expertise in enemy AI, behavior trees, state machines, and machine learning concepts applied to game
-                    development.</p>
-            </div>
-
-        </div>
-    </section>
-</section>
-
-<!-- section3 - future plans -->
-<!-- great way to show that you are always involved -->
-<section class="w-900">
-    <section class="baby-pink-light">
-        <h3 class="main-title center">Future plans</h3>
-        <ul class="justify padding-list-10">
-            <li class="no-padding-list-item">
-                AI Programming: Specializing in enemy AI.
-
-            </li>
-            <li class="no-padding-list-item">
-                Multiplayer Development: Mastering real-time networking and enhancing the multiplayer experience in
-                games.
-            </li>
-            <li class="no-padding-list-item">
-                Expanding Horizons: Exploring new gaming platforms and innovative mechanics to push the boundaries of
-                interactive entertainment.
-
-            </li>
-        </ul>
-    </section>
-</section>
-
-<!-- special thanks -->
-<!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
-
-<section id="contact-me">
-    <h2>Contatti</h2>
-    <div class="contact-info">
-        <div class="email">
-            <p>Email: <span class="email-text">loory4895@gmail.com</span></p>
-        </div>
-        <div class="phone">
-            <p>Discord: <span class="phone-text">Lollo48#2497</span></p>
-        </div>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html#work">Work</a>
+        <a class="is-active" href="AboutMe.html">About Me</a>
+        <a href="index.html#competencies">Competencies</a>
+        <a href="index.html#stack">Stack</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="nav-cta" href="Documents/CurriculumVitaeLorenzoGrasso.pdf" target="_blank" rel="noreferrer">CV ↗</a>
+      </nav>
     </div>
-</section>
+  </header>
 
-<section id="regardes">
-    <p class="small thanks justify w-900 padding-left">
-        *Based on :
+  <main>
+    <section class="about-hero">
+      <div class="shell about-hero-grid">
+        <div class="about-hero-copy">
+          <p class="eyebrow hero-enter hero-enter-1">ABOUT ME</p>
+          <h1 class="about-display hero-enter hero-enter-2">I LIKE BUILDING<br><span>THE THINGS PLAYERS FEEL.</span></h1>
+          <p class="about-intro hero-enter hero-enter-3">
+            I’m Lorenzo, a Game & Gameplay Programmer focused on <strong>gameplay systems, multiplayer architecture and AI</strong>. I work mainly with <strong>Unity / C#</strong> and <strong>Unreal Engine / C++</strong>, and I enjoy turning gameplay ideas into systems that are responsive, reusable and easy to maintain.
+          </p>
+          <div class="about-hero-actions hero-enter hero-enter-4">
+            <a class="button primary" href="index.html#work">View my projects <span>↗</span></a>
+            <a class="button ghost" href="Documents/CurriculumVitaeLorenzoGrasso.pdf" target="_blank" rel="noreferrer">Download CV <span>↗</span></a>
+          </div>
+        </div>
 
-        <a
-                class="link colorful-letter"
-                href="https://storyset.com/work"
-                target="_blank"
-        >work illustrations</a
-        >
-        @iluskaland 2024
-    </p>
+        <div class="about-portrait-wrap hero-enter hero-enter-photo">
+          <div class="about-portrait-frame">
+            <img src="PersonalImage/PortfolioPersonalImage2.jpeg" alt="Lorenzo Grasso" />
+            <div class="about-portrait-shade"></div>
+            <div class="portrait-label">
+              <span>GAMEPLAY</span>
+              <span>MULTIPLAYER</span>
+              <span>AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p class="small thanks justify w-900 padding-left">
-        *Thanks for the illustration:
-        <a
-                class="link colorful-letter"
-                href="https://storyset.com/work"
-                target="_blank"
-        >work illustrations</a
-        >
-        byStoryset
-    </p>
+    <section class="about-facts section-shell">
+      <div class="shell">
+        <div class="fact-strip reveal">
+          <div class="fact-item">
+            <span class="fact-number">2022</span>
+            <p>Started my game-development journey</p>
+          </div>
+          <div class="fact-item">
+            <span class="fact-number">2</span>
+            <p>Engines I build with: Unity & Unreal</p>
+          </div>
+          <div class="fact-item">
+            <span class="fact-number">01</span>
+            <p>Main obsession: gameplay that feels right</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p class="small thanks justify w-900 padding-left">
-        *Thanks for the icons:
-        <span
-        ><a
-                class="link colorful-letter"
-                href="https://www.iconfinder.com/Flatart"
-                target="_blank"
-        >flatart,</a
-        ></span
-        >
-        <span
-        ><a
-                class="link colorful-letter"
-                href="https://www.iconfinder.com/font-awesome"
-                target="_blank"
-        >font awesome,
-          </a></span
-        >
-        <span
-        ><a
-                class="link colorful-letter"
-                href="https://www.iconfinder.com/fluent-designsystem"
-                target="_blank"
-        >microsoft,
-          </a></span
-        >
-        <span
-        ><a
-                class="link colorful-letter"
-                href="https://www.iconfinder.com/Chanut-is"
-                target="_blank"
-        >chanut is indurstries,
-          </a></span
-        >
-        <span
-        ><a
-                class="link colorful-letter"
-                href="https://www.iconfinder.com/Kalashnyk"
-                target="_blank"
-        >kalash</a
-        ></span
-        >
-        on Iconfinder
-    </p>
-</section>
-<footer>
-    <p>&copy; 2025 Grasso Lorenzo. All rights reserved.</p>
-</footer>
+    <section class="about-story section-shell">
+      <div class="shell story-grid">
+        <div class="story-heading reveal">
+          <p class="eyebrow">HOW IT STARTED</p>
+          <h2>From learning the basics to building complete systems.</h2>
+        </div>
+
+        <div class="story-copy reveal reveal-delay-1">
+          <p class="story-lead">
+            My journey into game development started in <strong>2022</strong>, when I enrolled in the Game Programming course at <strong>Event Horizon School in Milan</strong>.
+          </p>
+          <p>
+            C# and C++ initially forced me to rethink how I approached problems. That challenge is exactly what pulled me in. I became interested not only in making features work, but in understanding how to structure them so they remain understandable when a project grows.
+          </p>
+          <p>
+            Today my strongest interests are gameplay architecture, multiplayer networking and AI. I enjoy working from the architecture of a system through implementation, debugging, iteration and final integration.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-values section-shell">
+      <div class="shell">
+        <div class="section-heading about-values-heading reveal">
+          <div>
+            <p class="eyebrow">HOW I WORK</p>
+            <h2>Technical, collaborative and always curious.</h2>
+          </div>
+          <p class="section-intro">The part of programming I enjoy most is finding the simplest structure that still gives the team room to move fast.</p>
+        </div>
+
+        <div class="value-grid">
+          <article class="value-card reveal">
+            <span>01</span>
+            <h3>Teamwork</h3>
+            <p>I enjoy collaborating, communicating clearly and turning technical constraints into something designers, artists and other programmers can work with.</p>
+          </article>
+          <article class="value-card reveal reveal-delay-1">
+            <span>02</span>
+            <h3>Curiosity</h3>
+            <p>I like understanding why a system works, not just getting it to compile. New tools, networking problems and unfamiliar systems are usually the fun part for me.</p>
+          </article>
+          <article class="value-card reveal">
+            <span>03</span>
+            <h3>Reliability</h3>
+            <p>I care about finishing what I start: build it, test it, debug it, document it and leave the system in a state another developer can understand.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="beyond section-shell">
+      <div class="shell beyond-grid">
+        <div class="beyond-media reveal">
+          <div class="beyond-photo-frame">
+            <img src="PersonalImage/PortfolioPersonalImage1.jpeg" alt="Lorenzo Grasso portrait" />
+          </div>
+        </div>
+
+        <div class="beyond-copy reveal reveal-delay-1">
+          <p class="eyebrow">BEYOND CODE</p>
+          <h2>I like seeing more than one world.</h2>
+          <p>
+            Outside game development, I love travelling, discovering different cultures and, very importantly, trying the food that comes with them. Those experiences keep me curious and give me a healthy break from staring at systems and logs all day.
+          </p>
+          <p>
+            I’m proactive, social and comfortable working with a team, but I’m equally happy disappearing into a difficult technical problem until I understand it properly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-focus section-shell">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">WHAT I’M PUSHING FURTHER</p>
+            <h2>Keep learning. Keep shipping.</h2>
+          </div>
+        </div>
+
+        <div class="focus-list reveal">
+          <div class="focus-row"><span>01</span><strong>Multiplayer</strong><p>Deeper networking, larger player counts and more robust server-authoritative systems.</p></div>
+          <div class="focus-row"><span>02</span><strong>AI Programming</strong><p>More expressive enemy behaviors, decision-making and reusable combat architectures.</p></div>
+          <div class="focus-row"><span>03</span><strong>Gameplay Architecture</strong><p>Cleaner modular systems that can move between prototypes and production without becoming a maintenance problem.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-shell about-contact">
+      <div class="shell contact-panel reveal">
+        <p class="eyebrow">BACK TO THE WORK</p>
+        <h2>Enough about me. Here’s what I build.</h2>
+        <p>The projects are the best place to see how I approach gameplay, networking and technical systems.</p>
+        <div class="about-final-actions">
+          <a class="button primary" href="index.html#work">View projects <span>→</span></a>
+          <a class="button ghost" href="index.html#contact">Get in touch <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>© <span id="year"></span> Lorenzo Grasso</span>
+      <span>Gameplay • Multiplayer • Systems</span>
+      <a href="index.html">Portfolio home ↑</a>
+    </div>
+  </footer>
+
+  <script src="portfolio.js"></script>
 </body>
 </html>
